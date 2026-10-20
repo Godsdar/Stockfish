@@ -1,0 +1,31 @@
+name: Sparse guard Windows performance research
+on:
+  push:
+    branches: [research/sparse-guard-windows-bench]
+permissions:
+  contents: read
+concurrency:
+  group: sparse-guard-windows-bench
+  cancel-in-progress: true
+jobs:
+  benchmark:
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2022, windows-2025]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756
+      - name: Capability-gated build and 20 alternating pairs
+        run: python tests/research/sparse_guard/benchmark.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sparse-benchmark-${{ matrix.os }}
+          path: benchmark-results/
+          retention-days: 14

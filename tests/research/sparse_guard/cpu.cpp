@@ -36,9 +36,10 @@ int main() {
 #else
     __cpuid_count(7, 0, a, b, c, d);
 #endif
-    const bool supported = (b & (1u << 16)) && (b & (1u << 30)) && (c & (1u << 11));
+    const unsigned avx512Mask = (1u << 16) | (1u << 17) | (1u << 28) | (1u << 30) | (1u << 31);
+    const bool supported = (b & avx512Mask) == avx512Mask && (c & (1u << 11));
     std::cout << "AVX512F=" << bool(b & (1u << 16)) << " AVX512BW="
               << bool(b & (1u << 30)) << " AVX512VNNI=" << bool(c & (1u << 11))
-              << " XCR0=" << xcr0 << '\n';
+              << " AVX512_DQ_CD_VL=" << bool((b & avx512Mask) == avx512Mask) << " XCR0=" << xcr0 << '\n';
     return supported ? 0 : 77;
 }
