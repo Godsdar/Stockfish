@@ -39,7 +39,7 @@ index 8efbabd..64dcc70 100644
  constexpr ThreatLUTs threat_luts{};
  
 +sf_always_inline IndexType geometry_index(PieceType pt, unsigned from, unsigned to) {
-+    const auto attackType = pt != PAWN ? unsigned(pt) : (to < from ? BLACK : WHITE);
++    const auto attackType = pt != PAWN ? unsigned(pt) : (to < from ? unsigned(BLACK) : unsigned(WHITE));
 +    const auto attacks    = Attacks::PseudoAttacks[attackType][from];
 +    return threat_luts.lut2[pt][from] + popcount(((1ULL << to) - 1) & attacks);
 +}
