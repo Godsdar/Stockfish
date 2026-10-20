@@ -1,0 +1,58 @@
+name: FullThreats popcount Windows release screen
+on:
+  push:
+    branches: [research/popcount-windows-release]
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-2022
+    timeout-minutes: 40
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          path: harness
+          persist-credentials: false
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: official-stockfish/Stockfish
+          ref: effdc3fd3f6de6e75fe1374a51a7a7eed66f880b
+          path: baseline
+          persist-credentials: false
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: official-stockfish/Stockfish
+          ref: effdc3fd3f6de6e75fe1374a51a7a7eed66f880b
+          path: candidate
+          persist-credentials: false
+      - name: Prepare geometry-only experiment
+        run: |
+          git -C candidate apply ../harness/.github/research/h1-popcount.patch
+          make -C baseline/src net
+          cp baseline/src/nn-*.nnue candidate/src/
+          mkdir -p results
+          git -C baseline rev-parse HEAD > results/base-commit.txt
+          git -C candidate diff > results/candidate.patch
+      - uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756
+      - name: Build identical release targets
+        run: |
+          python harness/.github/research/build_windows.py baseline/src candidate/src 2>&1 | tee results/build.log
+      - name: Record CPU
+        shell: pwsh
+        run: Get-CimInstance Win32_Processor | Select-Object Name, NumberOfCores, NumberOfLogicalProcessors | Out-File results/cpu.txt
+      - name: Verify signatures and measure alternating pairs
+        run: |
+          for directory in baseline candidate; do
+            "${directory}/src/stockfish.exe" compiler > "results/${directory}-compiler.txt"
+            "${directory}/src/stockfish.exe" bench > "results/${directory}-bench.stdout" 2> "results/${directory}-bench.log"
+            python -c "import pathlib,re; s=pathlib.Path('results/${directory}-bench.log').read_text(); assert int(re.search(r'Nodes searched\s*:\s*(\d+)',s).group(1))==1559611"
+          done
+          python harness/.github/research/compare_bench.py baseline/src/stockfish.exe candidate/src/stockfish.exe results/popcount-speed.json --depth 16 --pairs 20 | tee results/popcount-speed.log
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: popcount-windows-release
+          path: results/
