@@ -1,7 +1,7 @@
 name: NNUE failed-load recovery final validation
 on:
   push:
-    branches: [research/nnue-recovery-final-ci]
+    branches: [research/nnue-recovery-msvc-release]
 permissions:
   contents: read
 jobs:
@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-24.04, windows-2022]
+        os: [windows-2022]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 20
     env:
