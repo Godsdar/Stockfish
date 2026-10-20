@@ -1,0 +1,112 @@
+name: Frozen search candidate platform validation
+on:
+  push:
+    branches: [research/search-candidate-validation]
+permissions:
+  contents: read
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2022, ubuntu-24.04]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 35
+    env:
+      PYTHONUTF8: '1'
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          path: validation
+          persist-credentials: false
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: official-stockfish/Stockfish
+          ref: effdc3fd3f6de6e75fe1374a51a7a7eed66f880b
+          path: baseline
+          persist-credentials: false
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: Godsdar/Stockfish
+          ref: 035bf5920391d467fedd7b6af63a8942ab6ee720
+          fetch-depth: 2
+          path: s1
+          persist-credentials: false
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: Godsdar/Stockfish
+          ref: b983b697193530c234514fa337be42dabfe3ddef
+          fetch-depth: 2
+          path: s2
+          persist-credentials: false
+      - name: Record immutable source and network provenance
+        run: |
+          mkdir -p results
+          git -C baseline rev-parse HEAD | tee results/base-commit.txt
+          git -C s1 rev-parse HEAD | tee results/s1-commit.txt
+          git -C s2 rev-parse HEAD | tee results/s2-commit.txt
+          git -C validation rev-parse HEAD | tee results/validation-commit.txt
+          test "$(git -C baseline rev-parse HEAD)" = effdc3fd3f6de6e75fe1374a51a7a7eed66f880b
+          test "$(git -C s1 rev-parse HEAD)" = 035bf5920391d467fedd7b6af63a8942ab6ee720
+          test "$(git -C s2 rev-parse HEAD)" = b983b697193530c234514fa337be42dabfe3ddef
+          for directory in s1 s2; do
+            git -C "$directory" diff effdc3fd3f6de6e75fe1374a51a7a7eed66f880b HEAD > "results/${directory}.patch"
+          done
+          cp validation/.github/research/README.md results/provenance.md
+          sha256sum validation/.github/research/* > results/script-sha256.txt
+          python --version > results/python.txt
+          make -C baseline/src net
+          cp baseline/src/nn-*.nnue s1/src/
+          cp baseline/src/nn-*.nnue s2/src/
+          sha256sum baseline/src/nn-*.nnue s1/src/nn-*.nnue s2/src/nn-*.nnue > results/network-sha256.txt
+      - name: Set up MSVC
+        if: runner.os == 'Windows'
+        uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756
+      - name: Record Windows CPU and compiler
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          Get-CimInstance Win32_Processor | Select-Object Name, NumberOfCores, NumberOfLogicalProcessors | Tee-Object -FilePath results/cpu.txt
+          cl 2>&1 | Tee-Object -FilePath results/compiler.txt
+          exit 0
+      - name: Windows release builds
+        if: runner.os == 'Windows'
+        run: python validation/.github/research/build_windows.py s1/src s2/src > results/build-windows.log 2>&1
+      - name: Linux release builds
+        if: runner.os == 'Linux'
+        env:
+          CXXFLAGS: -Werror
+        run: |
+          lscpu | tee results/cpu.txt
+          g++ --version | tee results/compiler.txt
+          make -C s1/src -j4 build ARCH=x86-64-avx2 COMP=gcc > results/build-s1.log 2>&1
+          make -C s2/src -j4 build ARCH=x86-64-avx2 COMP=gcc > results/build-s2.log 2>&1
+      - name: Check frozen bench signatures
+        run: |
+          suffix=''
+          if [ "$RUNNER_OS" = 'Windows' ]; then suffix='.exe'; fi
+          for directory in s1 s2; do
+            "${directory}/src/stockfish${suffix}" bench > "results/${directory}-bench.stdout" 2> "results/${directory}-bench.log"
+            expected=1640333
+            if [ "$directory" = 's2' ]; then expected=2450249; fi
+            python -c "import pathlib,re; s=pathlib.Path('results/${directory}-bench.log').read_text(); n=int(re.search(r'Nodes searched\s*:\s*(\d+)',s).group(1)); assert n==${expected},(n,${expected}); print('${directory} bench',n)"
+          done
+      - name: Upstream suites and bounded UCI legality scenarios
+        run: |
+          python -m pip install requests python-chess > results/python-deps.log 2>&1
+          suffix=''
+          if [ "$RUNNER_OS" = 'Windows' ]; then suffix='.exe'; fi
+          for directory in s1 s2; do
+            cd "$directory"
+            python tests/instrumented.py --none "src/stockfish${suffix}" > "../results/${directory}-instrumented.log" 2>&1
+            cd ..
+            python validation/.github/research/smoke_uci.py "${directory}/src/stockfish${suffix}" "results/${directory}-smoke.json" | tee "results/${directory}-smoke.log"
+          done
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: search-candidates-${{ matrix.os }}
+          path: results/
