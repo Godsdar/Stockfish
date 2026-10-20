@@ -1385,9 +1385,9 @@ moves_loop:  // When in check, search starts here
         if (allNode)
             r += r * 276 / (256 * depth + 268);
 
-        // When seeking a mate, reduce non-checking moves more and checking moves less
+        // When seeking a mate, reduce checks and check evasions less
         if (seekMate && r > 0)
-            r += (givesCheck ? -r : r) / 4;
+            r += (givesCheck || ss->inCheck ? -r : r) / 4;
 
         // Apply the computed LMR
         if (depth >= 2 && moveCount > 1)
