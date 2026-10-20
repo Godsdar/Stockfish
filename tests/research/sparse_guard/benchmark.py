@@ -59,10 +59,21 @@ try:
     # Download only the official default net, validating the filename's hash.
     name = re.search(r'nn-[0-9a-f]+\.nnue', (ROOT / 'src/evaluate.h').read_text()).group()
     net = OUT / name
-    with urllib.request.urlopen('https://tests.stockfishchess.org/api/nn/' + name, timeout=60) as source, net.open('wb') as target:
-        shutil.copyfileobj(source, target)
-    digest = hashlib.sha256(net.read_bytes()).hexdigest()
-    assert digest.startswith(name[3:-5]), (name, digest)
+    summary['download_attempts'] = []
+    for url in ['https://tests.stockfishchess.org/api/nn/' + name,
+                'https://github.com/official-stockfish/networks/raw/master/' + name]:
+        try:
+            request = urllib.request.Request(url, headers={'User-Agent': 'Stockfish-research-validation/1.0'})
+            with urllib.request.urlopen(request, timeout=60) as source, net.open('wb') as target:
+                shutil.copyfileobj(source, target)
+            digest = hashlib.sha256(net.read_bytes()).hexdigest()
+            assert digest.startswith(name[3:-5]), (name, digest)
+            summary['download_attempts'].append({'url': url, 'status': 'validated'})
+            break
+        except Exception as error:
+            summary['download_attempts'].append({'url': url, 'status': repr(error)})
+            net.unlink(missing_ok=True)
+    assert net.exists(), summary['download_attempts']
     summary['network'] = {'filename': name, 'sha256': digest, 'size': net.stat().st_size}
     baseline = subprocess.check_output(['git', 'show', BASE + ':' + HEADER], cwd=ROOT, text=True)
     fixed = (ROOT / HEADER).read_text()
