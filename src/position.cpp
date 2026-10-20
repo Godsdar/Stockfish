@@ -1167,9 +1167,10 @@ void Position::update_piece_threats(Piece               pc,
                                     Square              s,
                                     DirtyThreats* const dts,
                                     // Silence spurious warning on GCC 10
-                                    [[maybe_unused]] Bitboard noRaysContaining) const {
+                                    [[maybe_unused]] Bitboard     noRaysContaining,
+                                    std::pair<Bitboard, Bitboard> directAttacks) const {
     const Bitboard occupied         = pieces();
-    const auto [bAttacks, rAttacks] = both_attacks_bb(s, occupied);
+    const auto [bAttacks, rAttacks] = ComputeRay ? both_attacks_bb(s, occupied) : directAttacks;
     const Bitboard  sliderAttacks   = bAttacks | rAttacks;
     const Bitboard  occupiedNoK     = occupied ^ pieces(KING);
     const PieceType pt              = type_of(pc);

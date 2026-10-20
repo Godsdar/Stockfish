@@ -28,6 +28,7 @@
 #include <optional>
 #include <stdexcept>
 #include <string>
+#include <utility>
 
 #include "attacks.h"
 #include "bitboard.h"
@@ -198,11 +199,12 @@ class Position {
 
     // Other helpers
     template<bool ComputeRay = true>
-    void update_piece_threats(Piece               pc,
-                              bool                putPiece,
-                              Square              s,
-                              DirtyThreats* const dts,
-                              Bitboard            noRaysContaining = -1ULL) const;
+    void update_piece_threats(Piece                         pc,
+                              bool                          putPiece,
+                              Square                        s,
+                              DirtyThreats* const           dts,
+                              Bitboard                      noRaysContaining = -1ULL,
+                              std::pair<Bitboard, Bitboard> directAttacks    = {}) const;
     void move_piece(Square from, Square to, DirtyThreats* const dts = nullptr);
     template<bool Do>
     void do_castling(Color               us,
@@ -428,16 +430,19 @@ inline void Position::move_piece(Square from, Square to, DirtyThreats* const dts
 
 inline void Position::swap_piece(Square s, Piece pc, DirtyThreats* const dts) {
     Piece old = board[s];
+    // Occupancy of the source square does not affect its sliding attacks.
+    const auto directAttacks =
+      dts ? Attacks::both_attacks_bb(s, pieces()) : std::pair<Bitboard, Bitboard>{};
 
     remove_piece(s);
 
     if (dts)
-        update_piece_threats<false>(old, false, s, dts);
+        update_piece_threats<false>(old, false, s, dts, -1ULL, directAttacks);
 
     put_piece(pc, s);
 
     if (dts)
-        update_piece_threats<false>(pc, true, s, dts);
+        update_piece_threats<false>(pc, true, s, dts, -1ULL, directAttacks);
 }
 
 inline void Position::do_move(Move m, StateInfo& newSt, const TranspositionTable* tt = nullptr) {
