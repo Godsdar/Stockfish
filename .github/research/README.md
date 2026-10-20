@@ -26,3 +26,11 @@ script SHA256 manifest, signatures, upstream suite, search comparisons, every
 timed invocation and raw JSON. Hosted-runner timing is screening evidence;
 identical nodes and a local NPS gain do not establish playing strength or Elo.
 No upstream PR is created by this workflow.
+
+A separate `research/mixed-pair-avx512` branch executes AVX512VNNI only after
+a baseline-ISA CPUID/XGETBV probe confirms CPU features and OS ZMM state.
+That run keeps AVX2 results separate, checks the same immutable source commits,
+and repeats the arithmetic harness, signatures, suite, deterministic positions
+and sequential paired timing under the AVX512VNNI build. Unsupported runners
+retain compile-only evidence and skip execution. The probe derives from the
+architecture subagent's sparse-guard validation, extended for full-engine flags.

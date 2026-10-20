@@ -1,0 +1,107 @@
+name: Mixed-sign NNUE AVX512 validation
+on:
+  push:
+    branches: [research/mixed-pair-avx512]
+permissions:
+  contents: read
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2022, ubuntu-24.04]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 35
+    env:
+      PYTHONUTF8: '1'
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          path: validation
+          persist-credentials: false
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: official-stockfish/Stockfish
+          ref: effdc3fd3f6de6e75fe1374a51a7a7eed66f880b
+          path: baseline
+          persist-credentials: false
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: Godsdar/Stockfish
+          ref: 939c57d819aa715aec1c26224ad204ed50ec8fa8
+          fetch-depth: 2
+          path: candidate
+          persist-credentials: false
+      - name: Record immutable provenance and identical network
+        run: |
+          mkdir -p results
+          git -C baseline rev-parse HEAD | tee results/base-commit.txt
+          git -C candidate rev-parse HEAD | tee results/candidate-commit.txt
+          git -C validation rev-parse HEAD | tee results/validation-commit.txt
+          test "$(git -C baseline rev-parse HEAD)" = effdc3fd3f6de6e75fe1374a51a7a7eed66f880b
+          test "$(git -C candidate rev-parse HEAD)" = 939c57d819aa715aec1c26224ad204ed50ec8fa8
+          git -C candidate diff effdc3fd3f6de6e75fe1374a51a7a7eed66f880b HEAD > results/source.patch
+          cmp results/source.patch validation/.github/research/source.patch
+          cp validation/.github/research/README.md results/provenance.md
+          sha256sum validation/.github/research/* > results/script-sha256.txt
+          python --version > results/python.txt
+          make -C baseline/src net
+          cp baseline/src/nn-*.nnue candidate/src/
+          sha256sum baseline/src/nn-*.nnue candidate/src/nn-*.nnue > results/network-sha256.txt
+      - name: Set up MSVC
+        if: runner.os == 'Windows'
+        uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756
+      - name: Record Windows CPU and compiler
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          Get-CimInstance Win32_Processor | Select-Object Name, NumberOfCores, NumberOfLogicalProcessors | Out-File results/cpu.txt
+          cl 2>&1 | Out-File results/compiler.txt
+          exit 0
+      - name: Record Linux CPU and compiler
+        if: runner.os == 'Linux'
+        run: |
+          lscpu > results/cpu.txt
+          g++ --version > results/compiler.txt
+      - name: Detect CPU and OS AVX512 state using baseline ISA
+        id: capability
+        run: python validation/.github/research/detect_cpu.py
+      - name: Build Windows AVX512VNNI engines
+        if: runner.os == 'Windows'
+        run: python validation/.github/research/build_windows.py baseline/src candidate/src --avx512 > results/build-avx512.log 2>&1
+      - name: Build Linux AVX512VNNI engines
+        if: runner.os == 'Linux'
+        env:
+          CXXFLAGS: -Werror
+        run: |
+          make -C baseline/src -j4 build ARCH=x86-64-vnni512 COMP=gcc > results/build-base.log 2>&1
+          make -C candidate/src -j4 build ARCH=x86-64-vnni512 COMP=gcc > results/build-candidate.log 2>&1
+      - name: Execute supported AVX512 pair arithmetic, signatures and regression suite
+        if: steps.capability.outputs.supported == 'true'
+        run: |
+          python -m pip install requests python-chess > results/python-deps.log 2>&1
+          suffix=''
+          if [ "$RUNNER_OS" = 'Windows' ]; then suffix='.exe'; fi
+          python validation/.github/research/build_runtime.py validation/.github/research/runtime-check.cpp "results/runtime-check${suffix}" --avx512 | tee results/runtime-avx512.log
+          for directory in baseline candidate; do
+            "${directory}/src/stockfish${suffix}" bench > "results/${directory}-bench.stdout" 2> "results/${directory}-bench.log"
+            python -c "import pathlib,re; s=pathlib.Path('results/${directory}-bench.log').read_text(); assert int(re.search(r'Nodes searched\s*:\s*(\d+)',s).group(1))==1559611"
+          done
+          cd candidate
+          python tests/instrumented.py --none "src/stockfish${suffix}" > ../results/instrumented.log 2>&1
+          cd ..
+          python validation/.github/research/compare_search.py "baseline/src/stockfish${suffix}" "candidate/src/stockfish${suffix}" results/search.json --depth 8 | tee results/search.log
+      - name: Sequential alternating AVX512 fixed-depth screening
+        if: steps.capability.outputs.supported == 'true'
+        run: |
+          suffix=''
+          if [ "$RUNNER_OS" = 'Windows' ]; then suffix='.exe'; fi
+          python validation/.github/research/compare_bench.py "baseline/src/stockfish${suffix}" "candidate/src/stockfish${suffix}" results/speed.json --depth 16 --pairs 20 | tee results/speed.log
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: mixed-pair-avx512-${{ matrix.os }}
+          path: results/
