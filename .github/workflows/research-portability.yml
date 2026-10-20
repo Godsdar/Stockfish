@@ -1,0 +1,90 @@
+name: FullThreats LUT portability
+on:
+  push:
+    branches: [experiment/flat-lut-ci]
+permissions:
+  contents: read
+jobs:
+  compare:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-2022]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          path: candidate
+          persist-credentials: false
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: official-stockfish/Stockfish
+          ref: effdc3fd3f6de6e75fe1374a51a7a7eed66f880b
+          path: baseline
+          persist-credentials: false
+      - name: Download identical network
+        run: |
+          make -C baseline/src net
+          cp baseline/src/nn-*.nnue candidate/src/
+      - name: Linux builds
+        if: runner.os == 'Linux'
+        env:
+          CXXFLAGS: -Werror
+        run: |
+          lscpu
+          g++ --version
+          make -C baseline/src -j4 build ARCH=x86-64-avx2 COMP=gcc
+          make -C candidate/src -j4 build ARCH=x86-64-avx2 COMP=gcc
+      - name: Set up MSVC
+        if: runner.os == 'Windows'
+        uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756
+      - name: Windows baseline build
+        if: runner.os == 'Windows'
+        shell: cmd
+        working-directory: baseline/src
+        run: >-
+          cl /nologo /std:c++17 /MT /EHsc /O2 /MP /W3 /WX /permissive-
+          /DUSE_POPCNT /DUSE_SSE2 /DUSE_SSSE3 /DUSE_SSE41 /DUSE_AVX2 /arch:AVX2
+          /Fe:stockfish.exe *.cpp nnue\*.cpp nnue\features\*.cpp syzygy\*.cpp
+          /link /STACK:8388608 shell32.lib
+      - name: Windows candidate build
+        if: runner.os == 'Windows'
+        shell: cmd
+        working-directory: candidate/src
+        run: >-
+          cl /nologo /std:c++17 /MT /EHsc /O2 /MP /W3 /WX /permissive-
+          /DUSE_POPCNT /DUSE_SSE2 /DUSE_SSSE3 /DUSE_SSE41 /DUSE_AVX2 /arch:AVX2
+          /Fe:stockfish.exe *.cpp nnue\*.cpp nnue\features\*.cpp syzygy\*.cpp
+          /link /STACK:8388608 shell32.lib
+      - name: Record Windows CPU
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: Get-CimInstance Win32_Processor | Select-Object Name, NumberOfCores, NumberOfLogicalProcessors
+      - name: Check signatures and compare alternating pairs
+        run: |
+          suffix=''
+          if [ "$RUNNER_OS" = 'Windows' ]; then suffix='.exe'; fi
+          mkdir -p results
+          EXE="$(pwd)/baseline/src/stockfish${suffix}" bash baseline/tests/signature.sh 1559611
+          EXE="$(pwd)/candidate/src/stockfish${suffix}" bash candidate/tests/signature.sh 1559611
+          python candidate/.github/research/compare_bench.py "baseline/src/stockfish${suffix}" "candidate/src/stockfish${suffix}" results/bench.json --depth 14 --pairs 12 | tee results/bench.log
+          cat results/bench.log
+      - name: Check array bounds in constant evaluation
+        run: python candidate/.github/research/check_lut_bounds.py baseline candidate results
+      - name: Run upstream tests
+        run: |
+          python -m pip install requests
+          suffix=''
+          if [ "$RUNNER_OS" = 'Windows' ]; then suffix='.exe'; fi
+          cd candidate
+          python tests/instrumented.py --none "src/stockfish${suffix}" > ../results/instrumented.log
+          cat ../results/instrumented.log
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: flat-lut-${{ matrix.os }}
+          path: results/
