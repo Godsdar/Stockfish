@@ -206,7 +206,7 @@ class AffineTransformSparseInput {
         for (IndexType k = NumAccums; k < NumRegs; ++k)
             acc[k] = vec_zero();
         #if defined(USE_VNNI)
-        while (start < end - 2)
+        while (nnzInfo.count >= 3 && start < end - 2)
         {
             const isize   i0  = *start++;
             const isize   i1  = *start++;
