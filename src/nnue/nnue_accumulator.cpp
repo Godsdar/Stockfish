@@ -425,6 +425,29 @@ sf_always_inline Tile apply_feature_pair(IndexType j, Tile acc, const i8* data0,
     return acc;
 }
 
+// XOR by 0x80 maps signed bytes to unsigned x + 128. The offsets cancel
+// in (added + 128) - (removed + 128), and the difference fits in int16.
+sf_always_inline Tile apply_feature_difference(IndexType j,
+                                               Tile      acc,
+                                               const i8* added,
+                                               const i8* removed) {
+    static_assert(Tiling::NumRegs % 2 == 0);
+    const vec_t offset = vec_set_8(-128);
+    const vec_t signs  = vec_set_16(0x01ff);
+    for (IndexType k = 0; k < Tiling::NumRegs; k += 2)
+    {
+        const vec_t r =
+          vec_xor(vec_load(reinterpret_cast<const vec_t*>(removed + j) + k / 2), offset);
+        const vec_t a =
+          vec_xor(vec_load(reinterpret_cast<const vec_t*>(added + j) + k / 2), offset);
+        const vec_t lo = vec_maddubs_16(vec_unpacklo_8(r, a), signs);
+        const vec_t hi = vec_maddubs_16(vec_unpackhi_8(r, a), signs);
+        acc[k]         = vec_add_16(acc[k], lo);
+        acc[k + 1]     = vec_add_16(acc[k + 1], hi);
+    }
+    return acc;
+}
+
     #endif
 
 #endif
@@ -450,16 +473,31 @@ class WeightRows {
     }
 
     template<int sign>
-    sf_always_inline Tile apply(IndexType j, Tile acc) const {
+    sf_always_inline Tile apply(IndexType j, Tile acc, bool skipLast = false) const {
         static_assert(sign == 1 || sign == -1);
-        int i = 0;
+        const int end = count - int(skipLast);
+        int       i   = 0;
 #if defined(USE_PAIRED_WIDENING_ADD)
-        for (; i + 1 < count; i += 2)
+        for (; i + 1 < end; i += 2)
             acc = apply_feature_pair<sign>(j, acc, rows[i], rows[i + 1]);
 #endif
-        for (; i < count; ++i)
+        for (; i < end; ++i)
             acc = apply_feature_single<sign>(j, acc, rows[i]);
         return acc;
+    }
+
+    sf_always_inline Tile apply_difference(IndexType j, Tile acc, const WeightRows& removed) const {
+#if defined(USE_PAIRED_WIDENING_ADD)
+        const bool mixed = (count & removed.count & 1) != 0;
+        acc              = removed.apply<-1>(j, acc, mixed);
+        acc              = apply<+1>(j, acc, mixed);
+        if (mixed)
+            acc =
+              apply_feature_difference(j, acc, rows[count - 1], removed.rows[removed.count - 1]);
+        return acc;
+#else
+        return apply<+1>(j, removed.apply<-1>(j, acc));
+#endif
     }
 
    private:
@@ -495,8 +533,7 @@ void apply_combined(Color                              perspective,
     {
         acc = load_tile(j, fromAcc.data());
 
-        acc = removed.apply<-1>(j, acc);
-        acc = added.apply<+1>(j, acc);
+        acc = added.apply_difference(j, acc, removed);
 
         store_tile(j, toAcc.data(), acc);
     }
