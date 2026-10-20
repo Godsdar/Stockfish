@@ -1,0 +1,35 @@
+name: Sparse guard supported Windows PGO study
+on:
+  push:
+    branches: [research/sparse-guard-pgo-validation]
+permissions:
+  contents: read
+jobs:
+  pgo:
+    runs-on: windows-2022
+    timeout-minutes: 45
+    steps:
+      - name: Refuse late queued starts
+        shell: pwsh
+        run: |
+          if ([DateTime]::UtcNow -ge [DateTime]::Parse('2026-10-20T13:10:00Z').ToUniversalTime()) { throw 'Study start cutoff passed' }
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: msys2/setup-msys2@e9898307ac31d1a803454791be09ab9973336e1c
+        with:
+          msystem: mingw64
+          update: true
+          install: mingw-w64-x86_64-gcc mingw-w64-x86_64-python make git
+      - name: Capability, supported independent PGO builds, correctness, warmup, fixed comparison
+        shell: msys2 {0}
+        run: python tests/research/sparse_guard/pgo.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sparse-guard-windows-pgo
+          path: |
+            pgo-results/*.json
+            pgo-results/*.txt
+          retention-days: 14

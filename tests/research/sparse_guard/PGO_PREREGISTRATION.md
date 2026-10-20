@@ -1,0 +1,15 @@
+# Frozen Windows PGO comparison, 2026-10-20
+
+Registered before any results. Compare only `effdc3fd3f6de6e75fe1374a51a7a7eed66f880b` and the one-line defined-pointer guard `49c5f5979c8af79d3807468dbf5e985054ed29d3`. This is one remote study on one GitHub Windows 2022 host, with no hardware retry, variant sweep, outlier removal, PR, or Fishtest submission.
+
+Use native MSYS2 MinGW64 GCC and Stockfish's supported `make -j2 profile-build ARCH=x86-64-vnni512 COMP=mingw COMPCXX=g++`. Upstream `universal_compilation.yml` and `tests.yml` establish MinGW64 support; README recommends profile-build, Makefile lines 1118ff and 1351ff implement GCC profiling. Upstream MSVC workflow has no supported PGO stage, so no custom MSVC PGO process is invented. Each frozen detached checkout trains its own instrumented executable with unchanged upstream `PGOBENCH = ./stockfish.exe bench`: 16 MiB hash, one thread, depth 13, default positions. Record compiler, actual flags, benchmark.cpp digest, and training signature. Profiles are never shared between variants.
+
+Require CPU/OS AVX-512 F/DQ/CD/BW/VL/VNNI, AVX2/BMI/BMI2/POPCNT and XCR0 state. Unsupported host means skip and retain HOLD. Both builds use identical SHA256-verified official network. Require default signature 1,559,611 and every depth-16 run 7,659,485 nodes.
+
+Before timing, sequentially run the existing actual sparse-layer scalar-reference harness for counts 0..256 and two index orders (514 cases) against each frozen source, using GCC release `-O3 -DNDEBUG`. This standalone harness is **not PGO**. Generate the already validated compatible all-zero network with unchanged generator and run `eval` through each actual PGO engine, requiring accepted network and raw NNUE evaluation zero. Zero FT parameters give zero transformed bytes and hence count-zero reachability; passing baseline machine code does not make original C++ pointer arithmetic defined.
+
+After correctness and compiler subprocesses finish, pin children to one allowed logical CPU. Run six balanced alternating warmup pairs at depth 16 (six runs per variant), then 40 alternating measured pairs (AB, BA, repeated). Every process is fresh; hash and one engine thread are explicit. Record engine milliseconds, wall time, node equality, complete logs, all warmups and all pairs. Preserve all pairs including early ones. No source changes, retries or new studies based on results.
+
+Primary descriptive statistic: geometric speed ratio `exp(mean(log(base_ms/fix_ms)))-1`; nominal paired 95% t interval with df39, critical 2.022691. The interval does not model every VM or systematic PGO/code-layout effect. Do not infer Elo or universal zero-cost behavior. One hosted machine and one PGO build per variant limit generalization. No posthoc trimming or acceptance threshold.
+
+Whole CI job maximum 45 minutes, script maximum 42 minutes, absolute cutoff 14:00 UTC. Refuse a start after 13:10 UTC. Upload only logs/JSON, not binaries, networks, profiles or worktrees. On failure retain partial observations and HOLD; do not silently rerun.

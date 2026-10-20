@@ -20,8 +20,8 @@ int main() {
         return 77;
     __cpuid(1, a, b, c, d);
 #endif
-    if ((c & (1u << 27)) == 0 || (c & (1u << 28)) == 0) {
-        std::cout << "OSXSAVE/AVX unavailable; AVX-512 runtime skipped\n";
+    if ((c & (1u << 27)) == 0 || (c & (1u << 28)) == 0 || (c & (1u << 23)) == 0) {
+        std::cout << "OSXSAVE/AVX/POPCNT unavailable; AVX-512 runtime skipped\n";
         return 77;
     }
     const auto xcr0 = _xgetbv(0);
@@ -37,9 +37,13 @@ int main() {
     __cpuid_count(7, 0, a, b, c, d);
 #endif
     const unsigned avx512Mask = (1u << 16) | (1u << 17) | (1u << 28) | (1u << 30) | (1u << 31);
-    const bool supported = (b & avx512Mask) == avx512Mask && (c & (1u << 11));
+    const unsigned avx2BmiMask = (1u << 5) | (1u << 3) | (1u << 8);
+    const bool supported = (b & avx512Mask) == avx512Mask && (c & (1u << 11))
+                        && (b & avx2BmiMask) == avx2BmiMask;
     std::cout << "AVX512F=" << bool(b & (1u << 16)) << " AVX512BW="
               << bool(b & (1u << 30)) << " AVX512VNNI=" << bool(c & (1u << 11))
-              << " AVX512_DQ_CD_VL=" << bool((b & avx512Mask) == avx512Mask) << " XCR0=" << xcr0 << '\n';
+              << " AVX512_DQ_CD_VL=" << bool((b & avx512Mask) == avx512Mask)
+              << " AVX2_BMI_BMI2=" << bool((b & avx2BmiMask) == avx2BmiMask)
+              << " POPCNT=1 XCR0=" << xcr0 << '\n';
     return supported ? 0 : 77;
 }
