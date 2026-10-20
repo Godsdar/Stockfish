@@ -1,0 +1,89 @@
+diff --git a/src/nnue/features/full_threats.cpp b/src/nnue/features/full_threats.cpp
+index 8efbabd..64dcc70 100644
+--- a/src/nnue/features/full_threats.cpp
++++ b/src/nnue/features/full_threats.cpp
+@@ -43,20 +43,14 @@ constexpr std::array<Piece, 12> AllPieces = {
+ };
+ 
+ constexpr auto index_lut2_array() {
+-    std::array<std::array<std::array<u16, SQUARE_NB>, SQUARE_NB>, PIECE_TYPE_NB> indices{};
++    std::array<std::array<u16, SQUARE_NB>, PIECE_TYPE_NB> indices{};
+ 
+     for (PieceType pt : {PAWN, KNIGHT, BISHOP, ROOK, QUEEN, KING})
+     {
+         u16 offset = 0;
+         for (Square from = SQ_A1; from <= SQ_H8; ++from)
+         {
+-            for (Square to = SQ_A1; to <= SQ_H8; ++to)
+-            {
+-                Bitboard attacks      = (pt != PAWN) ? Attacks::PseudoAttacks[pt][from]
+-                                      : (to < from)  ? Attacks::PseudoAttacks[BLACK][from]
+-                                                     : Attacks::PseudoAttacks[WHITE][from];
+-                indices[pt][from][to] = offset + constexpr_popcount(((1ULL << to) - 1) & attacks);
+-            }
++            indices[pt][from] = offset;
+ 
+             if (pt != PAWN)
+                 offset += constexpr_popcount(Attacks::PseudoAttacks[pt][from]);
+@@ -134,13 +128,18 @@ constexpr auto init_index_luts() {
+ struct alignas(64) ThreatLUTs {
+     // [attacker][attacked][from < to]
+     std::array<std::array<std::array<u32, 2>, PIECE_NB>, PIECE_NB> lut1 = init_index_luts();
+-    // [pt][from][to]
+-    std::array<std::array<std::array<u16, SQUARE_NB>, SQUARE_NB>, PIECE_TYPE_NB> lut2 =
+-      index_lut2_array();
++    // [pt][from]
++    std::array<std::array<u16, SQUARE_NB>, PIECE_TYPE_NB> lut2 = index_lut2_array();
+ };
+ 
+ constexpr ThreatLUTs threat_luts{};
+ 
++sf_always_inline IndexType geometry_index(PieceType pt, unsigned from, unsigned to) {
++    const auto attackType = pt != PAWN ? unsigned(pt) : (to < from ? BLACK : WHITE);
++    const auto attacks    = Attacks::PseudoAttacks[attackType][from];
++    return threat_luts.lut2[pt][from] + popcount(((1ULL << to) - 1) & attacks);
++}
++
+ // Index of a feature for a given king position and another piece on some square
+ sf_always_inline IndexType FullThreats::make_index(
+   Color perspective, Piece attacker, Square from, Square to, Piece attacked, Square ksq) {
+@@ -153,7 +152,7 @@ sf_always_inline IndexType FullThreats::make_index(
+     unsigned attacked_oriented = attacked ^ swap;
+ 
+     return threat_luts.lut1[attacker_oriented][attacked_oriented][from_oriented < to_oriented]
+-         + threat_luts.lut2[type_of(attacker)][from_oriented][to_oriented];
++         + geometry_index(type_of(attacker), from_oriented, to_oriented);
+ }
+ 
+ // Get a list of indices for active features in ascending order
+@@ -227,9 +226,9 @@ void FullThreats::append_changed_indices(Color                   perspective,
+         const unsigned from  = u8(raw) ^ orient;
+         const unsigned to    = u8(raw >> 8) ^ orient;
+         const unsigned pair  = u8(raw >> 16);
+-        const auto&    plut2 = threat_luts.lut2[(pair >> 4) & 7];
++        const auto     pt    = PieceType((pair >> 4) & 7);
+ 
+-        const IndexType index = lut1_flat[pair ^ pair_swap][from < to] + plut2[from][to];
++        const IndexType index = lut1_flat[pair ^ pair_swap][from < to] + geometry_index(pt, from, to);
+ 
+         if (prefetchBase)
+             prefetch<PrefetchRw::READ, PrefetchLoc::LOW>(reinterpret_cast<const void*>(
+@@ -261,15 +260,15 @@ void FullThreats::append_changed_indices_both(Square                  white_ksq,
+         const unsigned from  = u8(raw);
+         const unsigned to    = u8(raw >> 8);
+         const unsigned pair  = u8(raw >> 16);
+-        const auto&    plut2 = threat_luts.lut2[(pair >> 4) & 7];
++        const auto     pt    = PieceType((pair >> 4) & 7);
+ 
+         const unsigned  w_from      = from ^ w_orient;
+         const unsigned  w_to        = to ^ w_orient;
+-        const IndexType white_index = lut1_flat[pair][w_from < w_to] + plut2[w_from][w_to];
++        const IndexType white_index = lut1_flat[pair][w_from < w_to] + geometry_index(pt, w_from, w_to);
+ 
+         const unsigned  b_from      = from ^ b_orient;
+         const unsigned  b_to        = to ^ b_orient;
+-        const IndexType black_index = lut1_flat[pair ^ 0x88][b_from < b_to] + plut2[b_from][b_to];
++        const IndexType black_index = lut1_flat[pair ^ 0x88][b_from < b_to] + geometry_index(pt, b_from, b_to);
+ 
+         if (prefetchBase)
+         {
