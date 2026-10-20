@@ -1,0 +1,64 @@
+name: NNUE failed-load recovery final validation
+on:
+  push:
+    branches: [research/nnue-recovery-final-ci]
+permissions:
+  contents: read
+jobs:
+  recovery:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-2022]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: "1"
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - name: Prepare network and manifest
+        run: |
+          mkdir -p results
+          git rev-parse HEAD > results/ci-head.txt
+          git diff 063cc61 -- src/nnue/network.cpp tests/instrumented.py > results/source-diff.txt
+          test ! -s results/source-diff.txt
+          make -C src net
+          python --version
+          python -m pip install requests
+      - name: Linux build
+        if: runner.os == 'Linux'
+        env:
+          CXXFLAGS: -Werror
+        run: |
+          lscpu > results/cpu.txt
+          g++ --version > results/compiler.txt
+          make -C src -j4 build ARCH=x86-64-avx2 COMP=gcc
+      - name: Set up MSVC
+        if: runner.os == 'Windows'
+        uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756
+      - name: Windows build
+        if: runner.os == 'Windows'
+        run: python .github/research/build_windows.py src
+      - name: Windows CPU
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: Get-CimInstance Win32_Processor | Select-Object Name, NumberOfCores, NumberOfLogicalProcessors | Out-File results/cpu.txt
+      - name: Nine UCI recovery scenarios and upstream tests
+        run: |
+          suffix=''
+          if [ "$RUNNER_OS" = 'Windows' ]; then suffix='.exe'; fi
+          python .github/research/probe_net_recovery.py "src/stockfish${suffix}" src/nn-c9e480e92425.nnue results/recovery --expect-fixed | tee results/recovery.log
+          python tests/instrumented.py --none "src/stockfish${suffix}" > results/instrumented.log
+          cat results/instrumented.log
+          "src/stockfish${suffix}" bench > results/bench.stdout 2> results/bench.log
+          python -c "import pathlib,re; s=pathlib.Path('results/bench.log').read_text(); assert int(re.search(r'Nodes searched\s*:\s*(\d+)',s).group(1))==1559611"
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: recovery-${{ matrix.os }}
+          path: results/
