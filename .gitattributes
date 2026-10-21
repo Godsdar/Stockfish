@@ -1,2 +1,5 @@
 # normalize line endings for all text files
 * text=auto eol=lf
+
+# Preserve raw native validation evidence byte-for-byte.
+validation-results/** -text
