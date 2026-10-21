@@ -1,0 +1,53 @@
+{
+  "start_utc": "2026-10-21T06:35:38.982863+00:00",
+  "commit": "e6c3a5fba865c1d56fadf7cf607ae080547d620c",
+  "commands": [
+    [
+      [
+        "make",
+        "-C",
+        "/Users/godsdar/Documents/Codex/2026-10-21/stockfish-tt-s3-five-hour/work/resumed/bug-hunt/Stockfish-options/src",
+        "-j2",
+        "build",
+        "ARCH=apple-silicon",
+        "COMP=clang"
+      ],
+      "/Users/godsdar/Documents/Codex/2026-10-21/stockfish-tt-s3-five-hour/work/resumed/bug-hunt",
+      "build.log"
+    ],
+    [
+      [
+        "/Users/godsdar/Documents/Codex/2026-10-21/stockfish-tt-s3-five-hour/work/resumed/bug-hunt/Stockfish-options/src/stockfish",
+        "bench"
+      ],
+      "/Users/godsdar/Documents/Codex/2026-10-21/stockfish-tt-s3-five-hour/work/resumed/bug-hunt/Stockfish-options",
+      "bench.log"
+    ],
+    [
+      [
+        "/Users/godsdar/Documents/Codex/2026-10-20/i-gave-you-a-research-research/work/venv/bin/python",
+        "/Users/godsdar/Documents/Codex/2026-10-21/stockfish-tt-s3-five-hour/work/resumed/bug-hunt/Stockfish-options/tests/instrumented.py",
+        "--none",
+        "/Users/godsdar/Documents/Codex/2026-10-21/stockfish-tt-s3-five-hour/work/resumed/bug-hunt/Stockfish-options/src/stockfish"
+      ],
+      "/Users/godsdar/Documents/Codex/2026-10-21/stockfish-tt-s3-five-hour/work/resumed/bug-hunt/Stockfish-options",
+      "instrumented.log"
+    ],
+    [
+      [
+        "/Users/godsdar/Documents/Codex/2026-10-20/i-gave-you-a-research-research/work/venv/bin/python",
+        "/Users/godsdar/Documents/Codex/2026-10-21/stockfish-tt-s3-five-hour/work/smoke_uci.py",
+        "/Users/godsdar/Documents/Codex/2026-10-21/stockfish-tt-s3-five-hour/work/resumed/bug-hunt/Stockfish-options/src/stockfish",
+        "/Users/godsdar/Documents/Codex/2026-10-21/stockfish-tt-s3-five-hour/work/resumed/bug-hunt/macos/smoke.json"
+      ],
+      "/Users/godsdar/Documents/Codex/2026-10-21/stockfish-tt-s3-five-hour/work/resumed/bug-hunt",
+      "smoke.log"
+    ]
+  ],
+  "CXXFLAGS": "-isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -Werror",
+  "LDFLAGS": "-isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+  "end_utc": "2026-10-21T06:35:59.395518+00:00",
+  "passed": true,
+  "bench": 1559611,
+  "binary_sha256": "7fd793d93a5b0bf9711e408543ca8bab134b989f5ad89b8edc3805dc38502be5"
+}

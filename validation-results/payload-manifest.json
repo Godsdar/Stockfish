@@ -242,5 +242,89 @@
   "options-windows-2022/validation-commit.txt": {
     "size": 41,
     "sha256": "d0809f6a4f5630e4982f6ddef52409b12ca1a91dc9fdbebe52ac80c86b62e163"
+  },
+  "options-macos-arm64/build_integration.py": {
+    "size": 1260,
+    "sha256": "c6250b5f54aec32bd6e11f684215515b15681e01d30f666518e901cb15968a9b"
+  },
+  "options-macos-arm64/validate_macos.py": {
+    "size": 1991,
+    "sha256": "804bcdab180fce167f7d68122bb04d66bdfcf2466628b81e9f8cc0e0d443d8a8"
+  },
+  "options-macos-arm64/engine-options-fixed.stdout": {
+    "size": 2083,
+    "sha256": "95cb4df506e06681d82f72560189728f8e50b6e0b25e97e374b0e4ed189a52ee"
+  },
+  "options-macos-arm64/engine-options-base.stdout": {
+    "size": 1052,
+    "sha256": "4e5de64c9668808bd94b5446caecd7fb07398c4c58948d6ebdb76defcfddab15"
+  },
+  "options-macos-arm64/instrumented.log": {
+    "size": 7307,
+    "sha256": "b5482e244d564e306d295d45dac140cfd215d5eb0c30e04ed0f34598ee36e405"
+  },
+  "options-macos-arm64/engine-options-base.stderr": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "options-macos-arm64/build-integration-fixed.log": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "options-macos-arm64/engine-options-fixed.stderr": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "options-macos-arm64/options_cases.cpp": {
+    "size": 2628,
+    "sha256": "3f460c5c871296ad50dc2b07f0f351b02f3e04adea3f9eeff2e473511d9ef15a"
+  },
+  "options-macos-arm64/engine_options_repro.cpp": {
+    "size": 509,
+    "sha256": "42558a947f92990cbe0d6a6b7b8be72a77464f7d440289d9c7a93987c4e0fbf5"
+  },
+  "options-macos-arm64/smoke.log": {
+    "size": 212,
+    "sha256": "329be817abc02efb3c64b413be674fa5c0f07827cda96765503cce6109ae1154"
+  },
+  "options-macos-arm64/build-cases.log": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "options-macos-arm64/compiler.txt": {
+    "size": 204,
+    "sha256": "2790493e172ddd4174a259f81910698624756d49d41a06431c72c8861d70fac1"
+  },
+  "options-macos-arm64/cases-results.json": {
+    "size": 2361,
+    "sha256": "15c94d16d850a2c0b38c88488da5e49216c2328be19f88cd1f41614f98cb59d6"
+  },
+  "options-macos-arm64/build-integration-base.log": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "options-macos-arm64/integration-commands.json": {
+    "size": 6532,
+    "sha256": "46f2d04055a78005ee01f5b1d24997cc47e3a5a7c8ec483aa4faa166f2eaa11f"
+  },
+  "options-macos-arm64/smoke.json": {
+    "size": 122276,
+    "sha256": "a218414572f9428cc52b45ff69f3d150a5c13592d5026cb7f073968cc04aca52"
+  },
+  "options-macos-arm64/binary-identities.json": {
+    "size": 503,
+    "sha256": "bdd189bb26a3629b86ff757d43c1df5b6c3b78d32a3e553b126d447b5fd4b335"
+  },
+  "options-macos-arm64/execution.json": {
+    "size": 2419,
+    "sha256": "151d99f34734dd9c0291b56b258d0663678237567d7a7d7373a640f1554f3b3e"
+  },
+  "options-macos-arm64/bench.log": {
+    "size": 93219,
+    "sha256": "8007875a48118769cc6b3cde00d1189132dfa13fb3d49c38a6f167d5120dbfb0"
+  },
+  "options-macos-arm64/build.log": {
+    "size": 17078,
+    "sha256": "8283ebc2be83f4c05817039ce463024b1098fd71ce35f1784c6fef1bc3d74532"
   }
 }

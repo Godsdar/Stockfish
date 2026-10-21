@@ -1,0 +1,5744 @@
+{
+  "seed": 20261020,
+  "results": [
+    {
+      "index": 0,
+      "scenario": "depth8",
+      "fen": "rnbqkbnr/pppppppp/8/8/5P2/8/PPPPP1PP/RNBQKBNR b KQkq - 0 1",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "d7d5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 4303,
+          "score": "PovScore(Cp(+12), BLACK)",
+          "pv": [
+            "d7d5",
+            "g1f3",
+            "c7c6",
+            "e2e3",
+            "c8g4",
+            "f1e2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "scenario": "nodes10000",
+      "fen": "rnbqk1nr/p1pppp1p/1p6/6P1/8/N6P/PbPPP1P1/R1BQKBNR w KQkq - 0 5",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "c1b2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10002,
+          "score": "PovScore(Cp(+768), WHITE)",
+          "pv": [
+            "c1b2",
+            "e7e5",
+            "g1f3",
+            "d7d6",
+            "e2e4",
+            "h7h6",
+            "f1b5",
+            "c7c6",
+            "b5c4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "scenario": "multipv4",
+      "fen": "rnbq1k2/p1ppp2p/1p3B2/5pP1/8/N3P2P/P1PP2P1/R2QKBNR b KQ - 0 8",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "b6b5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3668,
+          "score": "PovScore(Cp(-716), BLACK)",
+          "pv": [
+            "b6b5",
+            "d2d3",
+            "b5b4",
+            "f6g7",
+            "f8g8"
+          ]
+        },
+        {
+          "nodes": 3668,
+          "score": "PovScore(Cp(-723), BLACK)",
+          "pv": [
+            "b8a6",
+            "d2d3"
+          ]
+        },
+        {
+          "nodes": 3668,
+          "score": "PovScore(Cp(-732), BLACK)",
+          "pv": [
+            "f8f7",
+            "d2d3",
+            "f7e6",
+            "d1c1"
+          ]
+        },
+        {
+          "nodes": 3668,
+          "score": "PovScore(Cp(-790), BLACK)",
+          "pv": [
+            "a7a6",
+            "d2d3",
+            "e7f6",
+            "e3e4",
+            "d8e7",
+            "d1c1",
+            "e7b4",
+            "c2c3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "scenario": "mate2_nodes10000",
+      "fen": "rn1q1k2/pbpp4/1p3P2/7p/5p2/N3P1PP/P1PP4/2RQKBNR w K - 0 12",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "g3f4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10000,
+          "score": "PovScore(Cp(+803), WHITE)",
+          "pv": [
+            "g3f4",
+            "b7h1",
+            "a3b5",
+            "d8f6",
+            "d1h5",
+            "f6b2",
+            "h5f5",
+            "f8g8",
+            "f1c4",
+            "d7d5",
+            "c4d5",
+            "h1d5",
+            "f5d5",
+            "g8g7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "scenario": "depth8",
+      "fen": "r2q1k2/pbpp4/np3P2/7Q/2N2P2/6PP/P1PP4/2R1K1NR b K - 2 15",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "d8e8",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 759,
+          "score": "PovScore(Cp(-659), BLACK)",
+          "pv": [
+            "d8e8",
+            "h5e2",
+            "e8g6",
+            "e2e7",
+            "f8g8",
+            "f6f7",
+            "g6f7",
+            "e7f7",
+            "g8f7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "scenario": "nodes10000",
+      "fen": "r6Q/pb1pk3/1pp5/2n5/2N2P2/6PP/P1PP3R/2R1K1N1 w - - 2 19",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "h2e2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10002,
+          "score": "PovScore(Cp(+1530), WHITE)",
+          "pv": [
+            "h2e2",
+            "c5e6",
+            "h8g7",
+            "e7e8",
+            "e2e6",
+            "d7e6",
+            "c4d6",
+            "e8d8",
+            "d6b7",
+            "d8c8",
+            "b7d6",
+            "c8d8"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "scenario": "multipv4",
+      "fen": "b7/p2pk3/n1p5/1p6/2N2PPP/3P4/P1P4R/2R1K1N1 b - - 0 22",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "b5c4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 2367,
+          "score": "PovScore(Cp(-819), BLACK)",
+          "pv": [
+            "b5c4",
+            "d3c4",
+            "e7d8",
+            "e1f1",
+            "c6c5"
+          ]
+        },
+        {
+          "nodes": 2367,
+          "score": "PovScore(Cp(-841), BLACK)",
+          "pv": [
+            "a6c5",
+            "h2e2",
+            "e7d8",
+            "c4e5",
+            "c5a4"
+          ]
+        },
+        {
+          "nodes": 2367,
+          "score": "PovScore(Cp(-863), BLACK)",
+          "pv": [
+            "d7d6"
+          ]
+        },
+        {
+          "nodes": 2367,
+          "score": "PovScore(Cp(-875), BLACK)",
+          "pv": [
+            "e7d8",
+            "c4e5",
+            "a6c5",
+            "c2c3",
+            "d7d6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "scenario": "mate2_nodes10000",
+      "fen": "b3k3/p7/n1pp4/6N1/2P2PPP/8/P1P4R/2R1K3 w - - 0 26",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "c1d1",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10008,
+          "score": "PovScore(Cp(+1126), WHITE)",
+          "pv": [
+            "c1d1",
+            "e8d7",
+            "h4h5",
+            "a6b4",
+            "c4c5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "scenario": "depth8",
+      "fen": "b2k4/p7/n1p5/5PN1/2p3PP/6R1/P1P5/2R2K2 b - - 1 29",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "a6c5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 864,
+          "score": "PovScore(Cp(-991), BLACK)",
+          "pv": [
+            "a6c5",
+            "c1d1",
+            "d8c7",
+            "a2a3",
+            "c7b7",
+            "h4h5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "scenario": "nodes10000",
+      "fen": "b3k3/p7/n7/2N2PP1/2p4P/6R1/P1P5/2R2K2 w - - 1 33",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "c1e1",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10016,
+          "score": "PovScore(Cp(+1210), WHITE)",
+          "pv": [
+            "c1e1",
+            "e8d8",
+            "c5e6",
+            "d8c8",
+            "f5f6",
+            "a6b8",
+            "g5g6",
+            "a8d5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "scenario": "multipv4",
+      "fen": "8/p2k4/N7/5PP1/7P/3P4/P7/4RK1b b - - 2 36",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "h1f3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 16859,
+          "score": "PovScore(Cp(-705), BLACK)",
+          "pv": [
+            "h1f3",
+            "g5g6",
+            "f3a8"
+          ]
+        },
+        {
+          "nodes": 16859,
+          "score": "PovScore(Cp(-722), BLACK)",
+          "pv": [
+            "h1c6",
+            "g5g6",
+            "d7d8"
+          ]
+        },
+        {
+          "nodes": 16859,
+          "score": "PovScore(Cp(-751), BLACK)",
+          "pv": [
+            "h1d5",
+            "g5g6",
+            "d5a2",
+            "f5f6",
+            "a2e6",
+            "h4h5",
+            "e6f5"
+          ]
+        },
+        {
+          "nodes": 16859,
+          "score": "PovScore(Cp(-759), BLACK)",
+          "pv": [
+            "h1b7",
+            "g5g6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "scenario": "mate2_nodes10000",
+      "fen": "4k3/p7/N7/5PP1/b6P/3P4/5K2/8 w - - 0 40",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "f5f6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10012,
+          "score": "PovScore(Cp(+578), WHITE)",
+          "pv": [
+            "f5f6",
+            "e8f7",
+            "f2e3",
+            "a4b5",
+            "a6c7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "scenario": "depth8",
+      "fen": "1N2k1b1/p5P1/8/5P2/7P/3P4/4K3/8 b - - 4 43",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "e8f7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1904,
+          "score": "PovScore(Cp(-165), BLACK)",
+          "pv": [
+            "e8f7",
+            "b8d7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "scenario": "nodes10000",
+      "fen": "1N3kB1/p7/8/8/7P/3b4/6K1/8 w - - 0 47",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "g8d5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10001,
+          "score": "PovScore(Cp(+166), WHITE)",
+          "pv": [
+            "g8d5",
+            "a7a5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "scenario": "multipv4",
+      "fen": "5k2/8/b7/8/7P/7K/8/8 b - - 1 50",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "a6e2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 6848,
+          "score": "PovScore(Cp(0), BLACK)",
+          "pv": [
+            "a6e2",
+            "h3g3",
+            "f8g7",
+            "g3f2"
+          ]
+        },
+        {
+          "nodes": 6848,
+          "score": "PovScore(Cp(0), BLACK)",
+          "pv": [
+            "f8e8"
+          ]
+        },
+        {
+          "nodes": 6848,
+          "score": "PovScore(Cp(0), BLACK)",
+          "pv": [
+            "a6f1",
+            "h3g3",
+            "f1d3",
+            "g3f2",
+            "f8e8",
+            "f2g2",
+            "d3g6"
+          ]
+        },
+        {
+          "nodes": 6848,
+          "score": "PovScore(Cp(0), BLACK)",
+          "pv": [
+            "a6c4",
+            "h4h5",
+            "c4e6",
+            "h3g2",
+            "f8e8",
+            "g2f2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "scenario": "mate2_nodes10000",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/P7/1PPPPPPP/RNBQKBNR b KQkq - 0 1",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "d7d5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10000,
+          "score": "PovScore(Cp(-2), BLACK)",
+          "pv": [
+            "d7d5",
+            "d2d4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "scenario": "depth8",
+      "fen": "1rbqkbnr/ppppp2p/n4p2/6p1/Q1P5/P7/RP1PPPPP/1NB1KBNR w Kk - 2 5",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "d2d4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1553,
+          "score": "PovScore(Cp(+162), WHITE)",
+          "pv": [
+            "d2d4",
+            "c7c6",
+            "e2e3",
+            "d7d5",
+            "b1c3",
+            "a6c7",
+            "c3d5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "scenario": "nodes10000",
+      "fen": "2bqkbnr/p1ppp2p/p4p2/6p1/2P5/P2P3P/R3NPP1/1NB1KB1R b Kk - 0 8",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "e7e6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10019,
+          "score": "PovScore(Cp(+625), BLACK)",
+          "pv": [
+            "e7e6",
+            "e2g3",
+            "g8e7",
+            "f1e2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "scenario": "multipv4",
+      "fen": "2bqk1nr/p1ppp1b1/p7/2P3pp/8/P2P3P/R3NPP1/1N1K1B1R w k - 3 12",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "e2c1",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3407,
+          "score": "PovScore(Cp(-880), WHITE)",
+          "pv": [
+            "e2c1",
+            "d7d6",
+            "c1b3",
+            "e7e6",
+            "b3a5",
+            "d6c5",
+            "a5c6",
+            "d8d5"
+          ]
+        },
+        {
+          "nodes": 3407,
+          "score": "PovScore(Cp(-895), WHITE)",
+          "pv": [
+            "b1d2",
+            "e7e6",
+            "d2b3"
+          ]
+        },
+        {
+          "nodes": 3407,
+          "score": "PovScore(Cp(-937), WHITE)",
+          "pv": [
+            "g2g3",
+            "e7e6",
+            "b1c3",
+            "d7d6",
+            "c3e4"
+          ]
+        },
+        {
+          "nodes": 3407,
+          "score": "PovScore(Cp(-939), WHITE)",
+          "pv": [
+            "f2f4",
+            "g5f4",
+            "e2f4",
+            "e7e6",
+            "f4g6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "scenario": "mate2_nodes10000",
+      "fen": "2bq1knr/p1ppp3/p7/2P3pp/5P2/b2P3P/6PR/1NNK1B2 b - - 0 15",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "a3c5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10008,
+          "score": "PovScore(Cp(+1113), BLACK)",
+          "pv": [
+            "a3c5",
+            "g2g4",
+            "g5f4",
+            "g4h5",
+            "h8h5",
+            "h2c2",
+            "d7d5",
+            "c2c5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "scenario": "depth8",
+      "fen": "2bq1kn1/p1p1p3/p6r/2Pp3p/5P2/N2P3P/2K4R/2N2B2 w - - 1 19",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "h2g2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 606,
+          "score": "PovScore(Cp(-916), WHITE)",
+          "pv": [
+            "h2g2",
+            "g8f6",
+            "g2g5",
+            "d5d4",
+            "h3h4",
+            "f6g4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "scenario": "nodes10000",
+      "fen": "2bq2n1/p3p1k1/p1pr4/2Pp3p/5P1P/1K1P4/1RN5/2N2B2 b - - 5 22",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "d6f6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10004,
+          "score": "PovScore(Cp(+880), BLACK)",
+          "pv": [
+            "d6f6",
+            "b3c3",
+            "d8a5",
+            "c3b3",
+            "g8h6",
+            "c2b4",
+            "d5d4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "scenario": "multipv4",
+      "fen": "3q2n1/pb2p1k1/N1p2r2/2Pp3p/5P1P/1K1P4/4R3/2N2B2 w - - 3 26",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "e2g2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3526,
+          "score": "PovScore(Cp(-837), WHITE)",
+          "pv": [
+            "e2g2",
+            "g7h8",
+            "f1e2",
+            "b7c8",
+            "e2h5",
+            "c8h3"
+          ]
+        },
+        {
+          "nodes": 3526,
+          "score": "PovScore(Cp(-848), WHITE)",
+          "pv": [
+            "a6c7",
+            "b7c8",
+            "e2g2",
+            "g7f8"
+          ]
+        },
+        {
+          "nodes": 3526,
+          "score": "PovScore(Cp(-863), WHITE)",
+          "pv": [
+            "f1h3",
+            "g7h8",
+            "e2g2",
+            "b7a6"
+          ]
+        },
+        {
+          "nodes": 3526,
+          "score": "PovScore(Cp(-885), WHITE)",
+          "pv": [
+            "f1g2",
+            "b7a6",
+            "g2h3",
+            "g7h8"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "scenario": "mate2_nodes10000",
+      "fen": "6n1/pN4k1/2p5/3p3p/5r1P/2KP4/8/2N2B2 b - - 0 29",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "f4f1",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10003,
+          "score": "PovScore(Cp(+568), BLACK)",
+          "pv": [
+            "f4f1",
+            "c1e2",
+            "g7g6",
+            "e2g3",
+            "f1f6",
+            "b7d8",
+            "c6c5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "scenario": "depth8",
+      "fen": "6n1/p7/8/2Np1k1p/7r/2KP4/8/2N5 w - - 0 33",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "c1b3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 840,
+          "score": "PovScore(Cp(-604), WHITE)",
+          "pv": [
+            "c1b3",
+            "f5g4",
+            "c3d4",
+            "h4h2",
+            "d4d5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "scenario": "nodes10000",
+      "fen": "6n1/8/p7/3p1k1p/3P4/2K5/8/4N3 b - - 1 36",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "g8e7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10005,
+          "score": "PovScore(Cp(+594), BLACK)",
+          "pv": [
+            "g8e7",
+            "c3b4",
+            "a6a5",
+            "b4a5",
+            "h5h4",
+            "a5b4",
+            "h4h3",
+            "e1f3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "scenario": "multipv4",
+      "fen": "8/8/p2k4/3p1n1p/3P4/8/3K2N1/8 w - - 8 40",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "d2c2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3402,
+          "score": "PovScore(Cp(-569), WHITE)",
+          "pv": [
+            "d2c2",
+            "h5h4"
+          ]
+        },
+        {
+          "nodes": 3402,
+          "score": "PovScore(Cp(-579), WHITE)",
+          "pv": [
+            "d2c3",
+            "h5h4",
+            "g2h4",
+            "f5h4",
+            "c3b2"
+          ]
+        },
+        {
+          "nodes": 3402,
+          "score": "PovScore(Cp(-589), WHITE)",
+          "pv": [
+            "d2c1",
+            "h5h4",
+            "g2h4",
+            "f5h4"
+          ]
+        },
+        {
+          "nodes": 3402,
+          "score": "PovScore(Cp(-612), WHITE)",
+          "pv": [
+            "d2e1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "scenario": "mate2_nodes10000",
+      "fen": "8/8/p2k4/3p1n2/7N/8/4K3/8 b - - 0 43",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "f5h4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10021,
+          "score": "PovScore(Cp(+669), BLACK)",
+          "pv": [
+            "f5h4",
+            "e2e3",
+            "a6a5",
+            "e3f4",
+            "h4g6",
+            "f4g3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "scenario": "depth8",
+      "fen": "8/3k4/p5n1/8/8/3K4/8/8 w - - 3 47",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "d3d4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 731,
+          "score": "PovScore(Cp(-444), WHITE)",
+          "pv": [
+            "d3d4",
+            "g6e7",
+            "d4c5",
+            "e7c8",
+            "c5b4",
+            "c8d6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "scenario": "nodes10000",
+      "fen": "8/2k5/p5n1/8/8/8/4K3/8 b - - 10 50",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "g6e5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10005,
+          "score": "PovScore(Cp(+577), BLACK)",
+          "pv": [
+            "g6e5",
+            "e2e3",
+            "c7c6",
+            "e3d2",
+            "c6b5",
+            "d2c1",
+            "e5f7",
+            "c1b2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "scenario": "multipv4",
+      "fen": "rnbqkbnr/pppppppp/8/8/8/6P1/PPPPPP1P/RNBQKBNR b KQkq - 0 1",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "e7e5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 6528,
+          "score": "PovScore(Cp(+12), BLACK)",
+          "pv": [
+            "e7e5",
+            "d2d4",
+            "e5d4",
+            "d1d4",
+            "g8f6"
+          ]
+        },
+        {
+          "nodes": 6528,
+          "score": "PovScore(Cp(+7), BLACK)",
+          "pv": [
+            "c7c5",
+            "c2c3",
+            "d7d5",
+            "d2d4",
+            "c5d4",
+            "c3d4"
+          ]
+        },
+        {
+          "nodes": 6528,
+          "score": "PovScore(Cp(-4), BLACK)",
+          "pv": [
+            "d7d5",
+            "d2d4",
+            "c7c6",
+            "g1f3"
+          ]
+        },
+        {
+          "nodes": 6528,
+          "score": "PovScore(Cp(-8), BLACK)",
+          "pv": [
+            "g8f6",
+            "c2c4",
+            "e7e5",
+            "b1c3",
+            "c7c6",
+            "d2d4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "scenario": "mate2_nodes10000",
+      "fen": "r1bqkbnr/pp2p1pp/n1pp4/5p2/8/N2PP1P1/PPP2P1P/R1BQKBNR w KQkq - 0 5",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "d3d4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10022,
+          "score": "PovScore(Cp(-6), WHITE)",
+          "pv": [
+            "d3d4",
+            "g8f6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "scenario": "depth8",
+      "fen": "rn1qkbnr/pp1bp1pp/3p4/2p2p2/8/N2PPPP1/PPPB3P/1RQ1KBNR b Kkq - 0 8",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "e7e5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 4613,
+          "score": "PovScore(Cp(+19), BLACK)",
+          "pv": [
+            "e7e5",
+            "f1g2",
+            "g8f6",
+            "f3f4",
+            "e5e4",
+            "g1h3",
+            "b8c6",
+            "d3e4",
+            "f6e4",
+            "e1g1",
+            "f8e7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "scenario": "nodes10000",
+      "fen": "rn2kb1r/pp2p1pp/1q1p1n2/2p2bB1/8/N2P1PP1/PPP4P/1RQ1KBNR w Kkq - 2 12",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "a3c4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10011,
+          "score": "PovScore(Cp(+28), WHITE)",
+          "pv": [
+            "a3c4",
+            "b6a6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "scenario": "multipv4",
+      "fen": "r3kb1r/pp2p1pp/2np1n2/2B5/8/Nq1P1PP1/P6P/1RQ1KBNR b Kkq - 0 15",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "b3d5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10872,
+          "score": "PovScore(Cp(-378), BLACK)",
+          "pv": [
+            "b3d5",
+            "c5e3",
+            "c6e5",
+            "a3c4",
+            "e5f3",
+            "e1e2",
+            "f3e5",
+            "c4e5"
+          ]
+        },
+        {
+          "nodes": 10872,
+          "score": "PovScore(Cp(-452), BLACK)",
+          "pv": [
+            "b3a4",
+            "c5e3",
+            "d6d5",
+            "e3d2"
+          ]
+        },
+        {
+          "nodes": 10872,
+          "score": "PovScore(Cp(-519), BLACK)",
+          "pv": [
+            "b3e6",
+            "c5e3",
+            "f6d5",
+            "a3c2",
+            "d5e3",
+            "c2e3",
+            "c6d4",
+            "c1d2",
+            "d6d5",
+            "f1h3"
+          ]
+        },
+        {
+          "nodes": 10872,
+          "score": "PovScore(Cp(-529), BLACK)",
+          "pv": [
+            "b3a2",
+            "c5e3",
+            "d6d5",
+            "a3b5",
+            "e7e6",
+            "b5c7",
+            "e8d7",
+            "c7a8"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "scenario": "mate2_nodes10000",
+      "fen": "2r1kbqr/pp2p1pp/2n5/2p5/6n1/N2P1P1N/P3K2P/1RQ2B1R w k - 0 19",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "f3g4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10014,
+          "score": "PovScore(Cp(+36), WHITE)",
+          "pv": [
+            "f3g4",
+            "g8d5",
+            "h1g1",
+            "g7g6",
+            "f1g2",
+            "d5d7",
+            "g2c6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "scenario": "depth8",
+      "fen": "2r1kbqr/pR2p1pp/2n5/8/2N5/3P1P2/P4N1P/2Q2K1R b k - 0 22",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "g8d5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3544,
+          "score": "PovScore(Cp(-28), BLACK)",
+          "pv": [
+            "g8d5",
+            "c1f4",
+            "g7g6",
+            "f1g2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "scenario": "nodes10000",
+      "fen": "1q2kb1r/p3p1pp/8/8/8/3P1P2/P4N1P/2rN1K1R w k - 0 26",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "h1g1",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10006,
+          "score": "PovScore(Cp(-1085), WHITE)",
+          "pv": [
+            "h1g1",
+            "b8h2",
+            "g1g4",
+            "h2d6",
+            "g4g5",
+            "d6f4",
+            "g5g4",
+            "f4d2",
+            "g4d4",
+            "c1d1",
+            "f2d1",
+            "d2d1",
+            "f1f2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "scenario": "multipv4",
+      "fen": "1q2kb1r/p3p1pp/8/8/4NP2/3P4/P5KP/3r3R b k - 1 29",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "b8b2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3556,
+          "score": "PovScore(Cp(+1417), BLACK)",
+          "pv": [
+            "b8b2",
+            "g2f3",
+            "d1d3",
+            "f3g4",
+            "b2e2",
+            "g4h4"
+          ]
+        },
+        {
+          "nodes": 3556,
+          "score": "PovScore(Cp(+1185), BLACK)",
+          "pv": [
+            "d1h1",
+            "g2h1",
+            "b8b1",
+            "h1g2",
+            "b1c2",
+            "g2h1",
+            "c2d1",
+            "h1g2"
+          ]
+        },
+        {
+          "nodes": 3556,
+          "score": "PovScore(Cp(+1162), BLACK)",
+          "pv": [
+            "b8b1",
+            "h1d1",
+            "b1d1",
+            "f4f5",
+            "d1c2",
+            "g2g1",
+            "c2b1",
+            "g1g2"
+          ]
+        },
+        {
+          "nodes": 3556,
+          "score": "PovScore(Cp(+1162), BLACK)",
+          "pv": [
+            "d1b1",
+            "h1b1",
+            "b8b1",
+            "f4f5",
+            "b1c1",
+            "f5f6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "scenario": "mate2_nodes10000",
+      "fen": "4k2r/p5pp/5p2/8/1b3q2/3r4/P6P/6KR w k - 2 33",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "h2h3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 446,
+          "score": "PovScore(Mate(-2), WHITE)",
+          "pv": [
+            "h2h3",
+            "b4c5",
+            "g1g2",
+            "f4f2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "scenario": "depth8",
+      "fen": "3k4/p5pr/5p2/8/Pb6/3r4/5K2/8 b - - 1 36",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "h7h2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1950,
+          "score": "PovScore(Mate(+3), BLACK)",
+          "pv": [
+            "h7h2",
+            "f2g1",
+            "h2b2",
+            "g1h1",
+            "d3d1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "scenario": "nodes10000",
+      "fen": "3k4/p5p1/5p1r/6r1/P7/5K2/3b4/8 w - - 8 40",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "f3f2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10010,
+          "score": "PovScore(Cp(-762), WHITE)",
+          "pv": [
+            "f3f2",
+            "g5g4",
+            "f2e2",
+            "h6h2",
+            "e2d1",
+            "g4a4",
+            "d1c2",
+            "h2h3",
+            "c2d2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "scenario": "multipv4",
+      "fen": "3k4/p5p1/5pr1/8/r7/8/8/5K2 b - - 1 43",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "a4a2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 8179,
+          "score": "PovScore(Mate(+2), BLACK)",
+          "pv": [
+            "a4a2",
+            "f1e1",
+            "g6g1"
+          ]
+        },
+        {
+          "nodes": 8179,
+          "score": "PovScore(Mate(+5), BLACK)",
+          "pv": [
+            "a4a3",
+            "f1f2",
+            "g6g3",
+            "f2e1",
+            "a3a2",
+            "e1f1",
+            "g7g6",
+            "f1e1",
+            "g3g1"
+          ]
+        },
+        {
+          "nodes": 8179,
+          "score": "PovScore(Mate(+6), BLACK)",
+          "pv": [
+            "g6g5",
+            "f1e2",
+            "g5g3",
+            "e2f2",
+            "a4a3",
+            "f2e1",
+            "a3a2",
+            "e1f1",
+            "g7g6",
+            "f1e1",
+            "g3g1"
+          ]
+        },
+        {
+          "nodes": 8179,
+          "score": "PovScore(Cp(+850), BLACK)",
+          "pv": [
+            "g6g3",
+            "f1f2",
+            "a4a3",
+            "f2e1",
+            "a3a2",
+            "e1f1",
+            "g7g6",
+            "f1e1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "scenario": "mate2_nodes10000",
+      "fen": "1k6/p5p1/5p2/8/r3r3/5K2/8/8 w - - 8 47",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "f3f2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10016,
+          "score": "PovScore(Cp(-762), WHITE)",
+          "pv": [
+            "f3f2",
+            "f6f5",
+            "f2g2",
+            "e4h4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "scenario": "depth8",
+      "fen": "k7/p5p1/4rp2/8/4r3/7K/8/8 b - - 15 50",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "f6f5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3885,
+          "score": "PovScore(Cp(+741), BLACK)",
+          "pv": [
+            "f6f5",
+            "h3g2",
+            "e4a4",
+            "g2h3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "scenario": "nodes10000",
+      "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "e7e6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10007,
+          "score": "PovScore(Cp(-34), BLACK)",
+          "pv": [
+            "e7e6",
+            "d2d4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "scenario": "multipv4",
+      "fen": "rnbqkbn1/p1ppppp1/7r/7p/pP2P3/B7/2PP1PPP/RN1QKBNR w KQq - 0 5",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "d2d4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 4519,
+          "score": "PovScore(Cp(+97), WHITE)",
+          "pv": [
+            "d2d4",
+            "c8b7"
+          ]
+        },
+        {
+          "nodes": 4519,
+          "score": "PovScore(Cp(+96), WHITE)",
+          "pv": [
+            "g1f3",
+            "c8b7",
+            "b1c3",
+            "e7e5",
+            "b4b5"
+          ]
+        },
+        {
+          "nodes": 4519,
+          "score": "PovScore(Cp(+88), WHITE)",
+          "pv": [
+            "b1c3",
+            "b8c6",
+            "g1f3",
+            "e7e5",
+            "b4b5"
+          ]
+        },
+        {
+          "nodes": 4519,
+          "score": "PovScore(Cp(+77), WHITE)",
+          "pv": [
+            "c2c4",
+            "e7e5",
+            "g1f3",
+            "a7a5",
+            "b4b5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "scenario": "mate2_nodes10000",
+      "fen": "r1bqkbn1/p1ppppp1/7r/1B6/pB2P2p/2N5/2PP1PPP/2RQK1NR b Kq - 0 8",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "e7e5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10000,
+          "score": "PovScore(Cp(-478), BLACK)",
+          "pv": [
+            "e7e5",
+            "b4f8",
+            "e8f8",
+            "g1f3",
+            "a4a3",
+            "e1g1",
+            "d8e7",
+            "f1e1",
+            "h4h3",
+            "g2g3",
+            "a3a2",
+            "c3a2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "scenario": "depth8",
+      "fen": "r1b1kbnr/p2qpp2/8/2B3p1/4P2p/2N5/2PP1PPP/2RQK1NR w Kq - 1 12",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "c1b1",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1857,
+          "score": "PovScore(Cp(+180), WHITE)",
+          "pv": [
+            "c1b1",
+            "g8f6",
+            "c5e3",
+            "g5g4",
+            "g1e2",
+            "h4h3",
+            "g2h3",
+            "h8h3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "scenario": "nodes10000",
+      "fen": "2b1k1nr/r3pp2/7b/6p1/4P2p/2P5/3K1PPP/1NRQ2NR b - - 0 15",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "a7d7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10004,
+          "score": "PovScore(Cp(-201), BLACK)",
+          "pv": [
+            "a7d7",
+            "d2e1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "scenario": "multipv4",
+      "fen": "4k1n1/r3pp1r/7b/6p1/4K2p/2P5/2R2P1P/1N1Q2NR w - - 1 19",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "e4f3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3474,
+          "score": "PovScore(Cp(+754), WHITE)",
+          "pv": [
+            "e4f3",
+            "a7d7",
+            "d1e1",
+            "g5g4",
+            "f3e2",
+            "g8f6",
+            "e2f1",
+            "d7d1",
+            "e1d1"
+          ]
+        },
+        {
+          "nodes": 3474,
+          "score": "PovScore(Cp(+677), WHITE)",
+          "pv": [
+            "e4e3",
+            "a7d7",
+            "d1e2",
+            "h4h3",
+            "c2d2"
+          ]
+        },
+        {
+          "nodes": 3474,
+          "score": "PovScore(Cp(+572), WHITE)",
+          "pv": [
+            "c2d2",
+            "g8f6",
+            "e4d3",
+            "g5g4",
+            "d3e2",
+            "h6d2",
+            "b1d2",
+            "a7d7",
+            "d1e1"
+          ]
+        },
+        {
+          "nodes": 3474,
+          "score": "PovScore(Cp(+531), WHITE)",
+          "pv": [
+            "f2f4",
+            "a7d7",
+            "d1e2",
+            "g5f4",
+            "c2d2",
+            "d7d2",
+            "b1d2",
+            "g8f6",
+            "e4d3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "scenario": "mate2_nodes10000",
+      "fen": "5kn1/r3pp1Q/7b/6p1/7p/N1P2K2/2R2P1P/6NR b - - 0 22",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "a7a3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10004,
+          "score": "PovScore(Cp(-687), BLACK)",
+          "pv": [
+            "a7a3",
+            "h7f5",
+            "a3a1",
+            "f3e2",
+            "g8f6",
+            "h2h3",
+            "f6d5",
+            "f5d5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "scenario": "depth8",
+      "fen": "5bk1/4pp2/7r/6p1/7p/2P2K2/4RP1P/1N4NR w - - 4 26",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "h2h3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 757,
+          "score": "PovScore(Cp(+660), WHITE)",
+          "pv": [
+            "h2h3",
+            "h6e6",
+            "b1d2",
+            "e6e2",
+            "f3e2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "scenario": "nodes10000",
+      "fen": "6k1/4p3/5R1b/6p1/2P4p/5K2/5P1P/1N4NR b - - 0 29",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "e7f6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10012,
+          "score": "PovScore(Cp(-716), BLACK)",
+          "pv": [
+            "e7f6",
+            "h2h3",
+            "h6g7",
+            "b1d2",
+            "g7h8"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "scenario": "multipv4",
+      "fen": "5b2/7k/6R1/4p1p1/2P4p/8/4KP1P/1N4NR w - - 2 33",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "g6a6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3449,
+          "score": "PovScore(Cp(+863), WHITE)",
+          "pv": [
+            "g6a6",
+            "f8b4",
+            "a6a1",
+            "e5e4",
+            "a1a7",
+            "h7g6"
+          ]
+        },
+        {
+          "nodes": 3449,
+          "score": "PovScore(Cp(+847), WHITE)",
+          "pv": [
+            "g6c6",
+            "f8b4",
+            "f2f3",
+            "b4a5",
+            "c6a6"
+          ]
+        },
+        {
+          "nodes": 3449,
+          "score": "PovScore(Cp(+818), WHITE)",
+          "pv": [
+            "g6e6",
+            "f8d6",
+            "b1d2",
+            "d6c5",
+            "e6a6"
+          ]
+        },
+        {
+          "nodes": 3449,
+          "score": "PovScore(Cp(+726), WHITE)",
+          "pv": [
+            "g6f6",
+            "f8c5",
+            "f6c6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "scenario": "mate2_nodes10000",
+      "fen": "8/4b3/7k/8/2P1p2p/8/5P1P/1N2K1NR b - - 1 36",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "h6h5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10010,
+          "score": "PovScore(Cp(-675), BLACK)",
+          "pv": [
+            "h6h5",
+            "h2h3",
+            "e7c5",
+            "g1e2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "scenario": "depth8",
+      "fen": "8/8/7k/8/2Pbp3/7N/5P1P/1N2K2R w - - 1 40",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "h3g1",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 2634,
+          "score": "PovScore(Cp(+668), WHITE)",
+          "pv": [
+            "h3g1",
+            "h6h5",
+            "e1f1",
+            "h5g5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "scenario": "nodes10000",
+      "fen": "8/8/8/7k/2P5/3Np3/3N3P/5K1R b - - 1 43",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "h5g5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10003,
+          "score": "PovScore(Cp(-675), BLACK)",
+          "pv": [
+            "h5g5",
+            "f1e1",
+            "g5f6",
+            "h1f1",
+            "f6e7",
+            "f1f5",
+            "e7d7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "scenario": "multipv4",
+      "fen": "8/8/8/5k2/2P5/3N4/3N3P/4n1KR w - - 0 47",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "d3e1",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 4882,
+          "score": "PovScore(Cp(+682), WHITE)",
+          "pv": [
+            "d3e1",
+            "f5f4",
+            "g1g2",
+            "f4e3",
+            "d2b3",
+            "e3e2"
+          ]
+        },
+        {
+          "nodes": 4882,
+          "score": "PovScore(Cp(+668), WHITE)",
+          "pv": [
+            "g1f2",
+            "e1f3",
+            "h1a1",
+            "f3e5",
+            "a1a3",
+            "e5c6"
+          ]
+        },
+        {
+          "nodes": 4882,
+          "score": "PovScore(Cp(+600), WHITE)",
+          "pv": [
+            "g1f1",
+            "e1f3",
+            "d2f3",
+            "f5e4",
+            "d3f2",
+            "e4f5",
+            "f3d4",
+            "f5e5"
+          ]
+        },
+        {
+          "nodes": 4882,
+          "score": "PovScore(Cp(+593), WHITE)",
+          "pv": [
+            "h2h3",
+            "e1d3",
+            "g1h2",
+            "d3f4",
+            "h1b1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "scenario": "mate2_nodes10000",
+      "fen": "8/8/8/2P5/6k1/3N1N2/7P/6KR b - - 4 50",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "g4f5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10003,
+          "score": "PovScore(Cp(-802), BLACK)",
+          "pv": [
+            "g4f5",
+            "c5c6",
+            "f5e6",
+            "g1g2",
+            "e6d6",
+            "c6c7",
+            "d6c7",
+            "h1e1",
+            "c7d6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 60,
+      "scenario": "depth8",
+      "fen": "rnbqkbnr/pppppppp/8/8/5P2/8/PPPPP1PP/RNBQKBNR b KQkq - 0 1",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "d7d5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 4303,
+          "score": "PovScore(Cp(+12), BLACK)",
+          "pv": [
+            "d7d5",
+            "g1f3",
+            "c7c6",
+            "e2e3",
+            "c8g4",
+            "f1e2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "scenario": "nodes10000",
+      "fen": "r1bqkb1r/1ppp1ppp/2n1pn2/p7/5P1P/N3P3/PPPP2P1/R1BQKBNR w KQkq - 0 5",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "g1f3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10007,
+          "score": "PovScore(Cp(-83), WHITE)",
+          "pv": [
+            "g1f3",
+            "d7d5",
+            "f1b5",
+            "f8e7",
+            "h4h5",
+            "h7h6",
+            "f3e5",
+            "e8g8",
+            "b5c6",
+            "b7c6",
+            "e5c6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 62,
+      "scenario": "multipv4",
+      "fen": "r1bqk1nr/1ppp1pp1/2n1p2p/p7/5P1P/P2PP2R/P1P3P1/1RBQKBN1 b kq - 3 8",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "g8f6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10043,
+          "score": "PovScore(Cp(+24), BLACK)",
+          "pv": [
+            "g8f6",
+            "g2g4"
+          ]
+        },
+        {
+          "nodes": 10043,
+          "score": "PovScore(Cp(-26), BLACK)",
+          "pv": [
+            "d7d6",
+            "d1g4",
+            "e6e5",
+            "g4g7",
+            "c8h3",
+            "g1h3"
+          ]
+        },
+        {
+          "nodes": 10043,
+          "score": "PovScore(Cp(-26), BLACK)",
+          "pv": [
+            "e6e5",
+            "d1g4",
+            "d7d6",
+            "g4g7",
+            "c8h3",
+            "g1h3"
+          ]
+        },
+        {
+          "nodes": 10043,
+          "score": "PovScore(Cp(-50), BLACK)",
+          "pv": [
+            "e8f8",
+            "e3e4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "scenario": "mate2_nodes10000",
+      "fen": "r1bq1kn1/2Rp1p1r/2n1p3/p5p1/5P2/P2PP2R/P1P3P1/2BQKBN1 w - - 0 12",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "c7c8",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10000,
+          "score": "PovScore(Cp(+734), WHITE)",
+          "pv": [
+            "c7c8",
+            "a8c8",
+            "h3h7",
+            "g5f4",
+            "g1e2",
+            "d8f6",
+            "e3f4",
+            "c6d4",
+            "e2d4",
+            "f6d4",
+            "c2c4",
+            "d4a1",
+            "h7h3",
+            "g8f6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 64,
+      "scenario": "depth8",
+      "fen": "r2q1kn1/3pnp2/4p3/p7/P4p2/2RPP2P/P1P5/2BQKBN1 b - - 0 15",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "e7d5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1139,
+          "score": "PovScore(Cp(-292), BLACK)",
+          "pv": [
+            "e7d5",
+            "c3b3",
+            "d8h4",
+            "e1e2",
+            "h4g3",
+            "c2c4",
+            "g3g1",
+            "c4d5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 65,
+      "scenario": "nodes10000",
+      "fen": "2q2kn1/B2p1p2/4p3/p7/P7/3P3P/P1P5/3QKBN1 w - - 0 19",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "g1e2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10008,
+          "score": "PovScore(Cp(+709), WHITE)",
+          "pv": [
+            "g1e2",
+            "g8e7",
+            "d1c1",
+            "f8e8",
+            "c1h6",
+            "c8c2",
+            "h6h8",
+            "e7g8",
+            "h8g8",
+            "e8e7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 66,
+      "scenario": "multipv4",
+      "fen": "4k1n1/3p1p2/8/p3p2Q/P7/3PB2P/P1K5/5BN1 b - - 3 22",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "d7d6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 2552,
+          "score": "PovScore(Cp(-1126), BLACK)",
+          "pv": [
+            "d7d6",
+            "d3d4",
+            "g8f6",
+            "h5h6",
+            "f6e4"
+          ]
+        },
+        {
+          "nodes": 2552,
+          "score": "PovScore(Cp(-1354), BLACK)",
+          "pv": [
+            "d7d5",
+            "h5e5",
+            "g8e7",
+            "e5b8",
+            "e8d7",
+            "b8b7",
+            "d7e6"
+          ]
+        },
+        {
+          "nodes": 2552,
+          "score": "PovScore(Cp(-1401), BLACK)",
+          "pv": [
+            "e5e4",
+            "d3e4",
+            "d7d6",
+            "h5b5",
+            "e8f8"
+          ]
+        },
+        {
+          "nodes": 2552,
+          "score": "PovScore(Cp(-1443), BLACK)",
+          "pv": [
+            "e8f8",
+            "e3c5",
+            "f8g7",
+            "h5e5",
+            "g8f6",
+            "e5g3",
+            "g7h7",
+            "g3h4",
+            "h7g8"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 67,
+      "scenario": "mate2_nodes10000",
+      "fen": "6n1/3k4/3p4/p3p1p1/P2P4/7P/P1K2B2/5BN1 w - - 0 26",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "f1e2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10006,
+          "score": "PovScore(Cp(+664), WHITE)",
+          "pv": [
+            "f1e2",
+            "d6d5",
+            "c2b2",
+            "d7e6",
+            "b2a1",
+            "g8f6",
+            "f2e3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 68,
+      "scenario": "depth8",
+      "fen": "2k5/8/1B3n2/p3p1p1/P7/3K3P/P7/5BN1 b - - 5 29",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "g5g4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1729,
+          "score": "PovScore(Cp(-605), BLACK)",
+          "pv": [
+            "g5g4",
+            "b6a5",
+            "f6d5",
+            "a5d2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 69,
+      "scenario": "nodes10000",
+      "fen": "8/1kBn4/8/4p3/P7/6pP/P2K4/5BN1 w - - 2 33",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "c7e5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10006,
+          "score": "PovScore(Cp(+623), WHITE)",
+          "pv": [
+            "c7e5",
+            "d7e5",
+            "d2c3",
+            "b7c7",
+            "f1d3",
+            "e5d3",
+            "c3d3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 70,
+      "scenario": "multipv4",
+      "fen": "k7/8/8/8/n7/6BP/P2K4/5BN1 b - - 1 36",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "a8b7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 9732,
+          "score": "PovScore(Cp(-556), BLACK)",
+          "pv": [
+            "a8b7",
+            "f1b5"
+          ]
+        },
+        {
+          "nodes": 9732,
+          "score": "PovScore(Cp(-565), BLACK)",
+          "pv": [
+            "a4b6"
+          ]
+        },
+        {
+          "nodes": 9732,
+          "score": "PovScore(Cp(-577), BLACK)",
+          "pv": [
+            "a8a7",
+            "f1d3",
+            "a4b6",
+            "h3h4",
+            "b6c8",
+            "g1e2",
+            "a7b6",
+            "g3f2",
+            "b6c7"
+          ]
+        },
+        {
+          "nodes": 9732,
+          "score": "PovScore(Cp(-577), BLACK)",
+          "pv": [
+            "a4b2",
+            "g3h2",
+            "b2a4",
+            "d2c2",
+            "a8a7",
+            "f1e2",
+            "a4c5",
+            "e2g4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 71,
+      "scenario": "mate2_nodes10000",
+      "fen": "8/2k5/8/8/7B/2K4P/P3N3/5B2 w - - 1 40",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "h4e7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10005,
+          "score": "PovScore(Cp(+642), WHITE)",
+          "pv": [
+            "h4e7",
+            "c7c6",
+            "c3b2",
+            "c6b5",
+            "e2d4",
+            "b5a4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 72,
+      "scenario": "depth8",
+      "fen": "8/8/4k3/6B1/2K5/2N4P/P5B1/8 b - - 8 43",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "e6d7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3257,
+          "score": "PovScore(Cp(-644), BLACK)",
+          "pv": [
+            "e6d7",
+            "h3h4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 73,
+      "scenario": "nodes10000",
+      "fen": "8/8/3k4/K5B1/8/2N2B1P/P7/8 w - - 15 47",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "a5b4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10007,
+          "score": "PovScore(Cp(+633), WHITE)",
+          "pv": [
+            "a5b4",
+            "d6e6",
+            "h3h4",
+            "e6e5",
+            "a2a3",
+            "e5f5",
+            "f3e4",
+            "f5e5",
+            "b4c4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 74,
+      "scenario": "multipv4",
+      "fen": "8/3k4/7B/K7/N7/7P/P5B1/8 b - - 22 50",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "d7e6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 11457,
+          "score": "PovScore(Cp(-597), BLACK)",
+          "pv": [
+            "d7e6",
+            "a2a3",
+            "e6e5",
+            "g2c6"
+          ]
+        },
+        {
+          "nodes": 11457,
+          "score": "PovScore(Cp(-605), BLACK)",
+          "pv": [
+            "d7c7",
+            "a2a3",
+            "c7d7",
+            "a5b4",
+            "d7e6",
+            "h6e3",
+            "e6d6"
+          ]
+        },
+        {
+          "nodes": 11457,
+          "score": "PovScore(Cp(-611), BLACK)",
+          "pv": [
+            "d7e7",
+            "a2a3",
+            "e7d6"
+          ]
+        },
+        {
+          "nodes": 11457,
+          "score": "PovScore(Cp(-612), BLACK)",
+          "pv": [
+            "d7d6",
+            "a2a3",
+            "d6e5",
+            "g2c6",
+            "e5d4",
+            "a5b4",
+            "d4e5",
+            "h6e3",
+            "e5d6",
+            "e3f4",
+            "d6e7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 75,
+      "scenario": "mate2_nodes10000",
+      "fen": "rnbqkbnr/pppppppp/8/8/1P6/8/P1PPPPPP/RNBQKBNR b KQkq - 0 1",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "c7c6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10005,
+          "score": "PovScore(Cp(+14), BLACK)",
+          "pv": [
+            "c7c6",
+            "a2a3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 76,
+      "scenario": "depth8",
+      "fen": "rnbqk1nr/1ppp1pp1/p7/4p2p/1b6/2N2P1N/P1PPP1PP/R1BQKB1R w KQkq - 0 5",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "e2e4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 2322,
+          "score": "PovScore(Cp(-196), WHITE)",
+          "pv": [
+            "e2e4",
+            "b8c6",
+            "h3f2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 77,
+      "scenario": "nodes10000",
+      "fen": "rnb1k1nr/1p1pqQp1/p7/2p1p2p/8/2P2P1N/P1P1PKPP/R1B2B1R b kq - 0 8",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "e8f7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10002,
+          "score": "PovScore(Cp(+954), BLACK)",
+          "pv": [
+            "e8f7",
+            "e2e4",
+            "g8f6",
+            "f1c4",
+            "f7e8",
+            "h1d1",
+            "d7d6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 78,
+      "scenario": "multipv4",
+      "fen": "r1b1k1r1/1p1pq1p1/n7/2p1p2p/8/2P1PP1N/P1P2KPP/R1B4R w - - 0 12",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "e3e4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3046,
+          "score": "PovScore(Cp(-1144), WHITE)",
+          "pv": [
+            "e3e4",
+            "d7d6",
+            "h3g5",
+            "b7b5",
+            "a2a4"
+          ]
+        },
+        {
+          "nodes": 3046,
+          "score": "PovScore(Cp(-1156), WHITE)",
+          "pv": [
+            "f2e2",
+            "d7d6",
+            "e2d1",
+            "e7d7",
+            "e3e4",
+            "d6d5"
+          ]
+        },
+        {
+          "nodes": 3046,
+          "score": "PovScore(Cp(-1156), WHITE)",
+          "pv": [
+            "f2e1",
+            "d7d6",
+            "e1d1",
+            "e7d7",
+            "e3e4",
+            "d6d5"
+          ]
+        },
+        {
+          "nodes": 3046,
+          "score": "PovScore(Cp(-1224), WHITE)",
+          "pv": [
+            "a2a3",
+            "d7d6",
+            "e3e4",
+            "e7d7",
+            "a3a4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 79,
+      "scenario": "mate2_nodes10000",
+      "fen": "r1b3r1/1p1pk1p1/n7/4p1Np/2p5/2P1PP2/PBP2KPP/2R4R b - - 1 15",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "a6c5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10000,
+          "score": "PovScore(Cp(+7), BLACK)",
+          "pv": [
+            "a6c5",
+            "c1a1",
+            "d7d6",
+            "b2c1",
+            "c8d7",
+            "a2a3",
+            "c5a4",
+            "c1d2",
+            "a8a6",
+            "h1b1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 80,
+      "scenario": "depth8",
+      "fen": "2b1r3/1pnpk1p1/8/4p1N1/2p1P2p/2P2P2/rBP2KPP/6RR w - - 0 19",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "g1b1",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 842,
+          "score": "PovScore(Cp(-100), WHITE)",
+          "pv": [
+            "g1b1",
+            "d7d6",
+            "h1d1",
+            "c8d7",
+            "d1d2",
+            "e8a8",
+            "b2c1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 81,
+      "scenario": "nodes10000",
+      "fen": "2b1r3/1pnpk1p1/8/4p1NR/2p1P3/2P2PP1/2r5/5KR1 b - - 1 22",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "c2c3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10001,
+          "score": "PovScore(Cp(+775), BLACK)",
+          "pv": [
+            "c2c3",
+            "f1f2",
+            "b7b6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 82,
+      "scenario": "multipv4",
+      "fen": "n1b4R/1p2k1p1/4p3/4p3/2p1P3/2r2PP1/8/5KR1 w - - 0 26",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "h8c8",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3947,
+          "score": "PovScore(Cp(+47), WHITE)",
+          "pv": [
+            "h8c8",
+            "a8b6",
+            "c8c7",
+            "e7d6",
+            "c7b7",
+            "c3b3"
+          ]
+        },
+        {
+          "nodes": 3947,
+          "score": "PovScore(Cp(-318), WHITE)",
+          "pv": [
+            "g1h1",
+            "a8b6",
+            "h1h7",
+            "c3f3",
+            "f1g2"
+          ]
+        },
+        {
+          "nodes": 3947,
+          "score": "PovScore(Cp(-351), WHITE)",
+          "pv": [
+            "h8h7",
+            "c3f3",
+            "f1g2",
+            "f3f8",
+            "h7g7",
+            "f8f7"
+          ]
+        },
+        {
+          "nodes": 3947,
+          "score": "PovScore(Cp(-354), WHITE)",
+          "pv": [
+            "h8g8",
+            "a8b6",
+            "f1e2",
+            "e7d6",
+            "g8g7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 83,
+      "scenario": "mate2_nodes10000",
+      "fen": "n1R5/1p2k1p1/4p3/4p3/2p1P3/6R1/7K/8 b - - 0 29",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "a8b6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10001,
+          "score": "PovScore(Cp(-596), BLACK)",
+          "pv": [
+            "a8b6",
+            "g3g7",
+            "e7d6",
+            "c8c7",
+            "c4c3",
+            "c7c3",
+            "b6a4",
+            "c3c7",
+            "a4c5",
+            "g7h7",
+            "b7b6",
+            "h7g7",
+            "b6b5",
+            "g7f7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 84,
+      "scenario": "depth8",
+      "fen": "2R5/1p2k1p1/1n2p3/4p1R1/4P3/2p4K/8/8 w - - 4 33",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "c8c7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 705,
+          "score": "PovScore(Cp(+584), WHITE)",
+          "pv": [
+            "c8c7",
+            "e7d8",
+            "g5g7",
+            "c3c2",
+            "c7c2",
+            "b6a4",
+            "c2c1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 85,
+      "scenario": "nodes10000",
+      "fen": "R7/1p1k4/4p3/4R3/4P3/2p4K/8/8 b - - 0 36",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "d7d6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10012,
+          "score": "PovScore(Cp(-703), BLACK)",
+          "pv": [
+            "d7d6",
+            "e5a5",
+            "b7b6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 86,
+      "scenario": "multipv4",
+      "fen": "R7/1p6/4p3/4k3/4P2K/8/2p5/8 w - - 0 40",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "a8c8",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 6066,
+          "score": "PovScore(Cp(+394), WHITE)",
+          "pv": [
+            "a8c8",
+            "e5d4",
+            "c8c2",
+            "d4e4"
+          ]
+        },
+        {
+          "nodes": 6066,
+          "score": "PovScore(Cp(-339), WHITE)",
+          "pv": [
+            "a8a5",
+            "e5e4",
+            "a5c5",
+            "e4d3",
+            "c5c8"
+          ]
+        },
+        {
+          "nodes": 6066,
+          "score": "PovScore(Cp(-340), WHITE)",
+          "pv": [
+            "a8a1",
+            "e5e4",
+            "h4g3",
+            "e4d3",
+            "g3f4"
+          ]
+        },
+        {
+          "nodes": 6066,
+          "score": "PovScore(Cp(-703), WHITE)",
+          "pv": [
+            "a8h8",
+            "c2c1q",
+            "h8e8",
+            "c1e1",
+            "h4g5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 87,
+      "scenario": "mate2_nodes10000",
+      "fen": "8/8/1p2p3/R7/7K/4k3/2p5/8 b - - 3 43",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "b6a5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10008,
+          "score": "PovScore(Cp(+837), BLACK)",
+          "pv": [
+            "b6a5",
+            "h4g5",
+            "e6e5",
+            "g5f6",
+            "e3d4",
+            "f6g7",
+            "a5a4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 88,
+      "scenario": "depth8",
+      "fen": "8/8/8/p3p3/3k4/7K/8/2n5 w - - 0 47",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "h3g3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1946,
+          "score": "PovScore(Cp(-744), WHITE)",
+          "pv": [
+            "h3g3",
+            "e5e4",
+            "g3h3",
+            "e4e3",
+            "h3g3",
+            "d4d3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 89,
+      "scenario": "nodes10000",
+      "fen": "8/8/8/4p3/p2k1n2/6K1/8/8 b - - 5 50",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "a4a3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10014,
+          "score": "PovScore(Cp(+968), BLACK)",
+          "pv": [
+            "a4a3",
+            "g3h4",
+            "a3a2",
+            "h4g4",
+            "a2a1q",
+            "g4f5",
+            "a1b1",
+            "f5f6",
+            "b1h7",
+            "f6g5",
+            "h7g7",
+            "g5h4",
+            "g7h6",
+            "h4g4",
+            "h6h5",
+            "g4g3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 90,
+      "scenario": "multipv4",
+      "fen": "qnnrbkrb/pppppppp/8/8/5P2/8/PPPPP1PP/QNNRBKRB b KQkq - 0 1",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "g7g5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 8573,
+          "score": "PovScore(Cp(+13), BLACK)",
+          "pv": [
+            "g7g5",
+            "f4g5",
+            "d7d5",
+            "f1g1",
+            "g8g5",
+            "b1c3",
+            "c8d6",
+            "d2d4",
+            "b8c6"
+          ]
+        },
+        {
+          "nodes": 8573,
+          "score": "PovScore(Cp(+11), BLACK)",
+          "pv": [
+            "d7d5",
+            "f1g1",
+            "g7g5",
+            "f4g5",
+            "g8g5"
+          ]
+        },
+        {
+          "nodes": 8573,
+          "score": "PovScore(Cp(+9), BLACK)",
+          "pv": [
+            "g7g6",
+            "f1g1",
+            "d7d5"
+          ]
+        },
+        {
+          "nodes": 8573,
+          "score": "PovScore(Cp(+4), BLACK)",
+          "pv": [
+            "f8g8",
+            "b1c3",
+            "d7d5",
+            "g2g4",
+            "d5d4",
+            "c3e4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 91,
+      "scenario": "mate2_nodes10000",
+      "fen": "qn1rbrkb/pp1ppppp/8/2p5/n4P1P/Q7/1PPPP1P1/1NNRBKRB w KQ - 0 5",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "a3a4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10003,
+          "score": "PovScore(Cp(+318), WHITE)",
+          "pv": [
+            "a3a4",
+            "g7g6",
+            "a4a3",
+            "b7b5",
+            "a3c5",
+            "d7d6",
+            "c5a3",
+            "a7a5",
+            "g2g3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 92,
+      "scenario": "depth8",
+      "fen": "q2rbrkb/pp1ppppp/Q7/2p5/5P1P/8/2PPP1P1/1NNnBKRB b - - 1 8",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "b7a6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 583,
+          "score": "PovScore(Cp(+999), BLACK)",
+          "pv": [
+            "b7a6",
+            "g2g4",
+            "a8b8",
+            "c1d3",
+            "c5c4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 93,
+      "scenario": "nodes10000",
+      "fen": "2qrbrkb/p2p1ppp/4p3/p1B5/5P1P/6P1/2PPP3/1NNn1KRB w - - 0 12",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "c5e7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10011,
+          "score": "PovScore(Cp(-1001), WHITE)",
+          "pv": [
+            "c5e7",
+            "c8c2",
+            "c1d3",
+            "c2b1",
+            "h1e4",
+            "d8b8",
+            "f1g2",
+            "b8b3",
+            "e7f8",
+            "g8f8"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 94,
+      "scenario": "multipv4",
+      "fen": "2Brbrk1/B2p1p1p/4p1p1/p7/5P1b/3N2P1/2PPP3/1N1n1KR1 b - - 0 15",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "h4e7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3348,
+          "score": "PovScore(Cp(+518), BLACK)",
+          "pv": [
+            "h4e7",
+            "c8b7",
+            "d7d5",
+            "f1g2"
+          ]
+        },
+        {
+          "nodes": 3348,
+          "score": "PovScore(Cp(+437), BLACK)",
+          "pv": [
+            "h4f6",
+            "c8a6",
+            "d8a8",
+            "a7c5",
+            "d7d5"
+          ]
+        },
+        {
+          "nodes": 3348,
+          "score": "PovScore(Cp(+305), BLACK)",
+          "pv": [
+            "d8c8",
+            "g3h4",
+            "d7d6",
+            "f1e1",
+            "c8c7"
+          ]
+        },
+        {
+          "nodes": 3348,
+          "score": "PovScore(Cp(+287), BLACK)",
+          "pv": [
+            "d7d6",
+            "g3h4",
+            "d8c8",
+            "f1e1",
+            "c8c7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 95,
+      "scenario": "mate2_nodes10000",
+      "fen": "2r1br1k/B2p1p1p/4p1p1/p7/5P2/8/2PPP3/3NNKR1 w - - 0 19",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "d1e3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10004,
+          "score": "PovScore(Cp(+17), WHITE)",
+          "pv": [
+            "d1e3",
+            "f7f6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 96,
+      "scenario": "depth8",
+      "fen": "4br1k/3p1p2/4p1p1/p7/3B1P2/8/3rP3/3NNK2 b - - 1 22",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "d2d4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1113,
+          "score": "PovScore(Cp(+762), BLACK)",
+          "pv": [
+            "d2d4",
+            "d1f2",
+            "d4f4",
+            "e2e3",
+            "f4f5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 97,
+      "scenario": "nodes10000",
+      "fen": "4br1k/3p4/4p1p1/p7/5p2/2N5/4P1K1/3rN3 w - - 0 26",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "c3d1",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10007,
+          "score": "PovScore(Cp(-646), WHITE)",
+          "pv": [
+            "c3d1",
+            "g6g5",
+            "d1f2",
+            "e8h5",
+            "f2h3",
+            "f8a8",
+            "e1f3",
+            "a5a4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 98,
+      "scenario": "multipv4",
+      "fen": "4b2k/3p4/4p1p1/p7/8/4N2K/8/4rr2 b - - 0 29",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "e1e3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 11692,
+          "score": "PovScore(Cp(+762), BLACK)",
+          "pv": [
+            "e1e3",
+            "h3g2",
+            "f1e1",
+            "g2h2",
+            "e1c1",
+            "h2g2",
+            "e3e1",
+            "g2f3",
+            "h8g8",
+            "f3f4"
+          ]
+        },
+        {
+          "nodes": 11692,
+          "score": "PovScore(Cp(+735), BLACK)",
+          "pv": [
+            "f1f3",
+            "h3g2",
+            "f3e3",
+            "g2f2",
+            "h8g8",
+            "f2g2",
+            "g6g5",
+            "g2f2"
+          ]
+        },
+        {
+          "nodes": 11692,
+          "score": "PovScore(Cp(+705), BLACK)",
+          "pv": [
+            "f1h1",
+            "h3g2",
+            "e1e3",
+            "g2h1",
+            "e3f3",
+            "h1h2"
+          ]
+        },
+        {
+          "nodes": 11692,
+          "score": "PovScore(Cp(+669), BLACK)",
+          "pv": [
+            "h8g8",
+            "e3f1",
+            "e1f1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 99,
+      "scenario": "mate2_nodes10000",
+      "fen": "4b2k/3p4/4p1p1/4r3/8/p6K/8/3N2r1 w - - 2 33",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "h3h2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10008,
+          "score": "PovScore(Cp(-2628), WHITE)",
+          "pv": [
+            "h3h2",
+            "g1d1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 100,
+      "scenario": "depth8",
+      "fen": "4b3/6k1/4p1p1/3pr3/8/3N3K/p7/6r1 b - - 1 36",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "e5h5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 297,
+          "score": "PovScore(Mate(+1), BLACK)",
+          "pv": [
+            "e5h5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 101,
+      "scenario": "nodes10000",
+      "fen": "rnbqnbkr/pppppppp/8/8/8/2P5/PP1PPPPP/RNBQNBKR b KQkq - 0 1",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "e7e5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10003,
+          "score": "PovScore(Cp(+2), BLACK)",
+          "pv": [
+            "e7e5",
+            "e2e4",
+            "e8f6",
+            "d2d4",
+            "f6e4",
+            "d4e5",
+            "d7d5",
+            "b1d2",
+            "b8c6",
+            "d2e4",
+            "d5e4",
+            "d1d8",
+            "c6d8"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 102,
+      "scenario": "multipv4",
+      "fen": "rnbq1bkr/p1pppppp/8/1p6/8/N1P5/P2PPPPP/RNBQ1BKR w KQkq - 0 5",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "a3b5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1924,
+          "score": "PovScore(Cp(+696), WHITE)",
+          "pv": [
+            "a3b5",
+            "c7c6",
+            "b5a3",
+            "h7h5",
+            "d2d4",
+            "h5h4",
+            "h2h3"
+          ]
+        },
+        {
+          "nodes": 1924,
+          "score": "PovScore(Cp(+683), WHITE)",
+          "pv": [
+            "h2h4",
+            "c7c6",
+            "h4h5",
+            "a7a6",
+            "d2d4"
+          ]
+        },
+        {
+          "nodes": 1924,
+          "score": "PovScore(Cp(+641), WHITE)",
+          "pv": [
+            "e2e4",
+            "h7h5",
+            "h2h4",
+            "c7c6",
+            "d2d4",
+            "a7a6",
+            "e4e5",
+            "d7d5"
+          ]
+        },
+        {
+          "nodes": 1924,
+          "score": "PovScore(Cp(+608), WHITE)",
+          "pv": [
+            "a3c2",
+            "h7h5",
+            "h2h4",
+            "d7d5",
+            "a2a4",
+            "b5a4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 103,
+      "scenario": "mate2_nodes10000",
+      "fen": "rn1q1bkr/p1Nppp1p/8/6p1/8/2P5/P2PPPBP/RNB1Q1KR b KQkq - 0 8",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "h7h5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10007,
+          "score": "PovScore(Cp(-743), BLACK)",
+          "pv": [
+            "h7h5",
+            "c7b5",
+            "g5g4",
+            "h2h4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 104,
+      "scenario": "depth8",
+      "fen": "rn4kr/p2pppbp/q7/6p1/5P2/2P5/P2PP1BP/RNB1QR1K w kq - 3 12",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "g2a8",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1071,
+          "score": "PovScore(Cp(+820), WHITE)",
+          "pv": [
+            "g2a8",
+            "g7c3",
+            "b1c3",
+            "g5g4",
+            "a8d5",
+            "g8g7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 105,
+      "scenario": "nodes10000",
+      "fen": "rn4kr/p2ppp1p/8/6P1/8/2P2q2/PB4BP/RN2Q2K b kq - 0 15",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "f3f5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10007,
+          "score": "PovScore(Cp(-658), BLACK)",
+          "pv": [
+            "f3f5",
+            "g2a8",
+            "b8c6",
+            "a8c6",
+            "d7c6",
+            "b1d2",
+            "f5d5",
+            "d2e4",
+            "g8h8"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 106,
+      "scenario": "multipv4",
+      "fen": "1n4kr/p2p1p1p/2B5/4p1P1/8/2q5/P6P/RN2Q2K w k - 2 19",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "b1c3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3896,
+          "score": "PovScore(Cp(+1027), WHITE)",
+          "pv": [
+            "b1c3",
+            "b8c6",
+            "c3e4",
+            "g8h8",
+            "e4f6",
+            "g8h8",
+            "f6d7",
+            "f8e8"
+          ]
+        },
+        {
+          "nodes": 3896,
+          "score": "PovScore(Cp(+976), WHITE)",
+          "pv": [
+            "e1c3",
+            "b8c6",
+            "c3f3",
+            "g8h8",
+            "b1c3",
+            "g8h8",
+            "f3f6",
+            "h8g8"
+          ]
+        },
+        {
+          "nodes": 3896,
+          "score": "PovScore(Cp(-136), WHITE)",
+          "pv": [
+            "b1d2",
+            "b8c6",
+            "a1c1",
+            "c3d3",
+            "d2e4",
+            "d3f3",
+            "h1g1"
+          ]
+        },
+        {
+          "nodes": 3896,
+          "score": "PovScore(Cp(-556), WHITE)",
+          "pv": [
+            "e1f1",
+            "c3c6",
+            "h1g1",
+            "g8h8"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 107,
+      "scenario": "mate2_nodes10000",
+      "fen": "1n4kr/p2B1p1p/8/4Q1P1/P7/N3q3/7P/7K b k - 2 22",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "e3e5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10005,
+          "score": "PovScore(Cp(+1217), BLACK)",
+          "pv": [
+            "e3e5",
+            "d7b5",
+            "e5g5",
+            "a4a5",
+            "g5c1",
+            "h1g2",
+            "c1d2",
+            "g2f3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 108,
+      "scenario": "depth8",
+      "fen": "1n4kr/p6p/8/6q1/P7/N7/7P/7K w - - 0 26",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "h2h3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1024,
+          "score": "PovScore(Cp(-1313), WHITE)",
+          "pv": [
+            "h2h3",
+            "g5d5",
+            "h1g1",
+            "d5d1",
+            "g1f2",
+            "d1d2",
+            "f2g3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 109,
+      "scenario": "nodes10000",
+      "fen": "6kr/p6p/n7/8/P7/N6P/4K3/7q b - - 6 29",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "h1h2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10022,
+          "score": "PovScore(Cp(+1267), BLACK)",
+          "pv": [
+            "h1h2",
+            "e2d1",
+            "a6b4",
+            "d1c1",
+            "h2g1",
+            "c1b2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 110,
+      "scenario": "multipv4",
+      "fen": "7r/p6k/n6p/8/P7/4K3/3N4/8 w - - 2 33",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "d2e4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3650,
+          "score": "PovScore(Cp(-610), WHITE)",
+          "pv": [
+            "d2e4",
+            "h8f8",
+            "e3e2",
+            "f8f4",
+            "e2d3"
+          ]
+        },
+        {
+          "nodes": 3650,
+          "score": "PovScore(Cp(-628), WHITE)",
+          "pv": [
+            "d2f1",
+            "h8f8",
+            "f1d2",
+            "f8b8"
+          ]
+        },
+        {
+          "nodes": 3650,
+          "score": "PovScore(Cp(-631), WHITE)",
+          "pv": [
+            "a4a5",
+            "h8b8",
+            "e3d4",
+            "b8d8",
+            "d4c3"
+          ]
+        },
+        {
+          "nodes": 3650,
+          "score": "PovScore(Cp(-635), WHITE)",
+          "pv": [
+            "e3e4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 111,
+      "scenario": "mate2_nodes10000",
+      "fen": "2r5/p6k/7p/P7/1K6/8/3N4/8 b - - 2 36",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "c8d8",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10007,
+          "score": "PovScore(Cp(+557), BLACK)",
+          "pv": [
+            "c8d8",
+            "d2f3",
+            "d8f8",
+            "f3d4",
+            "f8b8",
+            "b4c4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 112,
+      "scenario": "depth8",
+      "fen": "7r/p6k/7p/P7/K3N3/8/8/8 w - - 9 40",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "a4b5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1234,
+          "score": "PovScore(Cp(-511), WHITE)",
+          "pv": [
+            "a4b5",
+            "h6h5",
+            "e4f6",
+            "h7g7",
+            "f6h5",
+            "h8h5",
+            "b5a6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 113,
+      "scenario": "nodes10000",
+      "fen": "2r5/p5k1/5N2/PK5p/8/8/8/8 b - - 5 43",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "g7f6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10017,
+          "score": "PovScore(Cp(+877), BLACK)",
+          "pv": [
+            "g7f6",
+            "b5a6",
+            "h5h4",
+            "a6b5",
+            "h4h3",
+            "b5a6",
+            "c8g8",
+            "a6a7",
+            "h3h2",
+            "a7a6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 114,
+      "scenario": "multipv4",
+      "fen": "8/p1r5/P7/1K3k1p/8/8/8/8 w - - 1 47",
+      "chess960": true,
+      "requested_multipv": 3,
+      "bestmove": "b5b4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 4526,
+          "score": "PovScore(Cp(-971), WHITE)",
+          "pv": [
+            "b5b4",
+            "h5h4",
+            "b4a5",
+            "h4h3",
+            "a5a4",
+            "h3h2",
+            "a4a3",
+            "h2h1q",
+            "a3b2"
+          ]
+        },
+        {
+          "nodes": 4526,
+          "score": "PovScore(Cp(-971), WHITE)",
+          "pv": [
+            "b5a4",
+            "h5h4",
+            "a4b4",
+            "h4h3",
+            "b4a3"
+          ]
+        },
+        {
+          "nodes": 4526,
+          "score": "PovScore(Cp(-971), WHITE)",
+          "pv": [
+            "b5a5",
+            "h5h4",
+            "a5b5",
+            "h4h3",
+            "b5b4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 115,
+      "scenario": "mate2_nodes10000",
+      "fen": "8/p7/P7/5k1p/3r4/1K6/8/8 b - - 8 50",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "h5h4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10004,
+          "score": "PovScore(Cp(+1057), BLACK)",
+          "pv": [
+            "h5h4",
+            "b3b2",
+            "f5e4",
+            "b2a1",
+            "h4h3",
+            "a1b2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 116,
+      "scenario": "depth8",
+      "fen": "rbbkqnrn/pppppppp/8/8/8/6P1/PPPPPP1P/RBBKQNRN b KQkq - 0 1",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "d7d5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 5846,
+          "score": "PovScore(Cp(+8), BLACK)",
+          "pv": [
+            "d7d5",
+            "f2f4",
+            "c7c5",
+            "c2c3",
+            "b8d6",
+            "f4f5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 117,
+      "scenario": "nodes10000",
+      "fen": "rbbkq1rn/ppppppp1/7p/8/8/5nPP/PPPPP1R1/RBBKQN1N w Qkq - 0 5",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "e2f3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10005,
+          "score": "PovScore(Cp(+398), WHITE)",
+          "pv": [
+            "e2f3",
+            "d7d5",
+            "h1f2",
+            "c7c5",
+            "e1e2",
+            "b7b6",
+            "c2c4",
+            "c8b7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 118,
+      "scenario": "multipv4",
+      "fen": "rbbk2rn/pp1pq1p1/2p4p/5p2/8/1P3PPP/P1PP1R2/RBBK1N1N b Qkq - 1 8",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "g8e8",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3123,
+          "score": "PovScore(Cp(+929), BLACK)",
+          "pv": [
+            "g8e8",
+            "c2c3",
+            "e7e1",
+            "d1c2",
+            "e1e6"
+          ]
+        },
+        {
+          "nodes": 3123,
+          "score": "PovScore(Cp(+884), BLACK)",
+          "pv": [
+            "b7b6",
+            "f2e2",
+            "e7f6",
+            "c2c3",
+            "c8a6",
+            "e2e1",
+            "a6f1",
+            "e1f1"
+          ]
+        },
+        {
+          "nodes": 3123,
+          "score": "PovScore(Cp(+875), BLACK)",
+          "pv": [
+            "b7b5",
+            "c2c3"
+          ]
+        },
+        {
+          "nodes": 3123,
+          "score": "PovScore(Cp(+855), BLACK)",
+          "pv": [
+            "d7d5",
+            "f2e2",
+            "e7f6",
+            "c2c3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 119,
+      "scenario": "mate2_nodes10000",
+      "fen": "r1bk1r1n/pp1pq1p1/8/2p2p1p/8/1P3P1P/P1PP1R1N/RBBK3N w Qq - 0 12",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "c2c4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10014,
+          "score": "PovScore(Cp(-798), WHITE)",
+          "pv": [
+            "c2c4",
+            "f8e8",
+            "b1d3",
+            "e7f6",
+            "f2e2",
+            "f6a1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 120,
+      "scenario": "depth8",
+      "fen": "r1bk3n/pp2qrp1/8/2pp1p1N/5P2/1P5P/P1PP1R2/RBBK3N b Qq - 0 15",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "h8g6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 975,
+          "score": "PovScore(Cp(+808), BLACK)",
+          "pv": [
+            "h8g6",
+            "c1b2",
+            "d5d4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 121,
+      "scenario": "nodes10000",
+      "fen": "r1bk3n/pp4r1/3q4/2p2p2/4BP2/1Pp4P/P2P1R2/R1BK3N w Qq - 0 19",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "e4g2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10005,
+          "score": "PovScore(Cp(-1002), WHITE)",
+          "pv": [
+            "e4g2",
+            "g7d7",
+            "g2f1",
+            "b7b6",
+            "d1c2",
+            "c8b7",
+            "d2c3",
+            "d6d1",
+            "c2b2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 122,
+      "scenario": "multipv4",
+      "fen": "1rbk3n/p7/1p1q4/2p2p2/3P1Pr1/1Pp3NP/P1B2R2/R1BK4 b Q - 1 22",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "g4g3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 2581,
+          "score": "PovScore(Cp(+1315), BLACK)",
+          "pv": [
+            "g4g3",
+            "h3h4",
+            "g3g1",
+            "f2f1",
+            "g1f1",
+            "d1e2",
+            "c8a6",
+            "c2d3",
+            "a6d3",
+            "e2d3"
+          ]
+        },
+        {
+          "nodes": 2581,
+          "score": "PovScore(Cp(+1043), BLACK)",
+          "pv": [
+            "g4g6",
+            "g3f5",
+            "c8f5",
+            "c2f5",
+            "d6d4",
+            "c1d2",
+            "d4f2",
+            "d1a1"
+          ]
+        },
+        {
+          "nodes": 2581,
+          "score": "PovScore(Cp(+984), BLACK)",
+          "pv": [
+            "g4g8",
+            "g3f5",
+            "c8f5",
+            "c2f5",
+            "d6d4",
+            "d1e2",
+            "g8e8",
+            "e2f3"
+          ]
+        },
+        {
+          "nodes": 2581,
+          "score": "PovScore(Cp(+957), BLACK)",
+          "pv": [
+            "d6d4",
+            "c1d2",
+            "d4f2",
+            "d1a1",
+            "c3d2",
+            "d1d2",
+            "f2d2",
+            "c1d2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 123,
+      "scenario": "mate2_nodes10000",
+      "fen": "1rb1k2n/8/1pq5/p1p5/3P1Pp1/BPp3N1/P1B2R2/R1K5 w - - 0 26",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "c2e4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10001,
+          "score": "PovScore(Cp(-98), WHITE)",
+          "pv": [
+            "c2e4",
+            "c6f6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 124,
+      "scenario": "depth8",
+      "fen": "2b1k2n/8/6B1/p1p5/5Pp1/Brp3N1/P2R2q1/R1K5 b - - 3 29",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "h8g6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 625,
+          "score": "PovScore(Cp(-25), BLACK)",
+          "pv": [
+            "h8g6",
+            "d2g2",
+            "b3a3",
+            "g2e2",
+            "e8f7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 125,
+      "scenario": "nodes10000",
+      "fen": "4k3/1b3n2/6B1/p1p5/5Pp1/r1p5/P1K5/R4N2 w - - 2 33",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "f1e3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10015,
+          "score": "PovScore(Cp(-26), WHITE)",
+          "pv": [
+            "f1e3",
+            "e8f8"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 126,
+      "scenario": "multipv4",
+      "fen": "4k3/1b6/8/2p1PB2/p5p1/2K5/R7/5N2 b - - 0 36",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "e8f7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 5979,
+          "score": "PovScore(Cp(-637), BLACK)",
+          "pv": [
+            "e8f7",
+            "a2a1"
+          ]
+        },
+        {
+          "nodes": 5979,
+          "score": "PovScore(Cp(-641), BLACK)",
+          "pv": [
+            "e8e7",
+            "a2h2",
+            "a4a3",
+            "h2h7",
+            "e7d8"
+          ]
+        },
+        {
+          "nodes": 5979,
+          "score": "PovScore(Cp(-650), BLACK)",
+          "pv": [
+            "a4a3",
+            "a2a1",
+            "e8e7",
+            "f1g3",
+            "b7d5",
+            "f5d3",
+            "d5e6"
+          ]
+        },
+        {
+          "nodes": 5979,
+          "score": "PovScore(Cp(-666), BLACK)",
+          "pv": [
+            "e8f8",
+            "a2a1",
+            "f8g7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 127,
+      "scenario": "mate2_nodes10000",
+      "fen": "4k3/8/2b5/4P3/2R3B1/2K5/8/5N2 w - - 1 40",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "c4d4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10007,
+          "score": "PovScore(Cp(+737), WHITE)",
+          "pv": [
+            "c4d4",
+            "e8e7",
+            "e5e6",
+            "c6a8",
+            "f1e3",
+            "e7f6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 128,
+      "scenario": "depth8",
+      "fen": "7k/8/2R5/4P2B/8/6N1/2K5/8 b - - 6 43",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "h8g7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 539,
+          "score": "PovScore(Mate(-3), BLACK)",
+          "pv": [
+            "h8g7",
+            "g3f5",
+            "g7h7",
+            "h5g6",
+            "h7g8",
+            "c6c8"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 129,
+      "scenario": "nodes10000",
+      "fen": "7k/8/8/4P1RB/8/6N1/3K4/8 w - - 13 47",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "g3e4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10000,
+          "score": "PovScore(Mate(+3), WHITE)",
+          "pv": [
+            "g3e4",
+            "h8h7",
+            "e4f6",
+            "h7h8",
+            "g5g8"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 130,
+      "scenario": "multipv4",
+      "fen": "8/6Rk/8/4P3/8/8/3KB3/7N b - - 20 50",
+      "chess960": true,
+      "requested_multipv": 3,
+      "bestmove": "h7g7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 2108,
+          "score": "PovScore(Cp(-638), BLACK)",
+          "pv": [
+            "h7g7",
+            "d2e3",
+            "g7f8",
+            "h1f2"
+          ]
+        },
+        {
+          "nodes": 2108,
+          "score": "PovScore(Cp(-1291), BLACK)",
+          "pv": [
+            "h7h6",
+            "g7g1",
+            "h6h7",
+            "e5e6",
+            "h7h6",
+            "e6e7",
+            "h6h7",
+            "e7e8q",
+            "h7h6"
+          ]
+        },
+        {
+          "nodes": 2108,
+          "score": "PovScore(Cp(-1291), BLACK)",
+          "pv": [
+            "h7h8",
+            "g7g1",
+            "h8h7",
+            "e5e6",
+            "h7h6",
+            "e6e7",
+            "h6h7",
+            "e7e8q"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 131,
+      "scenario": "mate2_nodes10000",
+      "fen": "qrnkrbbn/pppppppp/8/8/7P/8/PPPPPPP1/QRNKRBBN b KQkq - 0 1",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "e7e5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10009,
+          "score": "PovScore(Cp(+32), BLACK)",
+          "pv": [
+            "e7e5",
+            "f2f3",
+            "b7b6",
+            "b2b3",
+            "f7f6",
+            "e2e4",
+            "h8g6",
+            "g1f2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 132,
+      "scenario": "depth8",
+      "fen": "qrnkrbb1/pp2pppp/8/2pp4/7P/4P3/PPPP1P2/QRNKRBBN w KQkq - 0 5",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "b2b3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1072,
+          "score": "PovScore(Cp(+446), WHITE)",
+          "pv": [
+            "b2b3",
+            "e7e5",
+            "f2f4",
+            "e5f4",
+            "h1f2",
+            "f4e3",
+            "e1e3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 133,
+      "scenario": "nodes10000",
+      "fen": "qrnkrb2/p3pppb/1p6/2pp3p/4P2P/1N1PR3/PPP2P2/QR1K1BBN b Qkq - 3 8",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "g7g6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10005,
+          "score": "PovScore(Cp(-306), BLACK)",
+          "pv": [
+            "g7g6",
+            "b3d2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 134,
+      "scenario": "multipv4",
+      "fen": "qrn1r3/p1k1pp1b/1p4pb/2N4p/4R2P/3P4/PPP2P2/Q1RK1BBN w - - 1 12",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "c5a6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 9847,
+          "score": "PovScore(Cp(+417), WHITE)",
+          "pv": [
+            "c5a6",
+            "c7d8",
+            "f1g2",
+            "c8d6",
+            "g1h2",
+            "d6e4",
+            "g2e4",
+            "b8c8",
+            "e4a8"
+          ]
+        },
+        {
+          "nodes": 9847,
+          "score": "PovScore(Cp(+385), WHITE)",
+          "pv": [
+            "g1h2",
+            "e7e5",
+            "c5a6",
+            "c7d8",
+            "f1g2",
+            "c8d6",
+            "b2b3",
+            "f7f5",
+            "h2e5",
+            "f5e4",
+            "e5d6"
+          ]
+        },
+        {
+          "nodes": 9847,
+          "score": "PovScore(Cp(+353), WHITE)",
+          "pv": [
+            "c5b3",
+            "c8d6",
+            "f1g2",
+            "f7f5"
+          ]
+        },
+        {
+          "nodes": 9847,
+          "score": "PovScore(Cp(+291), WHITE)",
+          "pv": [
+            "c5e6",
+            "f7e6",
+            "f1g2",
+            "b6b5",
+            "b2b3",
+            "c8d6",
+            "g1h2",
+            "b8b6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 135,
+      "scenario": "mate2_nodes10000",
+      "fen": "qrn1r3/p1k1Rp1b/6p1/2B4p/7P/3P4/PPP5/Q1b1KB1N b - - 0 15",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "e8e7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10012,
+          "score": "PovScore(Cp(+708), BLACK)",
+          "pv": [
+            "e8e7",
+            "c5e7",
+            "c1b2",
+            "a1d1",
+            "a8h1",
+            "d1d2",
+            "c8e7",
+            "d2a5",
+            "c7d7",
+            "a5a7",
+            "h1b7",
+            "a7a4",
+            "b7b5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 136,
+      "scenario": "depth8",
+      "fen": "q1n2B2/p1k2p1b/6p1/7p/7P/3P4/PrP5/4KB1N w - - 0 19",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "e1d2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 641,
+          "score": "PovScore(Cp(-995), WHITE)",
+          "pv": [
+            "e1d2",
+            "a8h1",
+            "d2c1",
+            "h1f1",
+            "c1b2",
+            "f1f6",
+            "b2c1",
+            "f6f4",
+            "c1b1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 137,
+      "scenario": "nodes10000",
+      "fen": "q7/pk3p1b/3B2p1/7p/3K3P/3P4/PrP5/5B1N b - - 2 22",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "b2c2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10003,
+          "score": "PovScore(Cp(+1022), BLACK)",
+          "pv": [
+            "b2c2",
+            "h1g3",
+            "g6g5",
+            "g3e4",
+            "h7e4",
+            "d3e4",
+            "c2c1",
+            "f1d3",
+            "a8d8",
+            "e4e5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 138,
+      "scenario": "multipv4",
+      "fen": "q7/pk3p1b/6p1/7p/2K4P/B7/P7/3r1B1N w - - 2 26",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "f1g2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 4342,
+          "score": "PovScore(Cp(-680), WHITE)",
+          "pv": [
+            "f1g2",
+            "b7b8",
+            "g2a8",
+            "b8a8",
+            "h1f2",
+            "d1e1",
+            "f2d3",
+            "e1e4",
+            "c4b3"
+          ]
+        },
+        {
+          "nodes": 4342,
+          "score": "PovScore(Cp(-1041), WHITE)",
+          "pv": [
+            "a3b2",
+            "a8c8",
+            "c4b3",
+            "c8e6",
+            "f1c4",
+            "e6e3",
+            "b3a4",
+            "e3e8",
+            "a4a5"
+          ]
+        },
+        {
+          "nodes": 4342,
+          "score": "PovScore(Cp(-1092), WHITE)",
+          "pv": [
+            "h1g3",
+            "a8c8",
+            "c4b3",
+            "c8e6",
+            "f1c4",
+            "e6e3",
+            "b3a4",
+            "e3e8",
+            "a4a5"
+          ]
+        },
+        {
+          "nodes": 4342,
+          "score": "PovScore(Cp(-1113), WHITE)",
+          "pv": [
+            "f1e2",
+            "a8c8",
+            "c4b3",
+            "c8e6",
+            "e2c4",
+            "e6e3",
+            "b3a4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 139,
+      "scenario": "mate2_nodes10000",
+      "fen": "q7/2k4b/5pp1/7p/2K4P/8/P4B2/5r1N b - - 1 29",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "a8a2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10014,
+          "score": "PovScore(Cp(+1570), BLACK)",
+          "pv": [
+            "a8a2",
+            "c4d4",
+            "f1h1",
+            "f2g3",
+            "c7d7",
+            "g3f4",
+            "a2f2",
+            "f4e3",
+            "f2h4",
+            "d4c3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 140,
+      "scenario": "depth8",
+      "fen": "2k5/7b/5pp1/7p/7q/1K6/P7/6B1 w - - 0 33",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "g1c5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1963,
+          "score": "PovScore(Cp(-1005), WHITE)",
+          "pv": [
+            "g1c5",
+            "h7g8",
+            "b3b2",
+            "h4h2",
+            "b2c3",
+            "g8a2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 141,
+      "scenario": "nodes10000",
+      "fen": "3k4/7b/6p1/5p1p/P7/8/5B2/3K4 b - - 0 36",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "d8e7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10003,
+          "score": "PovScore(Cp(+180), BLACK)",
+          "pv": [
+            "d8e7",
+            "f2e3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 142,
+      "scenario": "multipv4",
+      "fen": "8/1k5b/6p1/5p1p/P7/6B1/8/2K5 w - - 7 40",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "g3h4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 2449,
+          "score": "PovScore(Cp(-72), WHITE)",
+          "pv": [
+            "g3h4",
+            "b7c6",
+            "c1d2",
+            "h7g8",
+            "d2e3",
+            "g8b3"
+          ]
+        },
+        {
+          "nodes": 2449,
+          "score": "PovScore(Cp(-140), WHITE)",
+          "pv": [
+            "g3f4",
+            "b7c6",
+            "c1d2",
+            "h7g8",
+            "d2e3"
+          ]
+        },
+        {
+          "nodes": 2449,
+          "score": "PovScore(Cp(-168), WHITE)",
+          "pv": [
+            "g3e5",
+            "b7c6",
+            "c1d2"
+          ]
+        },
+        {
+          "nodes": 2449,
+          "score": "PovScore(Cp(-191), WHITE)",
+          "pv": [
+            "g3f2",
+            "b7c6",
+            "c1d2",
+            "g6g5",
+            "d2e2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 143,
+      "scenario": "mate2_nodes10000",
+      "fen": "3B4/1k5b/6p1/P6p/5p2/8/8/3K4 b - - 0 43",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "h7g8",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10004,
+          "score": "PovScore(Cp(+50), BLACK)",
+          "pv": [
+            "h7g8",
+            "d8g5",
+            "f4f3",
+            "d1e1",
+            "g8d5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 144,
+      "scenario": "depth8",
+      "fen": "3k4/8/P5p1/7p/2b2p2/8/8/3K4 w - - 4 47",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "a6a7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 877,
+          "score": "PovScore(Cp(-586), WHITE)",
+          "pv": [
+            "a6a7",
+            "c4d5",
+            "d1e2",
+            "d8e7",
+            "e2e1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 145,
+      "scenario": "nodes10000",
+      "fen": "8/2k5/P5p1/1b5p/5p2/8/8/1K6 b - - 11 50",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "f4f3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10012,
+          "score": "PovScore(Cp(+997), BLACK)",
+          "pv": [
+            "f4f3",
+            "a6a7",
+            "b5c6",
+            "a7a8q",
+            "c6a8",
+            "b1b2",
+            "h5h4",
+            "b2b3",
+            "f3f2",
+            "b3b4",
+            "f2f1q",
+            "b4a4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 146,
+      "scenario": "multipv4",
+      "fen": "bbrnnkrq/pppppppp/8/8/1P6/8/P1PPPPPP/BBRNNKRQ b KQkq - 0 1",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "b7b6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10022,
+          "score": "PovScore(Cp(-7), BLACK)",
+          "pv": [
+            "b7b6",
+            "h2h4",
+            "h7h5",
+            "h1h3",
+            "d8e6",
+            "c2c4",
+            "c7c5",
+            "b4c5",
+            "b6c5"
+          ]
+        },
+        {
+          "nodes": 10022,
+          "score": "PovScore(Cp(-16), BLACK)",
+          "pv": [
+            "b7b5",
+            "h2h4",
+            "h7h5",
+            "c2c4",
+            "b5c4",
+            "d1e3",
+            "d8e6"
+          ]
+        },
+        {
+          "nodes": 10022,
+          "score": "PovScore(Cp(-65), BLACK)",
+          "pv": [
+            "c7c5",
+            "b4c5",
+            "b7b6",
+            "c5b6",
+            "a7b6",
+            "h2h4",
+            "h7h5",
+            "h1h3",
+            "d8e6"
+          ]
+        },
+        {
+          "nodes": 10022,
+          "score": "PovScore(Cp(-67), BLACK)",
+          "pv": [
+            "a7a5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 147,
+      "scenario": "mate2_nodes10000",
+      "fen": "bbrnn1kq/ppppp1rp/8/4Np2/1P6/8/P1PPPPPP/1BRN1KRQ w KQ - 2 5",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "g2g4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10000,
+          "score": "PovScore(Cp(-317), WHITE)",
+          "pv": [
+            "g2g4",
+            "e7e6",
+            "g4f5",
+            "b7b6",
+            "g1g7",
+            "h8g7",
+            "h1a8",
+            "g7e5",
+            "a8g2",
+            "g8f8",
+            "c2c3",
+            "c7c5",
+            "b4c5",
+            "b6c5",
+            "f5e6",
+            "d8e6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 148,
+      "scenario": "depth8",
+      "fen": "bbrnn2q/ppp1prkp/2p5/5p2/1P5P/8/PNPPPPP1/1BR1K1RQ b - - 1 8",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "b7b5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 902,
+          "score": "PovScore(Cp(+650), BLACK)",
+          "pv": [
+            "b7b5",
+            "g2g4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 149,
+      "scenario": "nodes10000",
+      "fen": "bbrnn2q/pp2prkp/8/2p2p1P/1P6/3p3Q/PNP1PPP1/1BR1K1R1 w - - 0 12",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "h3d3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10008,
+          "score": "PovScore(Cp(-690), WHITE)",
+          "pv": [
+            "h3d3",
+            "e8f6",
+            "e1d2",
+            "f6h5",
+            "d3d7",
+            "b8f4",
+            "e2e3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 150,
+      "scenario": "multipv4",
+      "fen": "b1rnn2q/pp2prkp/8/5B1P/1pP5/6P1/PN2p1P1/2R1K1R1 b - - 0 15",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "e7e6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3115,
+          "score": "PovScore(Cp(+1528), BLACK)",
+          "pv": [
+            "e7e6",
+            "e1e2",
+            "g7f8"
+          ]
+        },
+        {
+          "nodes": 3115,
+          "score": "PovScore(Cp(+1451), BLACK)",
+          "pv": [
+            "g7f8",
+            "f5c8",
+            "h8b2",
+            "c8e6",
+            "d8e6",
+            "c1c2",
+            "b2b1",
+            "e1d2",
+            "b1g1",
+            "c2c1"
+          ]
+        },
+        {
+          "nodes": 3115,
+          "score": "PovScore(Cp(+1395), BLACK)",
+          "pv": [
+            "g7g8",
+            "b2a4",
+            "c8c6",
+            "c1c2",
+            "h8a1",
+            "e1e2"
+          ]
+        },
+        {
+          "nodes": 3115,
+          "score": "PovScore(Cp(+1241), BLACK)",
+          "pv": [
+            "f7f5",
+            "e1e2",
+            "g7f7",
+            "b2d3",
+            "f7g8",
+            "d3b4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 151,
+      "scenario": "mate2_nodes10000",
+      "fen": "b1r1n2q/pp2p1kp/2n5/7P/1pP1r3/2R3P1/PN1K2P1/6R1 w - - 3 19",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "c3f3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10010,
+          "score": "PovScore(Cp(-1255), WHITE)",
+          "pv": [
+            "c3f3",
+            "c6d4",
+            "f3f7",
+            "g7g8",
+            "d2c1",
+            "d4e2",
+            "c1d1",
+            "g8f7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 152,
+      "scenario": "depth8",
+      "fen": "b1r1n2q/pp2p1k1/2n4p/2P4P/3r4/1PR3P1/1N2K1P1/4R3 b - - 0 22",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "d4d2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 628,
+          "score": "PovScore(Cp(+963), BLACK)",
+          "pv": [
+            "d4d2",
+            "e2d2",
+            "c8d8",
+            "b2d3",
+            "d8d3",
+            "c3d3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 153,
+      "scenario": "nodes10000",
+      "fen": "b1r1n2q/p5k1/2n4p/1pP1p2P/8/1P4P1/1N3KP1/4r3 w - - 0 26",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "b3b4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10004,
+          "score": "PovScore(Cp(-1579), WHITE)",
+          "pv": [
+            "b3b4",
+            "c6b4",
+            "f2e1",
+            "c8c5",
+            "g3g4",
+            "c5c1",
+            "e1e2",
+            "c1c2",
+            "e2e3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 154,
+      "scenario": "multipv4",
+      "fen": "2r1n2q/pb4k1/7p/2P1n2P/1p6/1P4P1/5KP1/8 b - - 1 29",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "h8f8",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 4105,
+          "score": "PovScore(Cp(+1687), BLACK)",
+          "pv": [
+            "h8f8",
+            "f2e1",
+            "e5d3",
+            "e1d2",
+            "f8f2",
+            "d2d3",
+            "f2f1",
+            "d3e3"
+          ]
+        },
+        {
+          "nodes": 4105,
+          "score": "PovScore(Cp(+1624), BLACK)",
+          "pv": [
+            "g7h7",
+            "f2g1",
+            "h8f6",
+            "g1h2",
+            "e5g4",
+            "h2h3",
+            "f6f2",
+            "h3h4"
+          ]
+        },
+        {
+          "nodes": 4105,
+          "score": "PovScore(Cp(+1582), BLACK)",
+          "pv": [
+            "c8c5",
+            "f2e2"
+          ]
+        },
+        {
+          "nodes": 4105,
+          "score": "PovScore(Cp(+1518), BLACK)",
+          "pv": [
+            "h8g8",
+            "f2g1",
+            "g8b3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 155,
+      "scenario": "mate2_nodes10000",
+      "fen": "4n3/p5kq/7p/2r4P/1p4n1/1P6/6K1/8 w - - 0 33",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "g2h3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10002,
+          "score": "PovScore(Mate(-3), WHITE)",
+          "pv": [
+            "g2h3",
+            "c5c3",
+            "h3h4",
+            "c3b3",
+            "h4g4",
+            "h7e4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 156,
+      "scenario": "depth8",
+      "fen": "4n2k/7q/2r4p/p3K2P/1p6/1P6/8/8 b - - 1 36",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "h7e7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1608,
+          "score": "PovScore(Cp(+1800), BLACK)",
+          "pv": [
+            "h7e7",
+            "e5f4",
+            "e7g5",
+            "f4f3",
+            "g5h5",
+            "f3f2",
+            "h5h2",
+            "f2e1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 157,
+      "scenario": "nodes10000",
+      "fen": "7k/7q/5n1p/p2K3P/1p6/r7/8/8 w - - 4 40",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "d5d6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10000,
+          "score": "PovScore(Cp(-2580), WHITE)",
+          "pv": [
+            "d5d6",
+            "h7d7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 158,
+      "scenario": "multipv4",
+      "fen": "7k/3q4/K6p/p6n/1p6/8/r7/8 b - - 3 43",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "h5f6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 7124,
+          "score": "PovScore(Cp(+1234), BLACK)",
+          "pv": [
+            "h5f6",
+            "a6b6",
+            "f6h5",
+            "b6a6",
+            "h5f4",
+            "a6b6",
+            "a2e2",
+            "b6a5"
+          ]
+        },
+        {
+          "nodes": 7124,
+          "score": "PovScore(Cp(+1216), BLACK)",
+          "pv": [
+            "h5f4",
+            "a6b6",
+            "a2e2",
+            "b6a5",
+            "d7a7",
+            "a5b5"
+          ]
+        },
+        {
+          "nodes": 7124,
+          "score": "PovScore(Cp(+1216), BLACK)",
+          "pv": [
+            "h8h7",
+            "a6b6",
+            "h7h8",
+            "b6a6",
+            "h5f4"
+          ]
+        },
+        {
+          "nodes": 7124,
+          "score": "PovScore(Cp(+1209), BLACK)",
+          "pv": [
+            "d7c7",
+            "a6b5",
+            "c7d6",
+            "b5c4",
+            "d6a6",
+            "c4d4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 159,
+      "scenario": "mate2_nodes10000",
+      "fen": "1q6/7k/7p/pK5n/rp6/8/8/8 w - - 10 47",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "b5a4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10001,
+          "score": "PovScore(Cp(-1098), WHITE)",
+          "pv": [
+            "b5a4",
+            "h5g7",
+            "a4b3",
+            "b8b6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 160,
+      "scenario": "depth8",
+      "fen": "4q3/7k/7p/p6n/rp6/3K4/8/8 b - - 17 50",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "b4b3",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1973,
+          "score": "PovScore(Cp(+1281), BLACK)",
+          "pv": [
+            "b4b3",
+            "d3d2",
+            "h5f6",
+            "d2c1",
+            "e8e1",
+            "c1b2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 161,
+      "scenario": "nodes10000",
+      "fen": "nqbbnrkr/pppppppp/8/8/8/1N6/PPPPPPPP/1QBBNRKR b KQkq - 1 1",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "d7d5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10002,
+          "score": "PovScore(Cp(-17), BLACK)",
+          "pv": [
+            "d7d5",
+            "c2c3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 162,
+      "scenario": "multipv4",
+      "fen": "nqbb1rkr/pppp1npp/4p3/5p2/8/1N1N1P2/PPPPP1PP/Q1BB1RKR w KQkq - 3 5",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "d3f2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 12559,
+          "score": "PovScore(Cp(-29), WHITE)",
+          "pv": [
+            "d3f2",
+            "b7b6",
+            "d2d4",
+            "c7c5"
+          ]
+        },
+        {
+          "nodes": 12559,
+          "score": "PovScore(Cp(-45), WHITE)",
+          "pv": [
+            "c2c3",
+            "d7d6"
+          ]
+        },
+        {
+          "nodes": 12559,
+          "score": "PovScore(Cp(-49), WHITE)",
+          "pv": [
+            "h2h4",
+            "b7b6",
+            "d3f2",
+            "c7c5",
+            "d2d4",
+            "c5d4",
+            "b3d4"
+          ]
+        },
+        {
+          "nodes": 12559,
+          "score": "PovScore(Cp(-66), WHITE)",
+          "pv": [
+            "c2c4",
+            "b7b6",
+            "d3f4",
+            "e6e5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 163,
+      "scenario": "mate2_nodes10000",
+      "fen": "nqbb1rkr/pppp2pp/3R4/8/8/1N1p1P2/PPPP2PP/Q1BB2KR b Kkq - 0 8",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "c7d6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10011,
+          "score": "PovScore(Cp(+772), BLACK)",
+          "pv": [
+            "c7d6",
+            "g1f1",
+            "h7h5",
+            "b3d4",
+            "b7b6",
+            "d4e6",
+            "d7e6",
+            "c2c4",
+            "e6e5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 164,
+      "scenario": "depth8",
+      "fen": "nq1b2kr/pb1p2p1/3p3p/8/7P/1N1p4/PPPP2P1/Q1B3KR w Kk - 0 12",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "g1h1",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 873,
+          "score": "PovScore(Cp(-681), WHITE)",
+          "pv": [
+            "g1h1",
+            "d8h4",
+            "c2d3",
+            "h4e7",
+            "b3d4",
+            "e7g5",
+            "d4f5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 165,
+      "scenario": "nodes10000",
+      "fen": "nq4k1/p1bp2pr/3p3p/8/7P/1N1P4/PP1P2K1/Q1B4R b - - 0 15",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "b8b7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10002,
+          "score": "PovScore(Cp(+669), BLACK)",
+          "pv": [
+            "b8b7",
+            "g2g1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 166,
+      "scenario": "multipv4",
+      "fen": "3b2kr/2nQ2p1/3p3p/8/7P/1P1P4/1P1P2K1/2B4R w - - 1 19",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "d7d8",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 3167,
+          "score": "PovScore(Cp(+1012), WHITE)",
+          "pv": [
+            "d7d8",
+            "g8h7",
+            "d8c7",
+            "h8a8",
+            "c7c4",
+            "a8f8",
+            "c4e4",
+            "h7h8"
+          ]
+        },
+        {
+          "nodes": 3167,
+          "score": "PovScore(Cp(+953), WHITE)",
+          "pv": [
+            "h4h5",
+            "d6d5"
+          ]
+        },
+        {
+          "nodes": 3167,
+          "score": "PovScore(Cp(+919), WHITE)",
+          "pv": [
+            "h1g1",
+            "d6d5",
+            "d7d8",
+            "g8h7",
+            "d8c7"
+          ]
+        },
+        {
+          "nodes": 3167,
+          "score": "PovScore(Cp(+883), WHITE)",
+          "pv": [
+            "h1h3",
+            "g8h7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 167,
+      "scenario": "mate2_nodes10000",
+      "fen": "r7/2n3k1/3p3p/8/7b/1P1P4/1P1P2K1/2B1R3 b - - 3 22",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "h4e1",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10003,
+          "score": "PovScore(Cp(+741), BLACK)",
+          "pv": [
+            "h4e1",
+            "b3b4",
+            "g7g6",
+            "d3d4",
+            "a8h8"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 168,
+      "scenario": "depth8",
+      "fen": "8/6k1/3p3p/3n4/8/PP1P3K/3B4/8 w - - 1 26",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "a3a4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1661,
+          "score": "PovScore(Cp(+183), WHITE)",
+          "pv": [
+            "a3a4",
+            "g7f6",
+            "a4a5",
+            "f6e7",
+            "a5a6",
+            "e7d7",
+            "a6a7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 169,
+      "scenario": "nodes10000",
+      "fen": "8/8/3p3k/8/1n6/PP1P2K1/8/8 b - - 3 29",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "b4c2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10000,
+          "score": "PovScore(Cp(+20), BLACK)",
+          "pv": [
+            "b4c2",
+            "g3f4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 170,
+      "scenario": "multipv4",
+      "fen": "8/6k1/8/3p4/3n4/PP6/8/6K1 w - - 0 33",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "g1f2",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 4772,
+          "score": "PovScore(Cp(-358), WHITE)",
+          "pv": [
+            "g1f2",
+            "g7f6",
+            "f2e3",
+            "f6e5",
+            "e3d3",
+            "d4b3",
+            "d3c2",
+            "b3d4",
+            "c2d3"
+          ]
+        },
+        {
+          "nodes": 4772,
+          "score": "PovScore(Cp(-383), WHITE)",
+          "pv": [
+            "b3b4",
+            "g7f6",
+            "g1f2",
+            "f6e5",
+            "a3a4",
+            "e5d6"
+          ]
+        },
+        {
+          "nodes": 4772,
+          "score": "PovScore(Cp(-414), WHITE)",
+          "pv": [
+            "g1f1",
+            "g7f6",
+            "b3b4",
+            "f6e5",
+            "a3a4",
+            "e5d6",
+            "b4b5",
+            "d6c5",
+            "f1f2",
+            "c5c4",
+            "b5b6"
+          ]
+        },
+        {
+          "nodes": 4772,
+          "score": "PovScore(Cp(-494), WHITE)",
+          "pv": [
+            "g1g2",
+            "d4b3",
+            "g2f1",
+            "g7f6",
+            "f1e2",
+            "f6e5",
+            "e2d3",
+            "b3d4",
+            "d3c3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 171,
+      "scenario": "mate2_nodes10000",
+      "fen": "8/6k1/2n5/3p4/8/P5K1/8/8 b - - 5 36",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "g7f7",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10010,
+          "score": "PovScore(Cp(+543), BLACK)",
+          "pv": [
+            "g7f7",
+            "g3f3",
+            "f7e7",
+            "f3e2",
+            "e7d6",
+            "e2d2",
+            "d6c5",
+            "d2d3",
+            "c6e5",
+            "d3c3"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 172,
+      "scenario": "depth8",
+      "fen": "8/8/2n3k1/3p4/P7/8/7K/8 w - - 5 40",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "h2g1",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1127,
+          "score": "PovScore(Cp(-538), WHITE)",
+          "pv": [
+            "h2g1",
+            "g6f5",
+            "g1f1",
+            "f5e4",
+            "f1e2",
+            "d5d4",
+            "e2d2",
+            "e4d5"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 173,
+      "scenario": "nodes10000",
+      "fen": "8/8/6k1/3p4/Pn6/8/8/6K1 b - - 12 43",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "d5d4",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10006,
+          "score": "PovScore(Cp(+613), BLACK)",
+          "pv": [
+            "d5d4",
+            "g1f1"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 174,
+      "scenario": "multipv4",
+      "fen": "8/8/7k/P2p4/8/8/2n5/6K1 w - - 1 47",
+      "chess960": true,
+      "requested_multipv": 4,
+      "bestmove": "a5a6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 6591,
+          "score": "PovScore(Cp(+517), WHITE)",
+          "pv": [
+            "a5a6",
+            "c2d4"
+          ]
+        },
+        {
+          "nodes": 6591,
+          "score": "PovScore(Cp(-48), WHITE)",
+          "pv": [
+            "g1f2",
+            "c2d4",
+            "f2e3",
+            "d4e6",
+            "a5a6",
+            "h6g5"
+          ]
+        },
+        {
+          "nodes": 6591,
+          "score": "PovScore(Cp(-270), WHITE)",
+          "pv": [
+            "g1g2",
+            "c2b4",
+            "g2f3"
+          ]
+        },
+        {
+          "nodes": 6591,
+          "score": "PovScore(Cp(-298), WHITE)",
+          "pv": [
+            "g1f1",
+            "c2d4",
+            "a5a6",
+            "d4c6"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 175,
+      "scenario": "mate2_nodes10000",
+      "fen": "8/8/P5k1/1n1p4/8/8/8/7K b - - 2 50",
+      "chess960": true,
+      "requested_multipv": 1,
+      "bestmove": "g6g5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10004,
+          "score": "PovScore(Cp(+557), BLACK)",
+          "pv": [
+            "g6g5",
+            "h1g2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 176,
+      "scenario": "depth8",
+      "fen": "4k3/1P6/8/8/8/8/6p1/4K3 w - - 0 1",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "b7b8q",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 1346,
+          "score": "PovScore(Cp(+646), WHITE)",
+          "pv": [
+            "b7b8q",
+            "e8d7",
+            "b8b5",
+            "d7d6",
+            "b5b4",
+            "d6e6",
+            "b4c4",
+            "e6e7"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 177,
+      "scenario": "nodes10000",
+      "fen": "r3k2r/ppp2ppp/2n5/3pp3/3PP3/2N5/PPP2PPP/R3K2R w KQkq - 0 1",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "d4e5",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10013,
+          "score": "PovScore(Cp(+75), WHITE)",
+          "pv": [
+            "d4e5",
+            "d5e4"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 178,
+      "scenario": "multipv4",
+      "fen": "4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 1",
+      "chess960": false,
+      "requested_multipv": 4,
+      "bestmove": "e5d6",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 5310,
+          "score": "PovScore(Cp(0), WHITE)",
+          "pv": [
+            "e5d6",
+            "e8d7",
+            "e1e2",
+            "d7d8",
+            "d6d7"
+          ]
+        },
+        {
+          "nodes": 5310,
+          "score": "PovScore(Cp(0), WHITE)",
+          "pv": [
+            "e1f2",
+            "d5d4",
+            "f2f3",
+            "e8d7"
+          ]
+        },
+        {
+          "nodes": 5310,
+          "score": "PovScore(Cp(0), WHITE)",
+          "pv": [
+            "e1d2",
+            "e8f7",
+            "d2e3",
+            "f7e7",
+            "e3f3",
+            "e7d7",
+            "e5e6",
+            "d7d6"
+          ]
+        },
+        {
+          "nodes": 5310,
+          "score": "PovScore(Cp(0), WHITE)",
+          "pv": [
+            "e1e2",
+            "e8d8",
+            "e2e3",
+            "d8d7",
+            "e3e2"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 179,
+      "scenario": "mate2_nodes10000",
+      "fen": "r1b1k2r/1P3ppp/8/8/8/8/8/4K3 w kq - 0 1",
+      "chess960": false,
+      "requested_multipv": 1,
+      "bestmove": "b7a8q",
+      "legal": true,
+      "infos": [
+        {
+          "nodes": 10002,
+          "score": "PovScore(Cp(-234), WHITE)",
+          "pv": [
+            "b7a8q",
+            "e8g8",
+            "a8b8",
+            "c8e6",
+            "b8f4",
+            "f8c8",
+            "e1f2",
+            "h7h6",
+            "f2g3",
+            "c8c3",
+            "g3f2"
+          ]
+        }
+      ]
+    }
+  ]
+}

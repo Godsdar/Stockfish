@@ -1,0 +1,114 @@
+[
+  {
+    "binary": "options-cases-base",
+    "scenario": "empty",
+    "returncode": 0,
+    "stdout": "empty: PASS\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-base",
+    "scenario": "single",
+    "returncode": 0,
+    "stdout": "single: PASS\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-base",
+    "scenario": "sequential",
+    "returncode": 1,
+    "stdout": "sequential: FAIL\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-base",
+    "scenario": "interleaved",
+    "returncode": 1,
+    "stdout": "interleaved: FAIL\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-base",
+    "scenario": "lifetime",
+    "returncode": 1,
+    "stdout": "lifetime: FAIL\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-base",
+    "scenario": "combo",
+    "returncode": 1,
+    "stdout": "combo: FAIL\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-base",
+    "scenario": "callback",
+    "returncode": 1,
+    "stdout": "callback: FAIL\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-base",
+    "scenario": "duplicate",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Option \"HASH\" was already added!\n"
+  },
+  {
+    "binary": "options-cases-fixed",
+    "scenario": "empty",
+    "returncode": 0,
+    "stdout": "empty: PASS\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-fixed",
+    "scenario": "single",
+    "returncode": 0,
+    "stdout": "single: PASS\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-fixed",
+    "scenario": "sequential",
+    "returncode": 0,
+    "stdout": "sequential: PASS\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-fixed",
+    "scenario": "interleaved",
+    "returncode": 0,
+    "stdout": "interleaved: PASS\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-fixed",
+    "scenario": "lifetime",
+    "returncode": 0,
+    "stdout": "lifetime: PASS\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-fixed",
+    "scenario": "combo",
+    "returncode": 0,
+    "stdout": "combo: PASS\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-fixed",
+    "scenario": "callback",
+    "returncode": 0,
+    "stdout": "callback: PASS\n",
+    "stderr": ""
+  },
+  {
+    "binary": "options-cases-fixed",
+    "scenario": "duplicate",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Option \"HASH\" was already added!\n"
+  }
+]
