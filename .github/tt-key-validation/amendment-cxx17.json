@@ -1,0 +1,11 @@
+{
+  "registered_utc": "2026-10-21T06:33:23.070285+00:00",
+  "original_source": "a054f22a91a8a626b505f4ee894fc08b5483f02b",
+  "original_native_run": "https://github.com/Godsdar/Stockfish/actions/runs/39556032741",
+  "original_native_run_disposition": "cancel requested before candidate search/timing; local C++17 -Werror compile failure",
+  "amended_source": "e13def7ecdec79145abb64abdcba06daf4109003",
+  "reason": "C++17 forbids implicit capture of structured-binding ttData in lambda; pass Move childMove by value instead. childMove avoids outer Move move shadow. Guards, probe placement, fallback ordering, cutoff logic unchanged.",
+  "changes_allowed": "Only this mechanical C++17 repair authorized by parent; protocol, sample, timing pair count and rejection criteria unchanged. Repeat all correctness checks.",
+  "no_candidate_search_or_timing_observed": true,
+  "patch_sha256": "7a84717f2a7c46bacf6a952216bfda14b741dee6a98a0dbc026c34cb8ba5dd00"
+}

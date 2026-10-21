@@ -33,7 +33,7 @@ def run(name,index,case):
     normalized=[re.sub(r'\b(time|nps) \d+',r'\1 <elapsed>',line) for line in lines if not (line.startswith('Stockfish ') or line.startswith('id name '))]
     prefix.with_suffix('.normalized').write_text('\n'.join(normalized)+'\n')
     return normalized,time.monotonic()-started
-report={'sources':'frozen a054f22 against effdc3f','binaries':{k:{'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for k,p in engines.items()},'cases':[],'status':'running'}
+report={'sources':'frozen e13def7 against effdc3f; mechanical C++17 amendment','binaries':{k:{'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for k,p in engines.items()},'cases':[],'status':'running'}
 try:
  for i,case in enumerate(cases,1):
     results={}

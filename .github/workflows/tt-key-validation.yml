@@ -31,16 +31,16 @@ jobs:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: Godsdar/Stockfish
-          ref: a054f22a91a8a626b505f4ee894fc08b5483f02b
-          fetch-depth: 2
+          ref: e13def7ecdec79145abb64abdcba06daf4109003
+          fetch-depth: 3
           path: candidate
           persist-credentials: false
       - name: Provenance and network
         run: |
           mkdir -p results
           for d in validation baseline candidate; do git -C "$d" rev-parse HEAD > "results/$d-commit.txt"; done
-          git -C candidate diff HEAD^ HEAD > results/candidate.patch
-          cp validation/.github/tt-key-validation/{protocol.json,source-freeze.json,source-proof.md} results/
+          git -C candidate diff effdc3fd3f6de6e75fe1374a51a7a7eed66f880b HEAD > results/candidate.patch
+          cp validation/.github/tt-key-validation/{protocol.json,source-freeze.json,source-proof.md,amendment-cxx17.json} results/
           make -C baseline/src net
           cp baseline/src/nn-*.nnue candidate/src/
           sha256sum baseline/src/nn-*.nnue candidate/src/nn-*.nnue > results/network-sha256.txt
