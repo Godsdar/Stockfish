@@ -924,6 +924,11 @@ Value Search::Worker::search(
                     if (!is_valid(ttDataNext.value))
                         return ttData.value;
 
+                    // An upper bound in the child does not contradict a parent fail-high.
+                    if (ttData.value >= beta && ttHitNext && !is_decisive(ttDataNext.value)
+                        && ttDataNext.bound == BOUND_UPPER)
+                        return ttData.value;
+
                     if ((ttData.value >= beta) == (-ttDataNext.value >= beta))
                         return ttData.value;
                 }
