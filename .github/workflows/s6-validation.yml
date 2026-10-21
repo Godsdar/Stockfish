@@ -1,0 +1,91 @@
+name: S6 frozen native validation
+on:
+  push:
+    branches: [research/s6-validation-20261021]
+permissions:
+  contents: read
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2022, ubuntu-24.04]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 35
+    env:
+      PYTHONUTF8: '1'
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          path: validation
+          persist-credentials: false
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: official-stockfish/Stockfish
+          ref: effdc3fd3f6de6e75fe1374a51a7a7eed66f880b
+          path: baseline
+          persist-credentials: false
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: Godsdar/Stockfish
+          ref: 280a8985a0f6bff5bcc3abf03e931a05bd6c0102
+          fetch-depth: 2
+          path: candidate
+          persist-credentials: false
+      - name: Immutable provenance and network
+        run: |
+          mkdir -p results
+          for d in validation baseline candidate; do git -C "$d" rev-parse HEAD > "results/$d-commit.txt"; done
+          git -C candidate diff HEAD^ HEAD > results/candidate.patch
+          cp validation/.github/research/{source-freeze.json,justification.md,bench-freeze.json,protocol.json} results/
+          make -C baseline/src net
+          cp baseline/src/nn-*.nnue candidate/src/
+          sha256sum baseline/src/nn-*.nnue candidate/src/nn-*.nnue > results/network-sha256.txt
+          python -m pip install requests python-chess > results/python-deps.log 2>&1
+      - name: Set up MSVC
+        if: runner.os == 'Windows'
+        uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756
+      - name: Windows CPU and compiler
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          Get-CimInstance Win32_Processor | Select-Object Name, NumberOfCores, NumberOfLogicalProcessors | Tee-Object -FilePath results/cpu.txt
+          cl 2>&1 | Tee-Object -FilePath results/compiler.txt
+          exit 0
+      - name: Windows native release builds
+        if: runner.os == 'Windows'
+        run: python validation/.github/research/build_windows.py baseline/src candidate/src > results/build-windows.log 2>&1
+      - name: Linux native release builds
+        if: runner.os == 'Linux'
+        run: |
+          lscpu > results/cpu.txt
+          g++ --version > results/compiler.txt
+          for d in baseline candidate; do make -C "$d/src" -j2 build ARCH=x86-64-avx2 COMP=gcc EXTRACXXFLAGS='-DNDEBUG -Werror' > "results/build-$d.log" 2>&1; done
+      - name: Bench and real native runtime checks
+        run: |
+          suffix=''
+          if [ "$RUNNER_OS" = 'Windows' ]; then suffix='.exe'; fi
+          for d in baseline candidate; do
+            "$d/src/stockfish$suffix" bench > "results/$d-bench.stdout" 2> "results/$d-bench.log"
+            expected=1559611
+            if [ "$d" = 'candidate' ]; then expected=$(python -c "import json; print(json.load(open('validation/.github/research/bench-freeze.json'))['candidate_bench'])"); fi
+            python -c "import pathlib,re; s=pathlib.Path('results/$d-bench.log').read_text(); n=int(re.search(r'Nodes searched\s*:\s*(\d+)',s).group(1)); assert n==$expected,(n,$expected)"
+            sha256sum "$d/src/stockfish$suffix" >> results/binary-sha256.txt
+            cd "$d"
+            python tests/instrumented.py --none "src/stockfish$suffix" > "../results/$d-instrumented.log" 2>&1
+            cd ..
+            python validation/.github/research/smoke_uci.py "$d/src/stockfish$suffix" "results/$d-smoke.json" > "results/$d-smoke.log" 2>&1
+          done
+      - name: Verify text-only artifacts
+        if: always()
+        run: |
+          python -c "import pathlib; allowed={'.json','.log','.stdout','.txt','.patch','.md'}; bad=[str(p) for p in pathlib.Path('results').rglob('*') if p.is_file() and p.suffix.lower() not in allowed]; assert not bad,bad"
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: s6-${{ matrix.os }}
+          path: results/
+          retention-days: 7

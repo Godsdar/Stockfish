@@ -1,0 +1,12 @@
+{
+  "frozen_utc": "2026-10-21T06:57:48.459194+00:00",
+  "experiment": "S6: one-point parent-depth aging after actual child veto, nonexact parents only",
+  "base": "effdc3fd3f6de6e75fe1374a51a7a7eed66f880b",
+  "candidate": "280a8985a0f6bff5bcc3abf03e931a05bd6c0102",
+  "branch": "research/s6-child-veto-aging-20261021",
+  "patch_sha256": "e2e0bb9273bb0509a7588991bf43731132ca6ae1b36126368c0e25feaccd885b",
+  "search_cpp_sha256": "7b558df1690064a09935c99b61c007a97f49a8c519575e4701a3dcac8c90d852",
+  "candidate_builds_or_searches_so_far": 0,
+  "authorization": "Root selected this single functional heuristic after fresh baseline-only diagnostic. No alternatives or tuning. Root owns tactical/game preregistration and must release searches.",
+  "scope": "4 inserted lines, src/search.cpp only; existing child-invalid and same-side early returns unchanged; no exact-key shortcut included."
+}
