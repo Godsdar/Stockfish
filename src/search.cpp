@@ -915,19 +915,19 @@ Value Search::Worker::search(
                 if (depth >= 7 && ttData.move && pos.legal(ttData.move)
                     && !is_decisive(ttData.value))
                 {
-                    auto [ttHitNext, ttDataNext, ttWriterNext] = [&]() {
+                    auto [ttHitNext, ttDataNext, ttWriterNext] = [&](Move childMove) {
                         // The prefetch key is exact for ordinary non-pawn moves without
                         // castling rights or an en passant square.
-                        if (ttData.move.type_of() == NORMAL
-                            && type_of(pos.moved_piece(ttData.move)) != PAWN
+                        if (childMove.type_of() == NORMAL
+                            && type_of(pos.moved_piece(childMove)) != PAWN
                             && !pos.can_castle(ANY_CASTLING) && pos.ep_square() == SQ_NONE)
-                            return tt.probe(pos.prefetch_key(ttData.move));
+                            return tt.probe(pos.prefetch_key(childMove));
 
-                        pos.do_move(ttData.move, st);
+                        pos.do_move(childMove, st);
                         auto result = tt.probe(pos.key());
-                        pos.undo_move(ttData.move);
+                        pos.undo_move(childMove);
                         return result;
-                    }();
+                    }(ttData.move);
 
                     // Check that the ttValue after the tt move would also trigger a cutoff
                     if (!is_valid(ttDataNext.value))
