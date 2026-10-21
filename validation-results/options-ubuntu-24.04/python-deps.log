@@ -1,0 +1,18 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: requests in /usr/lib/python3/dist-packages (2.31.0)
+Collecting python-chess
+  Downloading python_chess-1.999-py3-none-any.whl.metadata (776 bytes)
+Collecting chess<2,>=1 (from python-chess)
+  Downloading chess-1.11.2.tar.gz (6.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.1/6.1 MB 26.7 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Downloading python_chess-1.999-py3-none-any.whl (1.4 kB)
+Building wheels for collected packages: chess
+  Building wheel for chess (setup.py): started
+  Building wheel for chess (setup.py): finished with status 'done'
+  Created wheel for chess: filename=chess-1.11.2-py3-none-any.whl size=147776 sha256=25f5747935e4dd2390a7c67112d5bd24882bdd36d59ceedbf2b3e0b041ed7995
+  Stored in directory: /home/runner/.cache/pip/wheels/83/1f/4e/8f4300f7dd554eb8de70ddfed96e94d3d030ace10c5b53d447
+Successfully built chess
+Installing collected packages: chess, python-chess
+Successfully installed chess-1.11.2 python-chess-1.999

@@ -1,0 +1,39 @@
+Collecting requests
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting python-chess
+  Downloading python_chess-1.999-py3-none-any.whl.metadata (776 bytes)
+Collecting charset_normalizer<4,>=2 (from requests)
+  Downloading charset_normalizer-3.5.2-cp312-cp312-win_amd64.whl.metadata (47 kB)
+Collecting idna<4,>=2.5 (from requests)
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting urllib3<3,>=1.26 (from requests)
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting certifi>=2023.5.7 (from requests)
+  Downloading certifi-2026.10.19-py3-none-any.whl.metadata (2.5 kB)
+Collecting chess<2,>=1 (from python-chess)
+  Downloading chess-1.11.2.tar.gz (6.1 MB)
+     ---------------------------------------- 6.1/6.1 MB 15.0 MB/s  0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading charset_normalizer-3.5.2-cp312-cp312-win_amd64.whl (207 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Downloading python_chess-1.999-py3-none-any.whl (1.4 kB)
+Downloading certifi-2026.10.19-py3-none-any.whl (136 kB)
+Building wheels for collected packages: chess
+  Building wheel for chess (pyproject.toml): started
+  Building wheel for chess (pyproject.toml): finished with status 'done'
+  Created wheel for chess: filename=chess-1.11.2-py3-none-any.whl size=147918 sha256=32c9544b30850ab0d18b2c9c68b20c7eea757a7bb9390cbae59ca1bc52d4603f
+  Stored in directory: c:\users\runneradmin\appdata\local\pip\cache\wheels\83\1f\4e\8f4300f7dd554eb8de70ddfed96e94d3d030ace10c5b53d447
+Successfully built chess
+Installing collected packages: urllib3, idna, chess, charset_normalizer, certifi, requests, python-chess
+
+Successfully installed certifi-2026.10.19 charset_normalizer-3.5.2 chess-1.11.2 idna-3.20 python-chess-1.999 requests-2.34.2 urllib3-2.8.0
+
+[notice] A new release of pip is available: 26.2.1 -> 26.2.2
+[notice] To update, run: python.exe -m pip install --upgrade pip

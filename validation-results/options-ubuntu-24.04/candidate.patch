@@ -1,0 +1,31 @@
+diff --git a/AUTHORS b/AUTHORS
+index c3b9834..241142f 100644
+--- a/AUTHORS
++++ b/AUTHORS
+@@ -118,6 +118,7 @@ Henri Wiechers
+ Hiraoka Takuya (HiraokaTakuya)
+ homoSapiensSapiens
+ Hongzhi Cheng
++Ildar Popov (Godsdar)
+ IncognitoQuack
+ Ivan Ivec (IIvec)
+ Jacques B. (Timshel)
+diff --git a/src/ucioption.cpp b/src/ucioption.cpp
+index cbbe007..abb7f12 100644
+--- a/src/ucioption.cpp
++++ b/src/ucioption.cpp
+@@ -69,12 +69,12 @@ const Option& OptionsMap::operator[](const std::string& name) const {
+ void OptionsMap::add(const std::string& name, const Option& option) {
+     if (!options_map.count(name))
+     {
+-        static usize insert_order = 0;
++        const usize insert_order = options_map.size();
+ 
+         options_map[name] = option;
+ 
+         options_map[name].parent = this;
+-        options_map[name].idx    = insert_order++;
++        options_map[name].idx    = insert_order;
+     }
+     else
+     {

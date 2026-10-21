@@ -1,0 +1,42 @@
+[
+  {
+    "path": "options-ubuntu-24.04/baseline-engine_options_repro",
+    "size": 113882776,
+    "sha256": "c2ac8a40c2f8aad70e1c25bae9c7a1578126771b56740d19f22708ffa5948e6d"
+  },
+  {
+    "path": "options-ubuntu-24.04/baseline-options_cases",
+    "size": 64944,
+    "sha256": "8efc070ab74e31677e750939cdb24f20f34a4fdb963f12d8589c6ccf01ef1894"
+  },
+  {
+    "path": "options-ubuntu-24.04/candidate-engine_options_repro",
+    "size": 113882632,
+    "sha256": "53b3012f7d5e3c62c3c3ca3b479ac654aeda4274106bbff10c4d5789b3ce130e"
+  },
+  {
+    "path": "options-ubuntu-24.04/candidate-options_cases",
+    "size": 64808,
+    "sha256": "7cc76fdcff4d7c2db7b261e72bdcf9db37ba5ae7bae62419f2156efd3d6828af"
+  },
+  {
+    "path": "options-windows-2022/baseline-engine_options_repro.exe",
+    "size": 841728,
+    "sha256": "7d96f79b693d0b1e39bb262c8ddcc1db8156ea1c0ccc9d9c6a65500b84c729a2"
+  },
+  {
+    "path": "options-windows-2022/baseline-options_cases.exe",
+    "size": 301568,
+    "sha256": "0b77d03e6b09b0220367f197e9177e4065f7cef09395de3a3fbd0653ed621b00"
+  },
+  {
+    "path": "options-windows-2022/candidate-engine_options_repro.exe",
+    "size": 841728,
+    "sha256": "4a4c890decce71fc1dcf53d9c4814e8d5928e22cb0bc061b96985d5b8585a74a"
+  },
+  {
+    "path": "options-windows-2022/candidate-options_cases.exe",
+    "size": 301568,
+    "sha256": "f0af0c9797d98cc1ac750de9e2e02e0b63626590aee477742dbf2e83f8c9b0ef"
+  }
+]

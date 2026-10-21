@@ -1,0 +1,164 @@
+[
+  {
+    "label": "baseline",
+    "fixture": "engine_options_repro",
+    "case": null,
+    "returncode": 1,
+    "expected_returncode": 1,
+    "stdout": "FIRST\noption name Debug Log File type string default <empty>\noption name NumaPolicy type string default auto\noption name Threads type spin default 1 min 1 max 1024\noption name Hash type spin default 16 min 1 max 33554432\noption name Clear Hash type button\noption name Ponder type check default false\noption name MultiPV type spin default 1 min 1 max 256\noption name Skill Level type spin default 20 min 0 max 20\noption name Move Overhead type spin default 10 min 0 max 5000\noption name nodestime type spin default 0 min 0 max 10000\noption name UCI_Chess960 type check default false\noption name UCI_LimitStrength type check default false\noption name UCI_Elo type spin default 1320 min 1320 max 3190\noption name UCI_ShowWDL type check default false\noption name SyzygyPath type string default <empty>\noption name SyzygyProbeDepth type spin default 1 min 1 max 100\noption name Syzygy50MoveRule type check default true\noption name SyzygyProbeLimit type spin default 7 min 0 max 7\noption name EvalFile type string default nn-c9e480e92425.nnue\nSECOND\nequal=0\n",
+    "stderr": ""
+  },
+  {
+    "label": "baseline",
+    "fixture": "options_cases",
+    "case": "empty",
+    "returncode": 0,
+    "expected_returncode": 0,
+    "stdout": "empty: PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "baseline",
+    "fixture": "options_cases",
+    "case": "single",
+    "returncode": 0,
+    "expected_returncode": 0,
+    "stdout": "single: PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "baseline",
+    "fixture": "options_cases",
+    "case": "sequential",
+    "returncode": 1,
+    "expected_returncode": 1,
+    "stdout": "sequential: FAIL\n",
+    "stderr": ""
+  },
+  {
+    "label": "baseline",
+    "fixture": "options_cases",
+    "case": "interleaved",
+    "returncode": 1,
+    "expected_returncode": 1,
+    "stdout": "interleaved: FAIL\n",
+    "stderr": ""
+  },
+  {
+    "label": "baseline",
+    "fixture": "options_cases",
+    "case": "lifetime",
+    "returncode": 1,
+    "expected_returncode": 1,
+    "stdout": "lifetime: FAIL\n",
+    "stderr": ""
+  },
+  {
+    "label": "baseline",
+    "fixture": "options_cases",
+    "case": "combo",
+    "returncode": 1,
+    "expected_returncode": 1,
+    "stdout": "combo: FAIL\n",
+    "stderr": ""
+  },
+  {
+    "label": "baseline",
+    "fixture": "options_cases",
+    "case": "callback",
+    "returncode": 1,
+    "expected_returncode": 1,
+    "stdout": "callback: FAIL\n",
+    "stderr": ""
+  },
+  {
+    "label": "baseline",
+    "fixture": "options_cases",
+    "case": "duplicate",
+    "returncode": 1,
+    "expected_returncode": 1,
+    "stdout": "",
+    "stderr": "Option \"HASH\" was already added!\n"
+  },
+  {
+    "label": "candidate",
+    "fixture": "engine_options_repro",
+    "case": null,
+    "returncode": 0,
+    "expected_returncode": 0,
+    "stdout": "FIRST\noption name Debug Log File type string default <empty>\noption name NumaPolicy type string default auto\noption name Threads type spin default 1 min 1 max 1024\noption name Hash type spin default 16 min 1 max 33554432\noption name Clear Hash type button\noption name Ponder type check default false\noption name MultiPV type spin default 1 min 1 max 256\noption name Skill Level type spin default 20 min 0 max 20\noption name Move Overhead type spin default 10 min 0 max 5000\noption name nodestime type spin default 0 min 0 max 10000\noption name UCI_Chess960 type check default false\noption name UCI_LimitStrength type check default false\noption name UCI_Elo type spin default 1320 min 1320 max 3190\noption name UCI_ShowWDL type check default false\noption name SyzygyPath type string default <empty>\noption name SyzygyProbeDepth type spin default 1 min 1 max 100\noption name Syzygy50MoveRule type check default true\noption name SyzygyProbeLimit type spin default 7 min 0 max 7\noption name EvalFile type string default nn-c9e480e92425.nnue\nSECOND\noption name Debug Log File type string default <empty>\noption name NumaPolicy type string default auto\noption name Threads type spin default 1 min 1 max 1024\noption name Hash type spin default 16 min 1 max 33554432\noption name Clear Hash type button\noption name Ponder type check default false\noption name MultiPV type spin default 1 min 1 max 256\noption name Skill Level type spin default 20 min 0 max 20\noption name Move Overhead type spin default 10 min 0 max 5000\noption name nodestime type spin default 0 min 0 max 10000\noption name UCI_Chess960 type check default false\noption name UCI_LimitStrength type check default false\noption name UCI_Elo type spin default 1320 min 1320 max 3190\noption name UCI_ShowWDL type check default false\noption name SyzygyPath type string default <empty>\noption name SyzygyProbeDepth type spin default 1 min 1 max 100\noption name Syzygy50MoveRule type check default true\noption name SyzygyProbeLimit type spin default 7 min 0 max 7\noption name EvalFile type string default nn-c9e480e92425.nnue\nequal=1\n",
+    "stderr": ""
+  },
+  {
+    "label": "candidate",
+    "fixture": "options_cases",
+    "case": "empty",
+    "returncode": 0,
+    "expected_returncode": 0,
+    "stdout": "empty: PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "candidate",
+    "fixture": "options_cases",
+    "case": "single",
+    "returncode": 0,
+    "expected_returncode": 0,
+    "stdout": "single: PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "candidate",
+    "fixture": "options_cases",
+    "case": "sequential",
+    "returncode": 0,
+    "expected_returncode": 0,
+    "stdout": "sequential: PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "candidate",
+    "fixture": "options_cases",
+    "case": "interleaved",
+    "returncode": 0,
+    "expected_returncode": 0,
+    "stdout": "interleaved: PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "candidate",
+    "fixture": "options_cases",
+    "case": "lifetime",
+    "returncode": 0,
+    "expected_returncode": 0,
+    "stdout": "lifetime: PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "candidate",
+    "fixture": "options_cases",
+    "case": "combo",
+    "returncode": 0,
+    "expected_returncode": 0,
+    "stdout": "combo: PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "candidate",
+    "fixture": "options_cases",
+    "case": "callback",
+    "returncode": 0,
+    "expected_returncode": 0,
+    "stdout": "callback: PASS\n",
+    "stderr": ""
+  },
+  {
+    "label": "candidate",
+    "fixture": "options_cases",
+    "case": "duplicate",
+    "returncode": 1,
+    "expected_returncode": 1,
+    "stdout": "",
+    "stderr": "Option \"HASH\" was already added!\n"
+  }
+]

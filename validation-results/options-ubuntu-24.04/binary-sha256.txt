@@ -1,0 +1,2 @@
+887a62dde85c987b592b28b78dfa439839d8f51fc7077c65b0d0da57b73a06a7  baseline/src/stockfish
+099c45460b423cac9e6de626204ab1fc285aba5f94ac53d6d32c97ffcee0a052  candidate/src/stockfish

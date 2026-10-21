@@ -1,0 +1,246 @@
+{
+  "options-ubuntu-24.04/baseline-bench.log": {
+    "size": 3724,
+    "sha256": "80edb4a091320455db439e9374870742749c8178c4a2c6ce23f0ec9bc78d1c76"
+  },
+  "options-ubuntu-24.04/baseline-bench.stdout": {
+    "size": 89490,
+    "sha256": "dc7cbd6c1ce4d7b959ae9543d871b9c49e3e44cf198664e0e4ff2b4d77a90f05"
+  },
+  "options-ubuntu-24.04/baseline-commit.txt": {
+    "size": 41,
+    "sha256": "962c377c94bf7f8a195a403cc51ca0e25d7e1d835dfad271c3ac3d77b93e959d"
+  },
+  "options-ubuntu-24.04/baseline-engine_options_repro-build.log": {
+    "size": 145,
+    "sha256": "7dcc0b3899864f169ca92b4d8a6dc182922336bdb79756cc6d553f9601d23ecb"
+  },
+  "options-ubuntu-24.04/baseline-engine_options_repro-command.json": {
+    "size": 2157,
+    "sha256": "d59954c56b3b7f2e3d8b84696cb777db1c484e7c4166d587345eb8ce64ca9048"
+  },
+  "options-ubuntu-24.04/baseline-instrumented.log": {
+    "size": 7337,
+    "sha256": "d892b483b00e043c8c4540f635fec8447d5bebdeeea519aba11f9d17ad833b33"
+  },
+  "options-ubuntu-24.04/baseline-options_cases-build.log": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "options-ubuntu-24.04/baseline-options_cases-command.json": {
+    "size": 561,
+    "sha256": "6d3a6a9a751e3ab106681ba209a32b918c9d98cebf4cea5a1253e36d4684a4bc"
+  },
+  "options-ubuntu-24.04/baseline-smoke.json": {
+    "size": 122276,
+    "sha256": "a218414572f9428cc52b45ff69f3d150a5c13592d5026cb7f073968cc04aca52"
+  },
+  "options-ubuntu-24.04/baseline-smoke.log": {
+    "size": 212,
+    "sha256": "329be817abc02efb3c64b413be674fa5c0f07827cda96765503cce6109ae1154"
+  },
+  "options-ubuntu-24.04/binary-sha256.txt": {
+    "size": 179,
+    "sha256": "e711e84e02d021b08112502029756a815ff0433384b0386f019dfc7c3eed2eb0"
+  },
+  "options-ubuntu-24.04/build-baseline.log": {
+    "size": 13283,
+    "sha256": "ac6acd7c8985fb82ae45145e94d5d27724597016de03176f1c27ab7ba7e2f222"
+  },
+  "options-ubuntu-24.04/build-candidate.log": {
+    "size": 13287,
+    "sha256": "03639c5b36552c49de7b271912f6f86bf953e67b0d33263ce6e9502e45077a78"
+  },
+  "options-ubuntu-24.04/candidate-bench.log": {
+    "size": 3724,
+    "sha256": "6612d583569c60bc4f8861d9f04a2a9852e7ea0ce20f4ca9651abb0b4476094a"
+  },
+  "options-ubuntu-24.04/candidate-bench.stdout": {
+    "size": 89476,
+    "sha256": "0b6218715486964e021448945f70a4cbe93f59b88edc0c9e1dcb891fde42eb7c"
+  },
+  "options-ubuntu-24.04/candidate-commit.txt": {
+    "size": 41,
+    "sha256": "c50521cd8cca809b08f97fc280046f7ea98a1a1e82a3a0cb4a2dbf5f4b610f95"
+  },
+  "options-ubuntu-24.04/candidate-engine_options_repro-build.log": {
+    "size": 145,
+    "sha256": "7dcc0b3899864f169ca92b4d8a6dc182922336bdb79756cc6d553f9601d23ecb"
+  },
+  "options-ubuntu-24.04/candidate-engine_options_repro-command.json": {
+    "size": 2184,
+    "sha256": "2d7f0f4955bdc6d9d27981f4c80dce60102259a2ef118ad07c9674f011439572"
+  },
+  "options-ubuntu-24.04/candidate-instrumented.log": {
+    "size": 7336,
+    "sha256": "755f74b61a8323b92f43086b09a52b373047ff5f9df06fe9eac62d586c22585e"
+  },
+  "options-ubuntu-24.04/candidate-options_cases-build.log": {
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "options-ubuntu-24.04/candidate-options_cases-command.json": {
+    "size": 564,
+    "sha256": "555e92a7fcc558f1c2bb9c50c2275ad458fdd576ab4c7f1a8a50ddc0c494114c"
+  },
+  "options-ubuntu-24.04/candidate-smoke.json": {
+    "size": 122276,
+    "sha256": "a218414572f9428cc52b45ff69f3d150a5c13592d5026cb7f073968cc04aca52"
+  },
+  "options-ubuntu-24.04/candidate-smoke.log": {
+    "size": 212,
+    "sha256": "329be817abc02efb3c64b413be674fa5c0f07827cda96765503cce6109ae1154"
+  },
+  "options-ubuntu-24.04/candidate.patch": {
+    "size": 908,
+    "sha256": "ad7cf19a62d07da64e95b6ab3b2ddaf376432012b1a28cbb4d5d9815dcfbba25"
+  },
+  "options-ubuntu-24.04/compiler.txt": {
+    "size": 246,
+    "sha256": "59d1cbef41d4ae78d5063d525b7aa13d18dc0493ea00537efc19b2ee398cb5a8"
+  },
+  "options-ubuntu-24.04/cpu.txt": {
+    "size": 3362,
+    "sha256": "91ee506d1c92e328259a9e571b5897d5c09e8f80271c3543322dc5c8ecb0792d"
+  },
+  "options-ubuntu-24.04/fixture-results.json": {
+    "size": 6666,
+    "sha256": "9375f20b4f7f1e0012a10f132a3efa464439d66450a25cb7c2d8baad12e7ae61"
+  },
+  "options-ubuntu-24.04/fixtures.log": {
+    "size": 90,
+    "sha256": "c46b37e8d925d30e5da7f102c98e7cdf8064219c1b9cae79db9917f59b5982fa"
+  },
+  "options-ubuntu-24.04/network-sha256.txt": {
+    "size": 201,
+    "sha256": "72bdfac0c3630ab8255f0cf20e33bab28573e2e250efe53bdf3f7246ab26405c"
+  },
+  "options-ubuntu-24.04/python-deps.log": {
+    "size": 1215,
+    "sha256": "1792979a0f319c7df7236a798130d42ebc5e210f872f8fd66fc00d700b2a9e4b"
+  },
+  "options-ubuntu-24.04/validation-commit.txt": {
+    "size": 41,
+    "sha256": "d0809f6a4f5630e4982f6ddef52409b12ca1a91dc9fdbebe52ac80c86b62e163"
+  },
+  "options-windows-2022/baseline-bench.log": {
+    "size": 3830,
+    "sha256": "8f66f41dbac03710fd07b83cebe5ebc852df535a8e7444664cc9240015ae48cb"
+  },
+  "options-windows-2022/baseline-bench.stdout": {
+    "size": 90145,
+    "sha256": "9a46a4f3211b4c9b30c705bb96ddf3111218015519151de6d59fad6de19806f4"
+  },
+  "options-windows-2022/baseline-commit.txt": {
+    "size": 41,
+    "sha256": "962c377c94bf7f8a195a403cc51ca0e25d7e1d835dfad271c3ac3d77b93e959d"
+  },
+  "options-windows-2022/baseline-engine_options_repro-build.log": {
+    "size": 26,
+    "sha256": "a07c96169f8e88ab92cf30675c888d3514d65eb1b323b519e270792b803500ae"
+  },
+  "options-windows-2022/baseline-engine_options_repro-command.json": {
+    "size": 2074,
+    "sha256": "2975b5836cd3b72f365afbff6c49d8a55f4264bc3ef22ba7a627125ec9cc2a4a"
+  },
+  "options-windows-2022/baseline-instrumented.log": {
+    "size": 7445,
+    "sha256": "b080cdd39f60976a5caef70e549d4561eb6b5680bf18336dfe49156e19d9222b"
+  },
+  "options-windows-2022/baseline-options_cases-build.log": {
+    "size": 54,
+    "sha256": "de027a30e460eccfbda8ca0ec4be890dbdc112d54802bdf5bf306c178c42406a"
+  },
+  "options-windows-2022/baseline-options_cases-command.json": {
+    "size": 572,
+    "sha256": "e8adaa4dfb58b8b1bb8d93436ca224d8f04be39777a2a991c5bdb74b894d6527"
+  },
+  "options-windows-2022/baseline-smoke.json": {
+    "size": 128020,
+    "sha256": "43a0c5042eb02aa64ad2c4af7b0988c663c9cbbf802ae4751ef8ac27bf860d38"
+  },
+  "options-windows-2022/baseline-smoke.log": {
+    "size": 219,
+    "sha256": "350cdcecf8c4ce48e2669672153eb8fd5607ff19e1ed27e06cbea8a215f96908"
+  },
+  "options-windows-2022/binary-sha256.txt": {
+    "size": 187,
+    "sha256": "90f868c7d4990bfe96e59c8fbdd19252cfb562b502d773a25954c43415b34ca8"
+  },
+  "options-windows-2022/build-windows.log": {
+    "size": 2124,
+    "sha256": "53d9c48bd511093f8bb1260eed35268767ff85254509d6f45e26fa6d32817345"
+  },
+  "options-windows-2022/candidate-bench.log": {
+    "size": 3830,
+    "sha256": "98043f0599f0edc9cf6aa5d92fa2e13464636e7144b4b945512f6bcff47c0cdb"
+  },
+  "options-windows-2022/candidate-bench.stdout": {
+    "size": 90143,
+    "sha256": "b32b8d80335b09ce45d84078f3a0e05731baf8062c237c91e7483ce9d15a9548"
+  },
+  "options-windows-2022/candidate-commit.txt": {
+    "size": 41,
+    "sha256": "c50521cd8cca809b08f97fc280046f7ea98a1a1e82a3a0cb4a2dbf5f4b610f95"
+  },
+  "options-windows-2022/candidate-engine_options_repro-build.log": {
+    "size": 26,
+    "sha256": "a07c96169f8e88ab92cf30675c888d3514d65eb1b323b519e270792b803500ae"
+  },
+  "options-windows-2022/candidate-engine_options_repro-command.json": {
+    "size": 2101,
+    "sha256": "5144093475c98dbda7c1d9567f8142aef4bfd9c5ca296dd8d016c8f57fa9c0c8"
+  },
+  "options-windows-2022/candidate-instrumented.log": {
+    "size": 7444,
+    "sha256": "d13fcaaf9075d5b98ed0d32e5948d04021d69db4d6959a4e847e7fc3297e3fd9"
+  },
+  "options-windows-2022/candidate-options_cases-build.log": {
+    "size": 54,
+    "sha256": "de027a30e460eccfbda8ca0ec4be890dbdc112d54802bdf5bf306c178c42406a"
+  },
+  "options-windows-2022/candidate-options_cases-command.json": {
+    "size": 575,
+    "sha256": "0afd908fc4b6ddfc40c82d43c066bd76a8b7ebd715e14983f9bda7f78e66c15a"
+  },
+  "options-windows-2022/candidate-smoke.json": {
+    "size": 128020,
+    "sha256": "43a0c5042eb02aa64ad2c4af7b0988c663c9cbbf802ae4751ef8ac27bf860d38"
+  },
+  "options-windows-2022/candidate-smoke.log": {
+    "size": 219,
+    "sha256": "350cdcecf8c4ce48e2669672153eb8fd5607ff19e1ed27e06cbea8a215f96908"
+  },
+  "options-windows-2022/candidate.patch": {
+    "size": 908,
+    "sha256": "ad7cf19a62d07da64e95b6ab3b2ddaf376432012b1a28cbb4d5d9815dcfbba25"
+  },
+  "options-windows-2022/compiler.txt": {
+    "size": 192,
+    "sha256": "7ab3c29b079e023c33e4f786d2aa6642bf4615ec683304477750f1c010ce0868"
+  },
+  "options-windows-2022/cpu.txt": {
+    "size": 271,
+    "sha256": "f4013b5922295f5704595b78c72aed564e7bec7349dcb41a399a16bf10a2d9b2"
+  },
+  "options-windows-2022/fixture-results.json": {
+    "size": 6830,
+    "sha256": "02ff11a10def0565fbc6204be9d042a66aba061688f0d2f6869440049115c689"
+  },
+  "options-windows-2022/fixtures.log": {
+    "size": 91,
+    "sha256": "41b776331639a78578db2bd3fe79a0e70913018031f06ce3f90200ca24653eca"
+  },
+  "options-windows-2022/network-sha256.txt": {
+    "size": 201,
+    "sha256": "5d20881a41552aaef3ccad6106f7bf4e83c7f65a0da7ecde132f10ffb530f625"
+  },
+  "options-windows-2022/python-deps.log": {
+    "size": 2356,
+    "sha256": "0be80954ae62ba17e91f8e36a19af2a6d4de56e2f209562f03b36c3b7e18084f"
+  },
+  "options-windows-2022/validation-commit.txt": {
+    "size": 41,
+    "sha256": "d0809f6a4f5630e4982f6ddef52409b12ca1a91dc9fdbebe52ac80c86b62e163"
+  }
+}

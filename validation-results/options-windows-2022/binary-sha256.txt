@@ -1,0 +1,2 @@
+0a4b1ece964931732863456e5b283536cd33255ca9502faa18065c2aee533f62 *baseline/src/stockfish.exe
+9189142c887276aeaf65f12cf901f12ad56a80cbab3c2ee50f91167ceed3d8c6 *candidate/src/stockfish.exe

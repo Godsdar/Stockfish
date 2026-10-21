@@ -1,0 +1,5 @@
+
+Name                                            NumberOfCores NumberOfLogicalProcessors
+----                                            ------------- -------------------------
+AMD EPYC 9V45 96-Core Processor                             2                         4
+

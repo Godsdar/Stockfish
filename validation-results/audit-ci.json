@@ -1,0 +1,28 @@
+{
+  "options-windows-2022": {
+    "ids": {
+      "baseline": "effdc3fd3f6de6e75fe1374a51a7a7eed66f880b",
+      "candidate": "e6c3a5fba865c1d56fadf7cf607ae080547d620c",
+      "validation": "c9c617d75cae5f0f2e8e481f0e4178e20d8b4548"
+    },
+    "bench": 1559611,
+    "upstream_tests_per_engine": 75,
+    "smoke_cases_per_engine": 180,
+    "smoke_sequences_identical": true,
+    "fixture_cases": 18,
+    "first_engine_options_identical": true
+  },
+  "options-ubuntu-24.04": {
+    "ids": {
+      "baseline": "effdc3fd3f6de6e75fe1374a51a7a7eed66f880b",
+      "candidate": "e6c3a5fba865c1d56fadf7cf607ae080547d620c",
+      "validation": "c9c617d75cae5f0f2e8e481f0e4178e20d8b4548"
+    },
+    "bench": 1559611,
+    "upstream_tests_per_engine": 75,
+    "smoke_cases_per_engine": 180,
+    "smoke_sequences_identical": true,
+    "fixture_cases": 18,
+    "first_engine_options_identical": true
+  }
+}

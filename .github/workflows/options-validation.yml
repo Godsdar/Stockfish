@@ -86,4 +86,14 @@ jobs:
         if: always()
         with:
           name: options-${{ matrix.os }}
-          path: results/
+          retention-days: 7
+          path: |
+            results/
+            !results/*.exe
+            !results/*.obj
+            !results/*.o
+            !results/*.nnue
+            !results/baseline-engine_options_repro
+            !results/candidate-engine_options_repro
+            !results/baseline-options_cases
+            !results/candidate-options_cases
