@@ -926,6 +926,10 @@ Value Search::Worker::search(
 
                     if ((ttData.value >= beta) == (-ttDataNext.value >= beta))
                         return ttData.value;
+
+                    // Reduce the priority of a non-exact entry contradicted by its child.
+                    if (ttData.bound != BOUND_EXACT)
+                        ttWriter.penalize(1);
                 }
                 else
                     return ttData.value;
