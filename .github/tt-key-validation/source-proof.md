@@ -1,0 +1,25 @@
+# Restricted exact child key: proposal frozen before results
+
+The candidate changes only the existing depth>=7 ordinary-parent-value child verification in search.cpp. It calls the existing prefetch_key helper directly for NORMAL non-pawn moves when the parent has no castling rights and no en-passant square. Every other move retains do_move, probe, undo_move in that order. The lambda returns the same tuple; no child-hit, depth, bound, score normalization or cutoff rule changes.
+
+## Algebra against the production source
+
+In position.cpp do_move begins with raw parent StateInfo::key XOR Zobrist::side. A normal non-pawn move XORs moving-piece keys at from/to. An ordinary capture XORs the captured piece's key at to and resets rule50 to zero. There is no promotion or EP removal square because the move is NORMAL and the moving piece is not a pawn. A non-pawn cannot create a new EP square. The no-current-EP guard removes the old-EP-key deletion case. With no castling rights, the old/new castling XORs cancel: both are the same zero-rights key, independently of rights masks on from/to. This exactly matches prefetch_key's three piece-square XORs (the NO_PIECE row is zero).
+
+For a capture, prefetch_key returns raw child k; actual child rule50=0 also returns raw k. For a quiet non-pawn move, the child's counter is r+1. The normal key adjustment starts at child counter14 and uses make_key((r+1-14)/8). The prefetch helper's adjust_key50<true> starts at parent counter13 and uses make_key((r-13)/8). The predicates and integer numerators are identical, including bucket boundaries. The synthetic corpus crosses r=12/13/14,20/21/22,93/94/95/96,99/100. Actual outer child verification normally avoids high-rule50 cutoffs; testing the helper beyond that gate protects its mathematical claim.
+
+## State and concurrency scope
+
+prefetch_key is const and reads board plus current StateInfo without mutation. The original lightweight do_move creates a child StateInfo, modifies board/bitboards/counts/side/gamePly, then undo restores those fields and the parent state pointer. Child checks/threats/blockers are stored in the child StateInfo, and undo does not update parent threat fields. The property harness checks every live StateInfo object by comparing its pre-existing byte representation after undo, and checks FEN, keys, piece array, bitboards/counts, legal moves, checkers/blockers/pinners/check squares/threats, state pointer, gamePly and Chess960 mode.
+
+Position::scratchDirties is deliberately excluded from object-byte equivalence: the original speculative do_move changes this private scratch object while the shortcut does not. Source search shows it is accessed only by the lightweight wrapper, which reconstructs dirtyThreats/dirtyPawnPairs and overwrites dirtyPiece's relevant fields before use. The normal search move path supplies its own Dirties object. Its prior contents have no exported semantic role. This is why whole-Position memcmp would be the wrong property; the semantic snapshot and live StateInfo checks target actual parent state. Do not claim a runtime check proves every possible state; source reasoning and raw search identity complement it.
+
+Threads1 raw search is deterministic and is the equivalence target. In concurrent searches, earlier access to a shared lock-free TT can observe a different concurrently written tuple, as any timing optimization can. This patch does not remove existing race/collision handling or promise identical SMP trajectories. The fallback still probes while the child is made, preserving its original operation order.
+
+## Prior art, risks and falsification
+
+Credit prefetch_key's restoration in #6911 and the child verification work in Daniel Monroe's #6069/#6094, with current common gates from FauziAkram's #7160. Closed #7203 by anavalo already investigated avoiding lightweight dirty-threat work; anematode pointed to i-cache costs from duplicated do_move implementations, and vondele required a standard gainer rather than perft-only evidence. The proposed restricted reuse of an existing helper avoids a duplicated move implementation but is not evidence of speed by itself. #7203 reported lightweight calls only around0.75% of tracked calls in bench; the shortcut hits a subset and adds four predicates, which can erase the saving. Explicitly do not claim novelty for avoiding speculative move work generally.
+
+Reject any semantic discrepancy, guard exclusion failure, state-restoration failure, or native platform runtime failure. Defer/reject the performance idea without repeatable Windows benefit under protocol.json; a single attractive timing or local bench signature is insufficient. Native Linux and Windows execution are required; a cross-compiled artifact is not a runtime test. Any upstream functional/Elo claim would require its own standard Fishtest, not this experiment.
+
+The alternative of changing bounds, decisive-score handling, occupancy or parent depth is excluded from this candidate. S3's held-out regressions and the diagnostic evidence do not support making those changes here.

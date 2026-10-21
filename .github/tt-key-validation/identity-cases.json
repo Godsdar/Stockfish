@@ -1,0 +1,674 @@
+[
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "Q6r/2qkrp2/p2pnnp1/pR5p/5b1R/1PN1P1P1/2PPK2P/1NB5 w - - 9 37",
+    "game": 47,
+    "ply": 72
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "r1b1k1n1/3p1r2/p2b4/nPp2p1p/4pN2/1P2PPqN/2KP2PP/1RBQ1BR1 w - - 0 25",
+    "game": 0,
+    "ply": 48
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "r2qkb1r/2pp1p2/b1B1p3/Pp4pp/6P1/1N1nn2P/P1PPPP1R/RNBQK3 w Qkq - 4 13",
+    "game": 28,
+    "ply": 24
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "r3k1nr/p1p3bp/n1q3pB/1p1pP3/1P1P1P2/P6b/R1PKB1P1/1N4NR w - - 0 21",
+    "game": 63,
+    "ply": 40
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "5rk1/8/4q3/P2N1Ppb/2P1P3/b3K3/1N6/R3n3 w - - 0 53",
+    "game": 31,
+    "ply": 104
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "5k2/1B2q3/7p/2b1ppP1/7P/pb4K1/3Q4/4rR2 w - - 0 65",
+    "game": 7,
+    "ply": 128
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "8/3nk3/r4prb/3pp1pp/Pp1P3P/1P2P1P1/2NB2P1/2RK1R2 w - - 2 37",
+    "game": 53,
+    "ply": 72
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "game": 29,
+    "ply": 0
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "5k2/5r2/5p2/1p3p2/3P3R/2p2PP1/4N3/5K2 w - - 0 57",
+    "game": 8,
+    "ply": 112
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "3k2rb/p7/2pp1N1p/5p1P/qP3p2/2p2Bp1/6P1/5KR1 w - - 10 57",
+    "game": 40,
+    "ply": 112
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "r1bqkb1r/ppppp1p1/n6n/5p1p/1PPP3P/8/P3PPP1/RNBQKBNR w KQkq - 1 5",
+    "game": 5,
+    "ply": 8
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "3kBb2/p4p1r/n2p1P2/P4R2/1r4p1/6K1/6NP/3N4 w - - 1 57",
+    "game": 60,
+    "ply": 112
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "r2q1k1b/pbp5/3p3p/3P1pNP/2R2p2/1PpB2p1/2Q3P1/3K2R1 w - - 0 41",
+    "game": 40,
+    "ply": 80
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "5brr/8/1pppk2n/P3Pppp/b4P1n/P1B2RP1/N1P1P3/3RKBN1 w - - 4 29",
+    "game": 1,
+    "ply": 56
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "1nbqkb1r/1p2ppp1/3p1n1p/p1p5/P3P3/2PP1PP1/7P/1rBQKBNR w Kk - 0 13",
+    "game": 7,
+    "ply": 24
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "5n2/1k2r3/8/Pp6/4P2R/4p2p/2p2p2/3K3B w - - 0 65",
+    "game": 22,
+    "ply": 128
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "r2k4/2p3P1/3p4/p6p/1R1N4/N1P3BP/P4K2/2b5 w - - 1 61",
+    "game": 56,
+    "ply": 120
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "3qkr2/rpp1N2p/p4p1n/P1n3p1/bR2p3/3PPNPP/1PQ1BP2/2B1K2R w K - 0 21",
+    "game": 51,
+    "ply": 40
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "r3k2b/pbp1q2p/2Nppp1B/3P1P1P/2R1P1r1/1Pp2Np1/Q1K3P1/5BR1 w - - 3 33",
+    "game": 40,
+    "ply": 64
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "8/P2r4/5Pk1/2P3p1/4P3/b1K1nb2/R7/1N6 w - - 4 65",
+    "game": 31,
+    "ply": 128
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "1rNk1b2/3bn2p/4Q3/2ppprBP/pp1P4/5P1N/2PK2B1/7R w - - 1 33",
+    "game": 14,
+    "ply": 64
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "6r1/1k4r1/1p1b3P/P2N1R1p/b1p5/P1B1R1PN/2P1P1n1/3K1B2 w - - 0 41",
+    "game": 1,
+    "ply": 80
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "r1bqkbnr/p1n1pppp/3p4/1pp5/PPP3P1/5P2/R2PP2P/1NBQKBNR w Kkq - 1 9",
+    "game": 60,
+    "ply": 16
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "1rk4r/6bp/2p3p1/ppnQp1p1/8/N1npPPNK/P2B3P/6RR w - - 6 33",
+    "game": 49,
+    "ply": 64
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "game": 16,
+    "ply": 0
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "2bk3r/pr1pqp2/n3p3/Ppp1n3/3PP1Q1/1PP3PB/3BPN1P/RN2KR2 w Q - 4 21",
+    "game": 18,
+    "ply": 40
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "2b3n1/5k2/1p6/p1p1pPpp/P1PNn2P/5KP1/2R5/7B w - - 8 53",
+    "game": 48,
+    "ply": 104
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "3kbb2/p2B1p1r/n2p1P2/P5pn/3r4/7K/7P/3NNR2 w - - 2 53",
+    "game": 60,
+    "ply": 104
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "2r5/n2r4/1p1k1N2/pPpP1b1P/P6p/2B5/5R2/2K2B2 w - - 9 57",
+    "game": 43,
+    "ply": 112
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "2bqnrk1/2pnb3/3rP3/3p4/pP1P1RpB/P1p3P1/3RB3/1N2K3 w - - 4 53",
+    "game": 23,
+    "ply": 104
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "rn1qkbnr/1ppbp1pp/p2p4/5p2/1P4P1/5P1N/P1PPP2P/RNBQKB1R w KQkq - 1 5",
+    "game": 11,
+    "ply": 8
+  },
+  {
+    "kind": "orthodox",
+    "chess960": false,
+    "fen": "r3k2r/p1p1q1bp/b2ppp2/2nn1P1P/3P2p1/1Pp5/2KQP1P1/RNB2BNR w kq - 0 17",
+    "game": 40,
+    "ply": 32
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "rbb3n1/pn1pkp2/2pr2pq/1p2pP1p/1P1P3P/B1P1P1P1/P1NKN2R/RB4Q1 w - - 1 17",
+    "game": 96,
+    "ply": 32
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "4qrk1/1b1n1p1p/2ppn3/pp6/1N1PN2P/2PRP1p1/PP3P2/4R2K w - - 0 25",
+    "game": 67,
+    "ply": 48
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "1b2rn2/2n3kb/1r1P1p2/1Pp4p/1P1P1PBP/3N4/3q2P1/R3RKBN w - - 1 29",
+    "game": 98,
+    "ply": 56
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "qr1k1b1n/2p1p2p/6rB/pp1pp1p1/P2PB3/2P5/1P3P1P/Q1RKRN1N w q - 2 25",
+    "game": 65,
+    "ply": 48
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "r1kbq1n1/2ppp1Bp/p7/1p6/bP2pnp1/P5PP/R1PP1P2/2KBQNR1 w - - 0 13",
+    "game": 91,
+    "ply": 24
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "1r5b/kp2r2p/p1p2Pp1/2Pp2p1/PP1P2RP/K4Pn1/2N5/2Q4B w - - 1 41",
+    "game": 109,
+    "ply": 80
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "n3rkbr/p2p4/1p2p1p1/N1b2p2/2P1B2p/1P3PP1/P3P2P/N3K2R w kq - 0 21",
+    "game": 100,
+    "ply": 40
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "4k3/2R5/3pp3/3N1rP1/4b3/6P1/3R1r2/2K5 w - - 3 65",
+    "game": 92,
+    "ply": 128
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "rnk1bbqr/pp1ppnpp/2p5/8/N4p2/5P2/PPPPP1PP/RK1NBBQR w kq - 0 5",
+    "game": 80,
+    "ply": 8
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "B1N5/p1b2p2/5k2/npP2r1p/2p4P/6P1/P4Q1R/R6K w - - 1 41",
+    "game": 96,
+    "ply": 80
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "1br4n/5k1b/r1pPnp2/1p5p/1P1P2pP/P2N1P2/5KP1/RBq2RBN w - - 1 21",
+    "game": 98,
+    "ply": 40
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "n2rk2b/3p4/p1p2rp1/qp3P1p/1PbPPp2/1N5P/P1P2K2/1RRB1QB1 w - - 7 37",
+    "game": 111,
+    "ply": 72
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "2nrkqrn/3pp1p1/p1p4p/3bbp2/2pPB2P/P4PP1/1P1KP3/B1NR1QRN w kq - 2 9",
+    "game": 76,
+    "ply": 16
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "n1k2n2/7Q/2r2p1p/8/pPP1N3/PNP3Bb/R4q1b/3K3R w - - 1 45",
+    "game": 70,
+    "ply": 88
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "8/p1p3kr/2P5/2B3PB/p1b1p2P/2b5/2P2R2/1K3Q1R w - - 3 53",
+    "game": 89,
+    "ply": 104
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "rbbknnqr/pppppppp/8/8/8/8/PPPPPPPP/RBBKNNQR w KQkq - 0 1",
+    "game": 96,
+    "ply": 0
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "1r4kr/8/4P3/1p4P1/2n1P1p1/P1B1N1R1/5K1R/N2B4 w - - 1 57",
+    "game": 66,
+    "ply": 112
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "1rnknb1r/p1pNp1p1/1p3p1p/3q4/2b2P1P/2P5/1PNPP1P1/Q1KR1BBR w kq - 1 9",
+    "game": 101,
+    "ply": 16
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "5kq1/1b5r/3pp3/rp4p1/PR6/4N1P1/7P/1N2bKR1 w - - 7 41",
+    "game": 92,
+    "ply": 80
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "r1k3N1/p4prp/1p1B1P2/1Pp5/n7/2P3Pb/P3PR1P/R5K1 w - - 1 41",
+    "game": 107,
+    "ply": 80
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "r1q1nb2/pp1k4/bP1pR3/2p2B2/P4N2/2K4P/2PN1nP1/R5B1 w - - 0 29",
+    "game": 94,
+    "ply": 56
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "3k4/7n/p2p2p1/1n1bP1P1/1Pp5/2PqP1p1/N6r/NRK3B1 w - - 0 57",
+    "game": 88,
+    "ply": 112
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "n1b1k2r/1rqp4/p1p1ppp1/1p1P3p/P1n4N/1N3R2/1P2PP1b/R2QKB2 w - - 0 21",
+    "game": 69,
+    "ply": 40
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "7B/3p4/p3n3/1p1kp1p1/1pr3P1/P2Pp1PP/1K2B3/5NR1 w - - 2 49",
+    "game": 91,
+    "ply": 96
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "nr6/2rkb3/p1pp4/1p1P1pRp/1P2Bp2/1RqK4/2P5/N3B3 w - - 5 65",
+    "game": 111,
+    "ply": 128
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "nr1r2b1/1pp3kp/3p1n1b/p3p1p1/4P1P1/1PPPqP1P/PB1N2BR/1R3K2 w - - 1 29",
+    "game": 121,
+    "ply": 56
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "5B2/8/7R/8/1P3kp1/6p1/NP1n2K1/8 w - - 10 65",
+    "game": 116,
+    "ply": 128
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "6kr/8/ppQ4b/1R3p1p/3prPpP/P2NP1P1/N7/2B4K w - - 4 49",
+    "game": 95,
+    "ply": 96
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "rb5n/2p1k3/1pP5/p3p2P/PP4P1/2RKp1B1/N1B1P2r/8 w - - 7 37",
+    "game": 123,
+    "ply": 72
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "1n1k1b2/5b2/rpp1pp2/3P1np1/pP1P1P1R/P7/2P1Q3/RNK1B1N1 w - - 4 25",
+    "game": 113,
+    "ply": 48
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "qr1k3n/2p5/1r2p2B/1Pb1p1pp/Q2P4/2P1p1N1/1P3P1P/2RKRN2 w q - 2 33",
+    "game": 65,
+    "ply": 64
+  },
+  {
+    "kind": "chess960",
+    "chess960": true,
+    "fen": "N6r/3r2p1/2kBP1b1/bN3p1p/2P1p3/P5PK/4P1BP/R4R2 w - - 1 37",
+    "game": 120,
+    "ply": 72
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/8/8/8/4r3/4K2R w - - 100 1",
+    "example": 5,
+    "rule50": 100
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/8/8/8/4r3/4K2R w - - 94 1",
+    "example": 5,
+    "rule50": 94
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/8/8/8/4r3/4K2R w - - 99 1",
+    "example": 5,
+    "rule50": 99
+  },
+  {
+    "kind": "explicit",
+    "chess960": true,
+    "fen": "rk5r/8/8/8/8/8/8/RK5R w AHah - 22 1",
+    "example": 1,
+    "rule50": 22
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/3pP3/8/8/8/4K2R w - d6 94 1",
+    "example": 2,
+    "rule50": 94
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/3pP3/8/8/8/4K2R w - d6 95 1",
+    "example": 2,
+    "rule50": 95
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/P7/8/8/8/8/7p/4K3 w - - 100 1",
+    "example": 3,
+    "rule50": 100
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/P7/8/8/8/8/7p/4K3 w - - 99 1",
+    "example": 3,
+    "rule50": 99
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/8/8/8/4r3/4K2R w - - 22 1",
+    "example": 5,
+    "rule50": 22
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/8/8/8/8/R3K3 b - - 96 1",
+    "example": 7,
+    "rule50": 96
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/3pP3/8/8/8/4K2R w - d6 13 1",
+    "example": 2,
+    "rule50": 13
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/8/8/8/8/R3K3 w - - 13 1",
+    "example": 6,
+    "rule50": 13
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/3pP3/8/8/8/4K2R w - d6 21 1",
+    "example": 2,
+    "rule50": 21
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/P7/8/8/8/8/7p/4K3 w - - 22 1",
+    "example": 3,
+    "rule50": 22
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "r3k2r/8/8/8/8/8/8/R3K2R w KQkq - 99 1",
+    "example": 0,
+    "rule50": 99
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "r3k2r/8/8/8/8/8/8/R3K2R w KQkq - 100 1",
+    "example": 0,
+    "rule50": 100
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/P7/8/8/8/8/7p/4K3 w - - 0 1",
+    "example": 3,
+    "rule50": 0
+  },
+  {
+    "kind": "explicit",
+    "chess960": true,
+    "fen": "rk5r/8/8/8/8/8/8/RK5R w AHah - 20 1",
+    "example": 1,
+    "rule50": 20
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/8/8/8/4r3/4K2R w - - 95 1",
+    "example": 5,
+    "rule50": 95
+  },
+  {
+    "kind": "explicit",
+    "chess960": true,
+    "fen": "rk5r/8/8/8/8/8/8/RK5R w AHah - 14 1",
+    "example": 1,
+    "rule50": 14
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/3p4/3R4/8/8/4K3 w - - 95 1",
+    "example": 4,
+    "rule50": 95
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/8/8/8/8/R3K3 b - - 14 1",
+    "example": 7,
+    "rule50": 14
+  },
+  {
+    "kind": "explicit",
+    "chess960": true,
+    "fen": "rk5r/8/8/8/8/8/8/RK5R w AHah - 12 1",
+    "example": 1,
+    "rule50": 12
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/8/8/8/8/R3K3 w - - 21 1",
+    "example": 6,
+    "rule50": 21
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/3pP3/8/8/8/4K2R w - d6 12 1",
+    "example": 2,
+    "rule50": 12
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/8/8/8/4r3/4K2R w - - 21 1",
+    "example": 5,
+    "rule50": 21
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/8/8/8/4r3/4K2R w - - 96 1",
+    "example": 5,
+    "rule50": 96
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/3p4/3R4/8/8/4K3 w - - 13 1",
+    "example": 4,
+    "rule50": 13
+  },
+  {
+    "kind": "explicit",
+    "chess960": true,
+    "fen": "rk5r/8/8/8/8/8/8/RK5R w AHah - 96 1",
+    "example": 1,
+    "rule50": 96
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "r3k2r/8/8/8/8/8/8/R3K2R w KQkq - 21 1",
+    "example": 0,
+    "rule50": 21
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/8/8/8/8/R3K3 b - - 13 1",
+    "example": 7,
+    "rule50": 13
+  },
+  {
+    "kind": "explicit",
+    "chess960": false,
+    "fen": "4k3/8/8/8/8/8/8/R3K3 w - - 100 1",
+    "example": 6,
+    "rule50": 100
+  }
+]

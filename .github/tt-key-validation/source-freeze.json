@@ -1,0 +1,15 @@
+{
+  "frozen_utc": "2026-10-21T06:30:00.182683+00:00",
+  "commit": "a054f22a91a8a626b505f4ee894fc08b5483f02b",
+  "files": {
+    "candidate.patch": "7be67df41ef3ec6ca4f3ec36c85c7d5dbddaf4eee105e9924e7b255e2b0b3005",
+    "protocol.json": "534c53d01b00289375e970e390509b46e46c811e42247d215196ef8e21ccf16e",
+    "source-proof.md": "a69aacd4aba00b47d28716e94af41f047578d5daf6121b4b7eb19696f11ce2e6",
+    "key_property.cpp": "0f70981b29d8aaf06203872fc246daeac1be9ce331eb0e89458982f9846b32e6",
+    "generate_corpus.py": "35cc0c04e55edbd382874e0c1951951db85e8b6fac259a33cc6b5a56ed1aaaf3",
+    "property-corpus.tsv": "37a77e95343b0971c0ad720a68ecc37f716c3e6768e2710ce414aa50cefda561",
+    "identity-cases.json": "a964e55e1ed9a0c033f6a0f17c399e8b094a03b028a4ff31fa16bd7b75fe67cd",
+    "corpus-manifest.json": "0476b5af5f2cd8cb274caaf23c2258cca8494f059e2083f9230c150274fc8c72"
+  },
+  "no_candidate_build_or_engine_outcomes_before_freeze": true
+}

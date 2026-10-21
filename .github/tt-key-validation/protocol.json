@@ -1,0 +1,34 @@
+{
+  "name": "Exact existing prefetch key for a restricted child-TT verification probe",
+  "registered_utc": "2026-10-21T06:29:12Z",
+  "status_at_registration": "Source patch prepared; no candidate build, engine search, property outcome, or timing observed",
+  "base": "effdc3fd3f6de6e75fe1374a51a7a7eed66f880b",
+  "branch": "research/tt-exact-key-20261021",
+  "source_freeze": "candidate.patch and subsequent source-freeze.json provide exact patch hash and commit; no tuning after first outcome",
+  "mechanism": "In existing deep child verification only, probe prefetch_key directly when move is NORMAL, moving piece is non-pawn, parent has no castling rights and no en passant square. Otherwise retain original do/probe/undo. All cutoff conditions and returned TT data remain unchanged.",
+  "novelty": "Narrow application of existing prefetch_key (#6911), motivated by but distinct from closed #7203's duplicated lightweight do_move implementation. No claim to first optimization of this path.",
+  "correctness": {
+    "property_seed": 2026102111,
+    "corpus": "128 random legal games:64 orthodox and64 Chess960; sample every8plies through128; add explicit castling, EP, promotion, capture/check positions crossed with rule50 0,12,13,14,20,21,22,93,94,95,96,99,100",
+    "properties": "Every legal move: fast guard implies prefetch_key==do_move/key/undo key; candidate path matches reference; guard false for every excluded predicate; every exclusion category exercised. Before/after public Position snapshot and current StateInfo bytes/pointer unchanged. Additional deterministic in-memory legal walk tests include nonempty previous-state histories.",
+    "raw_uci": "Fresh96 cases sampled with independent seed2026102112 from generated property corpus,32orthodox/32Chess960/32explicit. Threads1 Hash16 Clear Hash before each go nodes200000. Compare all UCI lines after removing only time/nps and non-search build banner. Preserve scores,bounds,depth,seldepth,multipv,nodes,hashfull,tbhits,pv,bestmove,ponder. Baseline and candidate raw streams retained.",
+    "bench_signature": 1559611,
+    "native_execution": "Run actual Linux and Windows release binaries. Cross-compilation alone does not count. Record compiler,target,commands,binary/source hashes and raw runtime outputs. macOS local check is secondary.",
+    "failure": "Any semantic identity or property failure rejects this frozen candidate. Harness/infrastructure bugs may be corrected only with disclosure and renewed full checks; engine guards may not be tuned on failures."
+  },
+  "performance": {
+    "precondition": "Uninstrumented release binaries from frozen sources; correctness checks passed; no competing intentional search/build workloads on measured host",
+    "primary_platform": "native Windows",
+    "required_secondary_platform": "native Linux",
+    "optional_secondary_platform": "native macOS",
+    "command": "bench 16 1 16 default depth",
+    "warmups_each_binary": 2,
+    "pairs_per_platform": 24,
+    "ordering": "pair1 base,candidate; pair2 candidate,base; alternate exactly through24. Two complete predefined blocks of12pairs.",
+    "records": "Each process elapsed monotonic duration, engine-reported total duration,nodes,NPS,exitstatus,raw stdout/stderr. Verify equal benchmark nodes every run. No outlier deletion or early stopping.",
+    "analysis": "For each pair x=log(base_ms/candidate_ms). Report exp(mean(x))-1 and two-sided95%CI using Student t23=2.068657610*sample_sd(x)/sqrt(24), transformed exponentially. Analyze engine duration primary and process duration secondary; provide both12-pair block point estimates.",
+    "promotion_criterion": "Native Windows engine-time95%CI lower bound>0, each12-pair block positive point estimate, and process-time full24 point estimate positive. Native Linux must not show statistically significant regression. Otherwise defer/reject performance candidate; do not submit a performance PR on unsupported gain.",
+    "limits": "A runtime gain is not Elo evidence. Any upstream Fishtest requires separate standard gainer design per #7203 discussion. One frozen candidate only; no threshold/guard variations after outcome."
+  },
+  "resource_policy": "Parent allocates all engine runs/build slots. Compile max-j2 currently allowed; searches only after S4 completes. Timing must be serialized and separately allocated."
+}
